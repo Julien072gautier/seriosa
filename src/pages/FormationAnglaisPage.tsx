@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Clock, Award, Users, CheckCircle, ArrowRight, Calendar, Phone, X, Tag, CreditCard, MessageSquare, Target, Brain, Star, Globe, BookOpen } from 'lucide-react';
+import { Clock, Award, Users, CheckCircle, ArrowRight, Calendar, Phone, X, Tag, MessageSquare, Target, Brain, Star, Globe, BookOpen } from 'lucide-react';
 import { useSendEmail } from '../hooks/useSendEmail';
 import { Link } from 'react-router-dom';
 

@@ -17,7 +17,10 @@ const Header = () => {
             onError={(e) => {
               // Fallback au texte si l'image n'est pas encore disponible
               e.currentTarget.style.display = 'none';
-              e.currentTarget.nextElementSibling.style.display = 'flex';
+              const nextElement = e.currentTarget.nextElementSibling;
+              if (nextElement) {
+                (nextElement as HTMLElement).style.display = 'flex';
+              }
             }}
           />
           <span className="text-2xl font-bold" style={{display: 'none'}}>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Award, Users, CheckCircle, ArrowRight, Calendar, Phone, X, Tag, CreditCard, MessageSquare, Target, Star, Globe } from 'lucide-react';
+import { Clock, Award, Users, CheckCircle, ArrowRight, Calendar, Phone, X, Tag, MessageSquare, Target, Star } from 'lucide-react';
 import { useSendEmail } from '../hooks/useSendEmail';
 
 const FormationAIVentePage = () => {

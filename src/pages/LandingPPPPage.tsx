@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSendEmail } from "../hooks/useSendEmail";
 import { motion } from "framer-motion";
-import { Phone, Calendar, CheckCircle, ArrowRight, MessageSquare, X, Zap, Target, Clock, AlertTriangle, Lightbulb, Rocket, Star, Award, CreditCard, Tag, PenTool as Tool, Wallet, Search, UserCheck, Brain, Settings, BadgeCheck, ChevronDown, Mic, Users, Presentation as PresentationChart } from 'lucide-react';
+import { Phone, Calendar, CheckCircle, ArrowRight, X, Zap, Clock, AlertTriangle, Rocket, Star, Award, CreditCard, UserCheck, Brain, BadgeCheck, ChevronDown, Mic } from 'lucide-react';
 import TagManager from 'react-gtm-module';
 import { Helmet } from 'react-helmet-async';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';

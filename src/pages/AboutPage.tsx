@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Award, Users, BookOpen, Globe, Check, ArrowRight, Star, Shield, Target } from 'lucide-react';
+import { Check, ArrowRight, Star, Target } from 'lucide-react';
 
 const AboutPage = () => {
   return (

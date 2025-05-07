@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Users, BookOpen, Zap, Globe, MessageSquare, BarChart3, GraduationCap, Phone, X, CheckCircle, Clock, Tag, CreditCard, Star, PenTool as Tool, Wallet, Search } from 'lucide-react';
+import { ArrowRight, Award, Zap, MessageSquare, BarChart3, Phone, X, CheckCircle, Clock, Tag, CreditCard, Star, PenTool as Tool, Wallet, Search } from 'lucide-react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useSendEmail } from '../hooks/useSendEmail';
@@ -62,9 +62,9 @@ const HomePage = () => {
       const interval = 20; // Update every 20ms
       
       // Counter for +280 apprenants
-      let startTime = null;
+      let startTime: number | null = null;
       const targetCount1 = 280;
-      const animateCount1 = (timestamp) => {
+      const animateCount1 = (timestamp: number) => {
         if (!startTime) startTime = timestamp;
         const progress = timestamp - startTime;
         const percentage = Math.min(progress / duration, 1);
@@ -76,9 +76,9 @@ const HomePage = () => {
       requestAnimationFrame(animateCount1);
       
       // Counter for 97%
-      let startTime2 = null;
+      let startTime2: number | null = null;
       const targetCount2 = 97;
-      const animateCount2 = (timestamp) => {
+      const animateCount2 = (timestamp: number) => {
         if (!startTime2) startTime2 = timestamp;
         const progress = timestamp - startTime2;
         const percentage = Math.min(progress / duration, 1);
@@ -90,9 +90,9 @@ const HomePage = () => {
       requestAnimationFrame(animateCount2);
       
       // Counter for 100%
-      let startTime3 = null;
+      let startTime3: number | null = null;
       const targetCount3 = 100;
-      const animateCount3 = (timestamp) => {
+      const animateCount3 = (timestamp: number) => {
         if (!startTime3) startTime3 = timestamp;
         const progress = timestamp - startTime3;
         const percentage = Math.min(progress / duration, 1);
@@ -159,7 +159,7 @@ const HomePage = () => {
   // Why Choose Us section animation variants
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: (i) => ({ 
+    visible: (i: number) => ({ 
       opacity: 1, 
       y: 0,
       transition: { 
@@ -173,7 +173,7 @@ const HomePage = () => {
   // Steps animation variants
   const stepVariants = {
     hidden: { opacity: 0, y: 15 },
-    visible: (i) => ({ 
+    visible: (i: number) => ({ 
       opacity: 1, 
       y: 0,
       transition: { 
@@ -187,7 +187,7 @@ const HomePage = () => {
   // Process step animation variants
   const processStepVariants = {
     hidden: { opacity: 0, y: 15 },
-    visible: (i) => ({ 
+    visible: (i: number) => ({ 
       opacity: 1, 
       y: 0,
       transition: { 
