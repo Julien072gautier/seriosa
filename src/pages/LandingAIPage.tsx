@@ -87,7 +87,7 @@ const LandingAIPage = () => {
     `;
 
     await sendEmail({
-      to: 'etienne@formaprobyaccertif.fr',
+      to: 'hello@formaprobyaccertif.fr',
       subject: "Contacts Landing Page IA",
       text: emailContent,
     });
