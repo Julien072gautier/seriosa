@@ -321,16 +321,8 @@ const FormationCommunityManagementPage = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white rounded-lg shadow-md p-6">
                 <h2 className="text-2xl font-bold mb-4">Public visé</h2>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <Users className="text-brand mr-3 mt-1 flex-shrink-0" size={20} />
-                    <span>Dirigeants de petites entreprises</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Users className="text-brand mr-3 mt-1 flex-shrink-0" size={20} />
-                    <span>Collaborateurs en charge de la communication marketing</span>
-                  </li>
-                </ul>
+                
+                <p className="text-gray-600">La formation et la certification s’adressent aux dirigeants de petites entreprises et collaborateurs directs chargés de la communication marketing souhaitant mettre en place une stratégie de community management en vue de développer l’activité de leur entreprise.</p>
               </div>
 
               <div className="bg-white rounded-lg shadow-md p-6">
@@ -408,7 +400,7 @@ const FormationCommunityManagementPage = () => {
                   <h3 className="text-xl font-semibold mb-2">
                     Développer son activité avec le Community Management
                   </h3>
-                  <p className="text-gray-600">Cette formation vous prépare à la certification « Développer son activité avec le Community Management » enregistrée par Webmarketing & Com auprès de France Compétences le 21/12/2023 sous le numéro RS6452 pour une durée de trois ans.</p>
+                  <p className="text-gray-600">Cette formation vous prépare à la certification « Développer son activité avec le Community Management » enregistrée par Webmarketing & Com auprès de France Compétences le 21/12/2023 sous le numéro RS6452 pour une durée de trois ans, attestant des compétences nécessaires à la mise en place d’une stratégie de communication sur les réseaux sociaux. A l’issue de la formation, le stagiaire s’engage à passer l’examen préparant à la certification.</p>
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
