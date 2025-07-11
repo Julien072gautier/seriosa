@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Nos Formations Professionnelles | FormaPro',
+  title: 'Nos Formations Professionnelles | FormaPro by Accertif',
   description: 'Découvrez toutes nos formations professionnelles certifiées Qualiopi : IA, langues étrangères, communication, community management. Formations éligibles CPF.',
   keywords: [
     'formations professionnelles',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'Qualiopi'
   ],
   openGraph: {
-    title: 'Nos Formations Professionnelles | FormaPro',
+    title: 'Nos Formations Professionnelles | FormaPro by Accertif',
     description: 'Découvrez toutes nos formations professionnelles certifiées Qualiopi : IA, langues étrangères, communication, community management.',
     type: 'website',
   },

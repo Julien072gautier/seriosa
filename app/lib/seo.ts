@@ -10,7 +10,7 @@ interface SEOData {
 
 export function generateFormationSEO(formationName: string, formationData: any): SEOData {
   return {
-    title: `Formation ${formationName} | FormaPro`,
+    title: `Formation ${formationName} | FormaPro by Accertif`,
     description: `Formation professionnelle ${formationName} certifiée Qualiopi. ${formationData.shortDescription} Éligible CPF. Inscrivez-vous dès maintenant.`,
     keywords: [
       `formation ${formationName.toLowerCase()}`,
@@ -30,7 +30,7 @@ export function generateFormationSEO(formationName: string, formationData: any):
       "description": formationData.fullDescription,
       "provider": {
         "@type": "EducationalOrganization",
-        "name": "FormaPro",
+        "name": "FormaPro by Accertif",
         "url": "https://www.formapro.fr"
       },
       "hasCourseInstance": {
@@ -58,24 +58,24 @@ export function generateFormationSEO(formationName: string, formationData: any):
 export function generatePageSEO(pageType: string, customData?: any): SEOData {
   const baseSEO = {
     website: {
-      title: 'FormaPro - Formation Professionnelle de Qualité | Certifiée Qualiopi',
-      description: 'FormaPro propose des formations professionnelles certifiées Qualiopi dans de nombreux domaines. Formations éligibles CPF avec un accompagnement personnalisé.',
+      title: 'FormaPro by Accertif - Formation Professionnelle de Qualité | Certifiée Qualiopi',
+      description: 'FormaPro by Accertif propose des formations professionnelles certifiées Qualiopi dans de nombreux domaines. Formations éligibles CPF avec un accompagnement personnalisé.',
       keywords: ['formation professionnelle', 'CPF', 'Qualiopi', 'intelligence artificielle', 'langues étrangères', 'communication']
     },
     formations: {
-      title: 'Toutes nos Formations Professionnelles | FormaPro',
+      title: 'Toutes nos Formations Professionnelles | FormaPro by Accertif',
       description: 'Découvrez toutes nos formations professionnelles certifiées Qualiopi : IA, langues étrangères, communication, community management. Éligibles CPF.',
       keywords: ['formations professionnelles', 'liste formations', 'catalogue formation', 'CPF', 'Qualiopi']
     },
     contact: {
-      title: 'Contactez-nous | FormaPro',
-      description: 'Contactez FormaPro pour plus d\'informations sur nos formations professionnelles. Notre équipe vous accompagne dans votre projet de formation.',
+      title: 'Contactez-nous | FormaPro by Accertif',
+      description: 'Contactez FormaPro by Accertif pour plus d\'informations sur nos formations professionnelles. Notre équipe vous accompagne dans votre projet de formation.',
       keywords: ['contact FormaPro', 'information formation', 'conseiller formation', 'accompagnement']
     },
     about: {
-      title: 'À Propos de FormaPro | Organisme de Formation Certifié',
+      title: 'À Propos de FormaPro by Accertif | Organisme de Formation Certifié',
       description: 'FormaPro by Accertif est un organisme de formation certifié Qualiopi. Découvrez notre histoire, nos valeurs et notre engagement qualité.',
-      keywords: ['FormaPro Accertif', 'organisme formation', 'Qualiopi', 'à propos', 'certification qualité']
+      keywords: ['FormaPro by Accertif', 'organisme formation', 'Qualiopi', 'à propos', 'certification qualité']
     }
   }
 

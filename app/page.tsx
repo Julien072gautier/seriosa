@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import HomePage from './components/HomePage'
 
 export const metadata: Metadata = {
-  title: 'FormaPro - Formation Professionnelle de Qualité | Certifiée Qualiopi',
+  title: 'FormaPro by Accertif - Formation Professionnelle de Qualité | Certifiée Qualiopi',
   description: 'Découvrez nos formations professionnelles certifiées Qualiopi : IA et vente, communication, community management, langues étrangères. Formations éligibles CPF avec un accompagnement personnalisé.',
   keywords: [
     'formation professionnelle',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'accompagnement formation'
   ],
   openGraph: {
-    title: 'FormaPro - Formation Professionnelle Certifiée Qualiopi',
+    title: 'FormaPro by Accertif - Formation Professionnelle Certifiée Qualiopi',
     description: 'Découvrez nos formations professionnelles certifiées Qualiopi dans l\'IA, la communication, les langues. Éligibles CPF.',
     url: 'https://www.formapro.fr',
     type: 'website',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FormaPro - Formation Professionnelle Certifiée Qualiopi',
+    title: 'FormaPro by Accertif - Formation Professionnelle Certifiée Qualiopi',
     description: 'Découvrez nos formations professionnelles certifiées Qualiopi dans l\'IA, la communication, les langues. Éligibles CPF.',
     images: ['/images/logos/formapro-og.jpg'],
   },

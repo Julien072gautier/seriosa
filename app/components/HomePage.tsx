@@ -410,173 +410,173 @@ const HomePage = () => {
             </p>
           </div>
           
-          {/* Featured Formations - New Structured Layout */}
+          {/* Featured Formations - Alignement parfait (hauteurs fixes) */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Formation 1 */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform h-full flex flex-col">
-              {/* Image on top */}
-              <div className="h-48 overflow-hidden">
+              {/* Image on top - Fixed height */}
+              <div className="h-48 overflow-hidden flex-shrink-0">
                 <img 
                   src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
                   alt="Communication professionnelle" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                {/* Domain icon and title */}
-                <div className="flex items-start mb-4">
+              <div className="p-6 flex flex-col flex-grow min-h-0">
+                {/* Bloc titre+icône */}
+                <div className="flex items-start mb-4 h-[64px]">
                   <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
                     <MessageSquare className="text-brand" size={20} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">Communiquer avec impact à l'oral en présentiel et à distance</h3>
+                  <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2">Communiquer avec impact à l'oral en présentiel et à distance</h3>
                 </div>
-                
                 {/* Description */}
-                <p className="text-gray-600 mb-5">
-                  Gagnez en aisance, maîtrisez votre stress et développez votre impact, que ce soit en présentiel ou à distance.
-                </p>
-                
-                {/* Key information with icons in a single row */}
-                <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3">
+                <div className="mb-5 h-[60px] flex items-center">
+                  <p className="text-gray-600 w-full overflow-hidden">
+                    Gagnez en aisance, maîtrisez votre stress et développez votre impact, que ce soit en présentiel ou à distance.
+                  </p>
+                </div>
+                {/* Infos */}
+                <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3 h-[48px]">
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
-                    <Clock size={16} className="mr-2 text-brand-600" />
+                    <Clock size={16} className="mr-2 text-brand-600 flex-shrink-0" />
                     <span>21 heures</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
-                    <Tag size={16} className="mr-2 text-brand-600" />
+                    <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
                     <span>2450€</span>
                   </div>
                   <div className="flex items-center text-sm text-green-600 font-medium mr-3 mb-2">
-                    <CreditCard size={16} className="mr-2 text-green-600" />
+                    <CreditCard size={16} className="mr-2 text-green-600 flex-shrink-0" />
                     <span>Éligible CPF</span>
                   </div>
                 </div>
-                
-                {/* Certification information */}
-                <div className="flex items-center text-sm text-gray-600 mb-5">
-                  <Award size={16} className="mr-2 text-brand-600" />
+                {/* Certification */}
+                <div className="flex items-center text-sm text-gray-600 mb-5 h-[28px]">
+                  <Award size={16} className="mr-2 text-brand-600 flex-shrink-0" />
                   <span>Certifié par Pollen Conseil</span>
                 </div>
-                
-                {/* CTA Button - Modified to be thinner */}
-                <Link 
-                  href="/formation/communication-prise-parole" 
-                  className="btn-primary btn-md btn-with-icon w-full mt-auto"
-                >
-                  Découvrir cette Form'actions <ArrowRight size={14} className="ml-2" />
-                </Link>
+                {/* Bouton */}
+                <div className="mt-auto flex-shrink-0">
+                  <Link 
+                    href="/formation/communication-prise-parole" 
+                    className="btn-primary btn-md btn-with-icon w-full"
+                  >
+                    Découvrir cette Form'actions <ArrowRight size={14} className="ml-2" />
+                  </Link>
+                </div>
               </div>
             </div>
 
             {/* Formation 2 */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform h-full flex flex-col">
-              {/* Image on top */}
-              <div className="h-48 overflow-hidden">
+              {/* Image on top - Fixed height */}
+              <div className="h-48 overflow-hidden flex-shrink-0">
                 <img 
                   src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
                   alt="Intelligence Artificielle pour le marketing" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                {/* Domain icon and title */}
-                <div className="flex items-start mb-4">
+              <div className="p-6 flex flex-col flex-grow min-h-0">
+                {/* Bloc titre+icône */}
+                <div className="flex items-start mb-4 h-[64px]">
                   <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
                     <Zap className="text-brand" size={20} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">Intégrer l'Intelligence Artificielle conversationnelle dans le cycle de vente</h3>
+                  <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2">Intégrer l'IA conversationnelle dans le cycle de vente</h3>
                 </div>
-                
                 {/* Description */}
-                <p className="text-gray-600 mb-5">
-                  Automatisez vos processus, optimisez vos ventes et engagez mieux vos clients grâce à l'IA conversationnelle.
-                </p>
-                
-                {/* Key information with icons in a single row */}
-                <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3">
+                <div className="mb-5 h-[60px] flex items-center">
+                  <p className="text-gray-600 w-full overflow-hidden">
+                    Automatisez vos processus, optimisez vos ventes et engagez mieux vos clients grâce à l'IA conversationnelle.
+                  </p>
+                </div>
+                {/* Infos */}
+                <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3 h-[48px]">
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
-                    <Clock size={16} className="mr-2 text-brand-600" />
+                    <Clock size={16} className="mr-2 text-brand-600 flex-shrink-0" />
                     <span>21 heures</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
-                    <Tag size={16} className="mr-2 text-brand-600" />
+                    <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
                     <span>2450€</span>
                   </div>
                   <div className="flex items-center text-sm text-green-600 font-medium mr-3 mb-2">
-                    <CreditCard size={16} className="mr-2 text-green-600" />
+                    <CreditCard size={16} className="mr-2 text-green-600 flex-shrink-0" />
                     <span>Éligible CPF</span>
                   </div>
                 </div>
-                
-                {/* Certification information */}
-                <div className="flex items-center text-sm text-gray-600 mb-5">
-                  <Award size={16} className="mr-2 text-brand-600" />
-                  <span>Certifié par Online Sales Success </span>
+                {/* Certification */}
+                <div className="flex items-center text-sm text-gray-600 mb-5 h-[28px]">
+                  <Award size={16} className="mr-2 text-brand-600 flex-shrink-0" />
+                  <span>Certifié par Online Sales Success</span>
                 </div>
-                
-                {/* CTA Button - Modified to be thinner */}
-                <Link 
-                  href="/formation/ia-vente" 
-                  className="btn-primary btn-md btn-with-icon w-full mt-auto"
-                >
-                  Découvrir cette Form'action <ArrowRight size={14} className="ml-2" />
-                </Link>
+                {/* Bouton */}
+                <div className="mt-auto flex-shrink-0">
+                  <Link 
+                    href="/formation/ia-vente" 
+                    className="btn-primary btn-md btn-with-icon w-full"
+                  >
+                    Découvrir cette Form'action <ArrowRight size={14} className="ml-2" />
+                  </Link>
+                </div>
               </div>
             </div>
 
             {/* Formation 3 */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform h-full flex flex-col">
-              {/* Image on top */}
-              <div className="h-48 overflow-hidden">
+              {/* Image on top - Fixed height */}
+              <div className="h-48 overflow-hidden flex-shrink-0">
                 <img 
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
                   alt="Stratégie digitale et réseaux sociaux" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                {/* Domain icon and title */}
-                <div className="flex items-start mb-4">
+              <div className="p-6 flex flex-col flex-grow min-h-0">
+                {/* Bloc titre+icône */}
+                <div className="flex items-start mb-4 h-[64px]">
                   <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
                     <BarChart3 className="text-brand" size={20} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800">Développer son activité avec le Webmarketing et une stratégie adaptée</h3>
+                  <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2">Développer son activité avec le Webmarketing</h3>
                 </div>
-                
                 {/* Description */}
-                <p className="text-gray-600 mb-5">
-                  Élaborez une stratégie digitale efficace et maîtrisez les leviers des réseaux sociaux pour votre présence en ligne.
-                </p>
-                
-                {/* Key information with icons in a single row */}
-                <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3">
+                <div className="mb-5 h-[60px] flex items-center">
+                  <p className="text-gray-600 w-full overflow-hidden">
+                    Élaborez une stratégie digitale efficace et maîtrisez les leviers des réseaux sociaux pour votre présence en ligne.
+                  </p>
+                </div>
+                {/* Infos */}
+                <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3 h-[48px]">
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
-                    <Clock size={16} className="mr-2 text-brand-600" />
+                    <Clock size={16} className="mr-2 text-brand-600 flex-shrink-0" />
                     <span>21 heures</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
-                    <Tag size={16} className="mr-2 text-brand-600" />
+                    <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
                     <span>2450€</span>
                   </div>
                   <div className="flex items-center text-sm text-green-600 font-medium mr-3 mb-2">
-                    <CreditCard size={16} className="mr-2 text-green-600" />
+                    <CreditCard size={16} className="mr-2 text-green-600 flex-shrink-0" />
                     <span>Éligible CPF</span>
                   </div>
                 </div>
-                
-                {/* Certification information */}
-                <div className="flex items-center text-sm text-gray-600 mb-5">
-                  <Award size={16} className="mr-2 text-brand-600" />
-                  <span>Certifié par Webmarketing & Com </span>
+                {/* Certification */}
+                <div className="flex items-center text-sm text-gray-600 mb-5 h-[28px]">
+                  <Award size={16} className="mr-2 text-brand-600 flex-shrink-0" />
+                  <span>Certifié par Webmarketing & Com</span>
                 </div>
-                
-                {/* CTA Button - Modified to be thinner */}
-                <Link 
-                  href="/formation/community-management" 
-                  className="btn-primary btn-md btn-with-icon w-full mt-auto"
-                >
-                  Découvrir cette Form'action <ArrowRight size={14} className="ml-2" />
-                </Link>
+                {/* Bouton */}
+                <div className="mt-auto flex-shrink-0">
+                  <Link 
+                    href="/formation/community-management" 
+                    className="btn-primary btn-md btn-with-icon w-full"
+                  >
+                    Découvrir cette Form'action <ArrowRight size={14} className="ml-2" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

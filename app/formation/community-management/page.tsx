@@ -374,20 +374,15 @@ function FormationCommunityManagementPage() {
 
               <div className="bg-white rounded-lg shadow-md p-6">
                 <h2 className="text-2xl font-bold mb-4">Modalités d&apos;évaluation</h2>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-brand mr-3 mt-1 flex-shrink-0" size={20} />
-                    <span>Évaluation des compétences en début et fin de formation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-brand mr-3 mt-1 flex-shrink-0" size={20} />
-                    <span>Évaluations intermédiaires à la fin de chaque module</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-brand mr-3 mt-1 flex-shrink-0" size={20} />
-                    <span>Feuilles de présence et certificat de réalisation</span>
-                  </li>
-                </ul>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-gray-600 mb-3">Mise en situation réelle portant sur l&apos;élaboration d&apos;une stratégie de community management avec remise de rapport et soutenance orale.</p>
+                    <ul className="space-y-2 text-sm text-gray-600">
+                      <li>• Le candidat a 15 jours de préparation avant la remise de ses écrits</li>
+                      <li>• L&apos;écrit est ensuite suivi d&apos;une présentation orale de 25 minutes devant un jury</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -397,63 +392,73 @@ function FormationCommunityManagementPage() {
             <div className="bg-white rounded-lg shadow-md p-8">
               <h2 className="text-2xl font-bold mb-6">Certification</h2>
               <div className="flex items-center mb-6">
-                <Award className="text-brand mr-4" size={48} />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">
-                    Développer son activité avec le Community Management
-                  </h3>
-                  <p className="text-gray-600">Cette formation vous prépare à la certification « Développer son activité avec le Community Management » enregistrée par Webmarketing & Com auprès de France Compétences le 21/12/2023 sous le numéro RS6452 pour une durée de trois ans, attestant des compétences nécessaires à la mise en place d’une stratégie de communication sur les réseaux sociaux. A l’issue de la formation, le stagiaire s’engage à passer l’examen préparant à la certification.</p>
+                  <p className="text-gray-600">Cette formation prépare à la certification "Développer son activité avec le community management" enregistrée à France Compétences sous le numéro <a href="https://www.francecompetences.fr/recherche/rs/6452/" target="_blank" rel="noopener noreferrer" className="text-brand hover:text-brand-600 underline">RS6452</a> par l'organisme certificateur <a href="https://www.webmarketing-com.com/" target="_blank" rel="noopener noreferrer" className="text-brand hover:text-brand-600 underline">Webmarketing & Com</a>.</p>
+                  <p className="text-gray-600 mt-3">A l'issue de la formation, le stagiaire s'engage à passer l'examen préparant à la certification.</p>
                 </div>
               </div>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="font-semibold mb-4">Statistiques</h4>
+                <div className="bg-brand-50 p-6 rounded-lg">
+                  <p className="text-brand-800 font-medium mb-2 text-lg">Taux de réussite : 100%</p>
+                  <p className="text-gray-600">Données basées sur les candidats ayant préparé la certification "Développer son activité avec le community management" auprès de notre organisme de formation</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Processus de candidature */}
+          <section className="mb-12">
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <div className="flex items-center mb-6">
+                <div className="bg-brand-100 p-3 rounded-full mr-4">
+                  <Users className="text-brand" size={24} />
+                </div>
+                <h2 className="text-2xl font-bold">Processus de candidature</h2>
+              </div>
+              
+              <div className="mb-8">
+                <div className="mb-6">
+                  <h3 className="font-semibold mb-4 text-lg text-gray-800">Comment s&apos;inscrire ?</h3>
+                  <p className="text-gray-600 mb-4">Afin de s&apos;inscrire à la certification, le candidat devra transmettre son dossier de candidature accompagné d&apos;un CV à jour.</p>
+                </div>
+                
                 <div>
-                  <h4 className="font-semibold mb-2">Modalités de certification</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <CheckCircle className="text-brand mr-3 mt-1 flex-shrink-0" size={20} />
-                      <span>Mise en situation professionnelle avec soutenance orale</span>
+                  <h3 className="font-semibold mb-3 text-lg text-gray-800">Documents requis</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-center">
+                      <CheckCircle className="text-brand mr-2 flex-shrink-0" size={16} />
+                      <span>Dossier de candidature complet</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-brand mr-3 mt-1 flex-shrink-0" size={20} />
-                      <span>Présentation de la stratégie éditoriale</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="text-brand mr-3 mt-1 flex-shrink-0" size={20} />
-                      <span>Analyse des actions et outils utilisés</span>
+                    <li className="flex items-center">
+                      <CheckCircle className="text-brand mr-2 flex-shrink-0" size={16} />
+                      <span>CV à jour</span>
                     </li>
                   </ul>
                 </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Statistiques</h4>
-                  <div className="bg-brand-50 p-4 rounded-lg">
-                    <p className="text-brand-800 font-medium mb-2">Taux de réussite : 95%</p>
-                    <p className="text-gray-600">Données basées sur les certifications de l&apos;année en cours</p>
+              </div>
+
+              {/* Section Accessibilité */}
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">
+                <div className="flex items-start">
+                  <div className="bg-green-100 p-3 rounded-full mr-4 flex-shrink-0">
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <span className="text-green-700 font-bold text-sm">♿</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold mb-3 text-lg text-green-800">Adaptation des conditions d&apos;examen aux personnes en situation de handicap</h3>
+                    <p className="text-green-700 mb-4">
+                      Le référent handicap prendra en compte dès l&apos;inscription du candidat sa situation de handicap, si celle-ci est mentionnée. Il sera alors proposé au candidat un entretien afin d&apos;envisager avec lui les aménagements qui pourront être apportés.
+                    </p>
+                    
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Accessibilité */}
-          <section className="mb-12">
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <h2 className="text-2xl font-bold mb-6">Accessibilité et inclusion</h2>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <Calendar className="text-brand mr-3 mt-1 flex-shrink-0" size={20} />
-                  <span>Formation accessible sous 15 jours après inscription</span>
-                </li>
-                <li className="flex items-start">
-                  <Users className="text-brand mr-3 mt-1 flex-shrink-0" size={20} />
-                  <span>Adaptations possibles sur demande pour les personnes en situation de handicap</span>
-                </li>
-                <li className="flex items-start">
-                  <MessageSquare className="text-brand mr-3 mt-1 flex-shrink-0" size={20} />
-                  <span>Assistance à la connexion en cas de visioconférence via Microsoft Teams</span>
-                </li>
-              </ul>
-            </div>
-          </section>
+          
 
           {/* CTA Section */}
           <section className="text-center bg-white rounded-lg shadow-md p-8">
