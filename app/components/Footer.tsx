@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <div className="mb-4">
@@ -67,6 +67,38 @@ const Footer = () => {
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/demande-formation" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  Demande de Formation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Formations Principales */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Formations Populaires</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/formation/anglais-professionnel" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  Anglais Professionnel
+                </Link>
+              </li>
+              <li>
+                <Link href="/formation/ia-vente" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  IA et Vente
+                </Link>
+              </li>
+              <li>
+                <Link href="/formation/communication-prise-parole" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  Communication et Prise de Parole
+                </Link>
+              </li>
+              <li>
+                <Link href="/formation/community-management" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  Community Management
                 </Link>
               </li>
             </ul>

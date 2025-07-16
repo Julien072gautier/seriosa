@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'FormaPro by Accertif - Formation Professionnelle Certifiée Qualiopi',
     description: 'Découvrez nos formations professionnelles certifiées Qualiopi dans l\'IA, la communication, les langues. Éligibles CPF.',
-    url: 'https://www.formapro.fr',
+    url: 'https://www.formaprobyaccertif.fr',
     type: 'website',
     images: [
       {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     images: ['/images/logos/formapro-og.jpg'],
   },
   alternates: {
-    canonical: 'https://www.formapro.fr',
+    canonical: 'https://www.formaprobyaccertif.fr',
   },
 }
 

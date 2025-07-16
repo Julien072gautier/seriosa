@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { Clock, Award, Users, CheckCircle, ArrowRight, Calendar, Phone, X, Tag, MessageSquare, Target, Brain, Star, Globe, BookOpen } from 'lucide-react'
 import { useSendEmail } from '../../hooks/useSendEmail'
+import { FormationJsonLd } from '../../components/JsonLd'
 
 function FormationAnglaisPage() {
   const [selectedModality, setSelectedModality] = useState<'individuel' | 'collectif'>('individuel')
@@ -44,7 +45,9 @@ function FormationAnglaisPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <FormationJsonLd formationSlug="anglais-professionnel" />
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-brand-600 to-brand text-white py-16">
         <div className="container mx-auto px-4">
@@ -86,7 +89,7 @@ function FormationAnglaisPage() {
               <div className="md:w-1/2">
                 <img 
                   src="https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Anglais.png"
-                  alt="Formation Anglais Professionnel" 
+                  alt="Formation Anglais Professionnel - Développez vos compétences linguistiques pour communiquer efficacement en anglais dans un contexte professionnel" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -589,6 +592,7 @@ function FormationAnglaisPage() {
         </div>
       )}
     </div>
+    </>
   )
 }
 
