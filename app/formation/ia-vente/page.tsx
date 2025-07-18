@@ -415,7 +415,7 @@ function FormationAIVentePage() {
                   <div>
                     <h4 className="font-semibold mb-2">Statistiques</h4>
                     <div className="bg-brand-50 p-4 rounded-lg">
-                      <p className="text-brand-800 font-medium mb-2">Taux de réussite : 80 % </p>
+                      <p className="text-brand-800 font-medium mb-2">Taux de réussite : 100 % </p>
                       <p className="text-gray-600">Données basées sur les certifications de l'année en cours</p>
                     </div>
                   </div>
