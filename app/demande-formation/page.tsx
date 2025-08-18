@@ -7,10 +7,14 @@ import { CheckCircle, Users, BookOpen, MessageSquare, School } from 'lucide-reac
 const FormulaireBesoinPage = () => {
   const [formData, setFormData] = useState({
     trainingType: 'individuelle',
+    formation: '',
     modality: '',
     modalityDetail: '',
-    name: '',
+    gender: '',
+    firstName: '',
+    lastName: '',
     email: '',
+    phone: '',
   });
 
   const { sendEmail, loading, error, success } = useSendEmail();
@@ -23,11 +27,15 @@ const FormulaireBesoinPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const emailContent = `
+      Formation souhaitée : ${formData.formation}
       Type de formation : ${formData.trainingType}
       Modalité : ${formData.modality}
       ${formData.modality === 'mixte' ? `Détail modalité : ${formData.modalityDetail}` : ''}
-      Nom : ${formData.name}
+      Genre : ${formData.gender}
+      Prénom : ${formData.firstName}
+      Nom : ${formData.lastName}
       Email : ${formData.email}
+      Téléphone : ${formData.phone}
     `;
 
     await sendEmail({
@@ -39,13 +47,35 @@ const FormulaireBesoinPage = () => {
     if (success) {
       setFormData({
         trainingType: 'individuelle',
+        formation: '',
         modality: '',
         modalityDetail: '',
-        name: '',
+        gender: '',
+        firstName: '',
+        lastName: '',
         email: '',
+        phone: '',
       });
     }
   };
+
+  const formations = [
+    { value: 'allemand-professionnel', label: 'Allemand professionnel' },
+    { value: 'anglais-professionnel', label: 'Anglais professionnel' },
+    { value: 'arabe-professionnel', label: 'Arabe professionnel' },
+    { value: 'chinois-professionnel', label: 'Chinois professionnel' },
+    { value: 'communication-prise-parole', label: 'Communication et prise de parole' },
+    { value: 'community-management', label: 'Community Management' },
+    { value: 'espagnol-professionnel', label: 'Espagnol professionnel' },
+    { value: 'francais-professionnel', label: 'Français professionnel' },
+    { value: 'ia-vente', label: 'IA et vente' },
+    { value: 'italien-professionnel', label: 'Italien professionnel' },
+    { value: 'japonais-professionnel', label: 'Japonais professionnel' },
+    { value: 'langue-des-signes', label: 'Langue des signes' },
+    { value: 'portugais-professionnel', label: 'Portugais professionnel' },
+    { value: 'russe-professionnel', label: 'Russe professionnel' },
+    { value: 'autre', label: 'Autre formation (à préciser)' },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -62,6 +92,28 @@ const FormulaireBesoinPage = () => {
           {/* Form Card */}
           <div className="bg-white rounded-lg shadow-md p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Formation Selection */}
+              <div>
+                <label htmlFor="formation" className="block text-gray-700 font-medium mb-2">
+                  Formation souhaitée *
+                </label>
+                <select
+                  id="formation"
+                  name="formation"
+                  value={formData.formation}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+                  required
+                >
+                  <option value="">Sélectionnez une formation</option>
+                  {formations.map((formation) => (
+                    <option key={formation.value} value={formation.label}>
+                      {formation.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
               {/* Training Type */}
               <div>
                 <label className="block text-gray-700 font-medium mb-2">
@@ -215,24 +267,85 @@ const FormulaireBesoinPage = () => {
 
               {/* Contact Information */}
               <div className="space-y-4 pt-6 border-t border-gray-200">
+                {/* Gender */}
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-                    Nom complet
+                  <label className="block text-gray-700 font-medium mb-2">
+                    Genre *
                   </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-                    required
-                  />
+                  <div className="grid grid-cols-2 gap-4">
+                    <label className={`
+                      flex items-center justify-center p-4 rounded-lg border-2 cursor-pointer transition-all
+                      ${formData.gender === 'M' 
+                        ? 'border-brand bg-brand-50 text-brand' 
+                        : 'border-gray-200 hover:border-brand-200'}
+                    `}>
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="M"
+                        checked={formData.gender === 'M'}
+                        onChange={handleChange}
+                        className="hidden"
+                        required
+                      />
+                      <span>Monsieur</span>
+                    </label>
+                    <label className={`
+                      flex items-center justify-center p-4 rounded-lg border-2 cursor-pointer transition-all
+                      ${formData.gender === 'F' 
+                        ? 'border-brand bg-brand-50 text-brand' 
+                        : 'border-gray-200 hover:border-brand-200'}
+                    `}>
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="F"
+                        checked={formData.gender === 'F'}
+                        onChange={handleChange}
+                        className="hidden"
+                        required
+                      />
+                      <span>Madame</span>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Name Fields */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="firstName" className="block text-gray-700 font-medium mb-2">
+                      Prénom *
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="lastName" className="block text-gray-700 font-medium mb-2">
+                      Nom *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+                      required
+                    />
+                  </div>
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                    Email
+                    Email *
                   </label>
                   <input
                     type="email"
@@ -241,6 +354,22 @@ const FormulaireBesoinPage = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
+                    Téléphone *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+                    placeholder="06 12 34 56 78"
                     required
                   />
                 </div>
@@ -264,10 +393,10 @@ const FormulaireBesoinPage = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={loading || !formData.modality || (!formData.modalityDetail && formData.modality === 'mixte')}
+                disabled={loading || !formData.formation || !formData.modality || (!formData.modalityDetail && formData.modality === 'mixte') || !formData.gender || !formData.firstName || !formData.lastName || !formData.email || !formData.phone}
                 className={`
                   w-full py-3 px-4 rounded-md font-medium text-white transition-all
-                  ${loading || !formData.modality || (!formData.modalityDetail && formData.modality === 'mixte')
+                  ${loading || !formData.formation || !formData.modality || (!formData.modalityDetail && formData.modality === 'mixte') || !formData.gender || !formData.firstName || !formData.lastName || !formData.email || !formData.phone
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'bg-brand hover:bg-brand-600'}
                 `}
