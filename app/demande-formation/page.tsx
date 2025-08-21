@@ -104,7 +104,7 @@ PRENOM: ${formData.firstName}
 NOM: ${formData.lastName}
 EMAIL: ${formData.email}
 TELEPHONE: ${formData.phone}
-FORMATION: ${formData.formation === 'autre' ? 'Autre formation (à préciser)' : formData.formation}
+FORMATION: ${formData.formation === 'autre' ? 'Autre formation (à préciser)' : formations.find(f => f.value === formData.formation)?.label || formData.formation}
 ${formData.formation === 'autre' ? `FORMATION_PERSONNALISEE: ${formData.autreFormation}` : ''}
 TYPE_FORMATION: ${formData.trainingType}
 MODALITE: ${formData.modality}
@@ -176,7 +176,7 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
                 >
                   <option value="">Sélectionnez une formation</option>
                   {formations.map((formation) => (
-                    <option key={formation.value} value={formation.label}>
+                    <option key={formation.value} value={formation.value}>
                       {formation.label}
                     </option>
                   ))}
@@ -507,10 +507,10 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={loading || !formData.formation || !formData.modality || (!formData.modalityDetail && formData.modality === 'mixte') || !formData.gender || !formData.firstName || !formData.lastName || !formData.email || !formData.phone}
+                disabled={loading || !formData.formation || !formData.modality || (!formData.modalityDetail && formData.modality === 'mixte') || !formData.gender || !formData.firstName || !formData.lastName || !formData.email || !formData.phone || (formData.formation === 'autre' && !formData.autreFormation.trim())}
                 className={`
                   w-full py-3 px-4 rounded-md font-medium text-white transition-all
-                  ${loading || !formData.formation || !formData.modality || (!formData.modalityDetail && formData.modality === 'mixte') || !formData.gender || !formData.firstName || !formData.lastName || !formData.email || !formData.phone
+                  ${loading || !formData.formation || !formData.modality || (!formData.modalityDetail && formData.modality === 'mixte') || !formData.gender || !formData.firstName || !formData.lastName || !formData.email || !formData.phone || (formData.formation === 'autre' && !formData.autreFormation.trim())
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'bg-brand hover:bg-brand-600'}
                 `}
