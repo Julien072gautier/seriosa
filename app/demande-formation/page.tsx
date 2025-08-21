@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useSendEmail } from '../hooks/useSendEmail';
-import { CheckCircle, Users, BookOpen, MessageSquare, School } from 'lucide-react';
+import { Users, BookOpen, MessageSquare, School } from 'lucide-react';
 import { validateForm, ValidationErrors, formatPhoneNumber } from '../lib/validation';
 
 const FormulaireBesoinPage = () => {
@@ -502,13 +502,7 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
                 </div>
               )}
 
-              {/* Success Message */}
-              {success && (
-                <div className="p-4 bg-green-50 text-green-700 rounded-md flex items-center">
-                  <CheckCircle className="mr-2" size={20} />
-                  <span>Votre demande a été envoyée avec succès !</span>
-                </div>
-              )}
+
 
               {/* Submit Button */}
               <button
