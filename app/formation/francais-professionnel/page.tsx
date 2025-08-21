@@ -47,7 +47,7 @@ const FormationFrancaisPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
-                  onClick={() => setIsInfoModalOpen(true))
+                  onClick={() => setIsInfoModalOpen(true)}
                   className="bg-white text-brand-700 hover:bg-gray-100 font-medium py-3 px-6 rounded-md transition-colors flex items-center justify-center"
                 >
                   <MessageSquare size={18} className="mr-2" />
