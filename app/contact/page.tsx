@@ -91,9 +91,9 @@ EMAIL: ${formData.email}
 TELEPHONE: ${formData.phone}
 SUJET: ${formData.subject}
 MESSAGE: ${formData.message}`;
-    await sendEmail({ to: 'hello@formaprobyaccertif.fr', subject: formData.subject, text: data });
+    const result = await sendEmail({ to: 'hello@formaprobyaccertif.fr', subject: formData.subject, text: data });
     
-    // Redirection vers la page de remerciement
+    // Redirection vers la page de remerciement après envoi réussi
     window.location.href = '/merci';
   };
 

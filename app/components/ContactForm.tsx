@@ -101,16 +101,14 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
   hour: '2-digit',
   minute: '2-digit'
 })}`;
-    await sendEmail({
+    const result = await sendEmail({
       to: 'hello@formaprobyaccertif.fr',
       subject: `Demande d'information - Formation ${formationName}`,
       text: data
     });
 
-    if (success) {
-      // Redirection vers la page de remerciement
-      window.location.href = '/merci';
-    }
+    // Redirection vers la page de remerciement après envoi réussi
+    window.location.href = '/merci';
   };
 
   if (!isOpen) return null;

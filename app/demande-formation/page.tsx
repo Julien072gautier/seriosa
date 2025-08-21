@@ -76,7 +76,7 @@ const FormulaireBesoinPage = () => {
     });
     
     // Validation spéciale pour "autre formation"
-    if (formData.formation === 'Autre formation (à préciser)' && !formData.autreFormation.trim()) {
+    if (formData.formation === 'autre' && !formData.autreFormation.trim()) {
       setValidationErrors({ ...errors });
       setTouched({
         firstName: true,
@@ -104,8 +104,8 @@ PRENOM: ${formData.firstName}
 NOM: ${formData.lastName}
 EMAIL: ${formData.email}
 TELEPHONE: ${formData.phone}
-FORMATION: ${formData.formation}
-${formData.formation === 'Autre formation (à préciser)' ? `FORMATION_PERSONNALISEE: ${formData.autreFormation}` : ''}
+FORMATION: ${formData.formation === 'autre' ? 'Autre formation (à préciser)' : formData.formation}
+${formData.formation === 'autre' ? `FORMATION_PERSONNALISEE: ${formData.autreFormation}` : ''}
 TYPE_FORMATION: ${formData.trainingType}
 MODALITE: ${formData.modality}
 ${formData.modality === 'mixte' ? `DETAIL_MODALITE: ${formData.modalityDetail}` : ''}
@@ -117,16 +117,14 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
   minute: '2-digit'
 })}`;
 
-    await sendEmail({
+    const result = await sendEmail({
       to: 'hello@formaprobyaccertif.fr',
       subject: "Demande de formation personnalisée - FORMAPRO by Accertif",
       text: emailContent
     });
 
-    if (success) {
-      // Redirection vers la page de remerciement
-      window.location.href = '/merci';
-    }
+    // Redirection vers la page de remerciement après envoi réussi
+    window.location.href = '/merci';
   };
 
   const formations = [
@@ -189,7 +187,7 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
               </div>
 
               {/* Champ "Autre formation" conditionnel */}
-              {formData.formation === 'Autre formation (à préciser)' && (
+              {formData.formation === 'autre' && (
                 <div>
                   <label htmlFor="autreFormation" className="block text-gray-700 font-medium mb-2">
                     Précisez la formation recherchée *
