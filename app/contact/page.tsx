@@ -84,33 +84,17 @@ const ContactPage = () => {
       return;
     }
     
-    let data = `INFORMATIONS PERSONNELLES :
-Genre : ${formData.gender}
-Prénom : ${formData.firstName}
-Nom : ${formData.lastName}
-Email : ${formData.email}
-Téléphone : ${formData.phone}
-
-INFORMATIONS DE CONTACT :
-Sujet : ${formData.subject}
-
-MESSAGE :
-${formData.message}`;
+    let data = `GENRE: ${formData.gender}
+PRENOM: ${formData.firstName}
+NOM: ${formData.lastName}
+EMAIL: ${formData.email}
+TELEPHONE: ${formData.phone}
+SUJET: ${formData.subject}
+MESSAGE: ${formData.message}`;
     await sendEmail({ to: 'hello@formaprobyaccertif.fr', subject: formData.subject, text: data });
-    setIsSubmitted(true);
     
-    // Reset form after submission
-    setFormData({
-      gender: '',
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
-    });
-    setValidationErrors({});
-    setTouched({});
+    // Redirection vers la page de remerciement
+    window.location.href = '/merci';
   };
 
   return (

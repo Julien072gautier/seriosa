@@ -1,21 +1,17 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Award, Zap, MessageSquare, BarChart3, Phone, Clock, Tag, CreditCard, Star, PenTool as Tool, Wallet, Search } from 'lucide-react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useSendEmail } from '../hooks/useSendEmail';
+
+import { useStatsAnimation } from '../hooks/useStatsAnimation';
+import { STATS_CONFIG } from '../lib/stats-config';
 
 const HomePage = () => {
 
-  const [contactFormData, setContactFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
-  const { sendEmail, loading, error, success } = useSendEmail();
+
   
   // Animation controls
   const controls = useAnimation();
@@ -42,104 +38,19 @@ const HomePage = () => {
     threshold: 0.1,
   });
   
-  // Stats counter state
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0);
-  const [count3, setCount3] = useState(0);
+  // Stats animation hook
+  const { count1, count2, count3 } = useStatsAnimation(inView);
   
   // Start animations when section is in view
   useEffect(() => {
     if (inView) {
       controls.start('visible');
-      
-      // Animate counters
-      const duration = 2000; // 2 seconds
-      const interval = 20; // Update every 20ms
-      
-      // Counter for +280 apprenants
-      let startTime: number | null = null;
-      const targetCount1 = 280;
-      const animateCount1 = (timestamp: number) => {
-        if (!startTime) startTime = timestamp;
-        const progress = timestamp - startTime;
-        const percentage = Math.min(progress / duration, 1);
-        setCount1(Math.floor(percentage * targetCount1));
-        if (percentage < 1) {
-          requestAnimationFrame(animateCount1);
-        }
-      };
-      requestAnimationFrame(animateCount1);
-      
-      // Counter for 97%
-      let startTime2: number | null = null;
-      const targetCount2 = 97;
-      const animateCount2 = (timestamp: number) => {
-        if (!startTime2) startTime2 = timestamp;
-        const progress = timestamp - startTime2;
-        const percentage = Math.min(progress / duration, 1);
-        setCount2(Math.floor(percentage * targetCount2));
-        if (percentage < 1) {
-          requestAnimationFrame(animateCount2);
-        }
-      };
-      requestAnimationFrame(animateCount2);
-      
-      // Counter for 100%
-      let startTime3: number | null = null;
-      const targetCount3 = 100;
-      const animateCount3 = (timestamp: number) => {
-        if (!startTime3) startTime3 = timestamp;
-        const progress = timestamp - startTime3;
-        const percentage = Math.min(progress / duration, 1);
-        setCount3(Math.floor(percentage * targetCount3));
-        if (percentage < 1) {
-          requestAnimationFrame(animateCount3);
-        }
-      };
-      requestAnimationFrame(animateCount3);
     }
   }, [inView, controls]);
 
 
 
-  const handleContactChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setContactFormData(prev => ({ ...prev, [name]: value }));
-  };
 
-  const handleContactSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const data = `INFORMATIONS PERSONNELLES :
-Nom : ${contactFormData.name}
-Email : ${contactFormData.email}
-Téléphone : ${contactFormData.phone}
-
-MESSAGE :
-${contactFormData.message}
-
-DATE D'ENVOI :
-${new Date().toLocaleDateString('fr-FR', { 
-  day: '2-digit', 
-  month: '2-digit', 
-  year: 'numeric',
-  hour: '2-digit',
-  minute: '2-digit'
-})}`;
-    await sendEmail({
-      to: 'hello@formaprobyaccertif.fr',
-      subject: "Contact - FORMAPRO by Accertif",
-      text: data
-    });
-
-    if (success) {
-      setContactFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-      });
-    }
-  };
 
 
   
@@ -276,15 +187,15 @@ ${new Date().toLocaleDateString('fr-FR', {
             >
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
                 <div className="text-2xl font-bold">+{count1}</div>
-                <div className="text-sm">apprenants formés</div>
+                <div className="text-sm">{STATS_CONFIG.apprenantsFormesLabel}</div>
               </div>
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
                 <div className="text-2xl font-bold">{count2}%</div>
-                <div className="text-sm">ont acquis de nouvelles compétences</div>
+                <div className="text-sm">{STATS_CONFIG.satisfactionLabel}</div>
               </div>
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
                 <div className="text-2xl font-bold">{count3}%</div>
-                <div className="text-sm">finançable</div>
+                <div className="text-sm">{STATS_CONFIG.financementLabel}</div>
               </div>
             </motion.div>
             

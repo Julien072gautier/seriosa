@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useSendEmail } from '../hooks/useSendEmail';
 import { validateForm, ValidationErrors } from '../lib/validation';
-import { CheckCircle, X } from 'lucide-react';
+import { X } from 'lucide-react';
 
 interface ContactFormProps {
   formationName: string;
@@ -88,18 +88,13 @@ const ContactForm: React.FC<ContactFormProps> = ({ formationName, onClose, isOpe
       return;
     }
     
-    const data = `INFORMATIONS PERSONNELLES :
-Genre : ${formData.gender}
-Prénom : ${formData.firstName}
-Nom : ${formData.lastName}
-Email : ${formData.email}
-Téléphone : ${formData.phone}
-
-FORMATION DEMANDÉE :
-${formationName}
-
-DATE D'ENVOI :
-${new Date().toLocaleDateString('fr-FR', { 
+    const data = `GENRE: ${formData.gender}
+PRENOM: ${formData.firstName}
+NOM: ${formData.lastName}
+EMAIL: ${formData.email}
+TELEPHONE: ${formData.phone}
+FORMATION_DEMANDEE: ${formationName}
+DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', { 
   day: '2-digit', 
   month: '2-digit', 
   year: 'numeric',
@@ -113,15 +108,8 @@ ${new Date().toLocaleDateString('fr-FR', {
     });
 
     if (success) {
-      setFormData({
-        gender: '',
-        firstName: '',
-        lastName: '',
-        phone: '',
-        email: '',
-      });
-      setValidationErrors({});
-      setTouched({});
+      // Redirection vers la page de remerciement
+      window.location.href = '/merci';
     }
   };
 
@@ -142,23 +130,7 @@ ${new Date().toLocaleDateString('fr-FR', {
           )}
         </div>
 
-        {success ? (
-          <div className="text-center py-8">
-            <CheckCircle className="text-green-500 mx-auto mb-4" size={48} />
-            <h4 className="text-lg font-semibold mb-2">Demande envoyée !</h4>
-            <p className="text-gray-600 mb-4">
-              Nous vous recontacterons dans les plus brefs délais.
-            </p>
-            {onClose && (
-              <button
-                onClick={onClose}
-                className="bg-brand text-white px-6 py-2 rounded-md hover:bg-brand-600 transition-colors"
-              >
-                Fermer
-              </button>
-            )}
-          </div>
-        ) : (
+
           <form onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div>
@@ -311,7 +283,6 @@ ${new Date().toLocaleDateString('fr-FR', {
               </button>
             </div>
           </form>
-        )}
       </div>
     </div>
   );

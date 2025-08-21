@@ -99,22 +99,17 @@ const FormulaireBesoinPage = () => {
       return;
     }
 
-    const emailContent = `INFORMATIONS PERSONNELLES :
-Genre : ${formData.gender === 'M' ? 'Monsieur' : 'Madame'}
-Prénom : ${formData.firstName}
-Nom : ${formData.lastName}
-Email : ${formData.email}
-Téléphone : ${formData.phone}
-
-FORMATION SOUHAITÉE :
-Formation : ${formData.formation}
-${formData.formation === 'Autre formation (à préciser)' ? `Formation personnalisée : ${formData.autreFormation}` : ''}
-Type de formation : ${formData.trainingType}
-Modalité : ${formData.modality}
-${formData.modality === 'mixte' ? `Détail modalité : ${formData.modalityDetail}` : ''}
-
-DATE D'ENVOI :
-${new Date().toLocaleDateString('fr-FR', { 
+    const emailContent = `GENRE: ${formData.gender === 'M' ? 'Monsieur' : 'Madame'}
+PRENOM: ${formData.firstName}
+NOM: ${formData.lastName}
+EMAIL: ${formData.email}
+TELEPHONE: ${formData.phone}
+FORMATION: ${formData.formation}
+${formData.formation === 'Autre formation (à préciser)' ? `FORMATION_PERSONNALISEE: ${formData.autreFormation}` : ''}
+TYPE_FORMATION: ${formData.trainingType}
+MODALITE: ${formData.modality}
+${formData.modality === 'mixte' ? `DETAIL_MODALITE: ${formData.modalityDetail}` : ''}
+DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', { 
   day: '2-digit', 
   month: '2-digit', 
   year: 'numeric',
@@ -129,20 +124,8 @@ ${new Date().toLocaleDateString('fr-FR', {
     });
 
     if (success) {
-      setFormData({
-        trainingType: 'individuelle',
-        formation: '',
-        autreFormation: '',
-        modality: '',
-        modalityDetail: '',
-        gender: '',
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-      });
-      setValidationErrors({});
-      setTouched({});
+      // Redirection vers la page de remerciement
+      window.location.href = '/merci';
     }
   };
 
