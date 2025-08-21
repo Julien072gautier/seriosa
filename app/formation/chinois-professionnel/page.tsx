@@ -8,7 +8,8 @@ import Link from 'next/link'
 
 const FormationChinoisPage = () => {
   const [selectedModality, setSelectedModality] = useState<'individuel' | 'collectif'>('individuel');
-  const [isCallbackOpen, setIsCallbackOpen] = useState(false);
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
+  const [isParcoursModalOpen, setIsParcoursModalOpen] = useState(false);
 
   const prices = {
     individuel: { price: "1 950€*", label: "Éligible CPF" },
@@ -20,8 +21,15 @@ const FormationChinoisPage = () => {
       <FormationJsonLd formationSlug="chinois-professionnel" />
       <ContactForm 
         formationName="Chinois Professionnel"
-        isOpen={isCallbackOpen}
-        onClose={() => setIsCallbackOpen(false)}
+        isOpen={isInfoModalOpen}
+        onClose={() => setIsInfoModalOpen(false)}
+        actionType="information"
+      />
+      <ContactForm 
+        formationName="Chinois Professionnel"
+        isOpen={isParcoursModalOpen}
+        onClose={() => setIsParcoursModalOpen(false)}
+        actionType="parcours"
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -39,7 +47,7 @@ const FormationChinoisPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
-                  onClick={() => setIsCallbackOpen(true)}
+                  onClick={() => setIsInfoModalOpen(true)}
                   className="bg-white text-brand-700 hover:bg-gray-100 font-medium py-3 px-6 rounded-md transition-colors flex items-center justify-center"
                 >
                   <MessageSquare size={18} className="mr-2" />
@@ -429,12 +437,12 @@ const FormationChinoisPage = () => {
                 Contactez-nous pour obtenir plus d'informations ou démarrer votre inscription.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button
-                  onClick={() => setIsCallbackOpen(true)}
-                  className="btn-primary btn-lg btn-with-icon"
-                >
+                              <button
+                onClick={() => setIsParcoursModalOpen(true)}
+                className="btn-primary btn-lg btn-with-icon"
+              >
                   Je lance mon parcours
-                </button>
+              </button>
                 <a
                   href="tel:0975856510"
                   className="btn-outline btn-lg btn-with-icon"

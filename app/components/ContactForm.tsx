@@ -9,9 +9,10 @@ interface ContactFormProps {
   formationName: string;
   onClose?: () => void;
   isOpen?: boolean;
+  actionType?: 'information' | 'parcours';
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ formationName, onClose, isOpen = true }) => {
+const ContactForm: React.FC<ContactFormProps> = ({ formationName, onClose, isOpen = true, actionType = 'information' }) => {
   const [formData, setFormData] = useState({
     gender: '',
     firstName: '',
@@ -101,9 +102,13 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
   hour: '2-digit',
   minute: '2-digit'
 })}`;
+    const subject = actionType === 'parcours' 
+      ? `Je lance mon parcours - Formation ${formationName}`
+      : `Demande d'information - Formation ${formationName}`;
+      
     const result = await sendEmail({
       to: 'hello@formaprobyaccertif.fr',
-      subject: `Demande d'information - Formation ${formationName}`,
+      subject: subject,
       text: data
     });
 
@@ -117,7 +122,9 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
         <div className="flex justify-between items-center mb-6">
-          <h3 className="text-xl font-bold">Demande d'information</h3>
+          <h3 className="text-xl font-bold">
+            {actionType === 'parcours' ? 'Je lance mon parcours' : 'Demande d\'information'}
+          </h3>
           {onClose && (
             <button
               onClick={onClose}
