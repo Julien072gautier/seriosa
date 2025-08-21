@@ -3,11 +3,13 @@
 import React, { useState } from 'react';
 import { useSendEmail } from '../hooks/useSendEmail';
 import { CheckCircle, Users, BookOpen, MessageSquare, School } from 'lucide-react';
+import { validateForm, ValidationErrors, formatPhoneNumber } from '../lib/validation';
 
 const FormulaireBesoinPage = () => {
   const [formData, setFormData] = useState({
     trainingType: 'individuelle',
     formation: '',
+    autreFormation: '',
     modality: '',
     modalityDetail: '',
     gender: '',
@@ -17,26 +19,108 @@ const FormulaireBesoinPage = () => {
     phone: '',
   });
 
+  const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+
   const { sendEmail, loading, error, success } = useSendEmail();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    
+    // Marquer le champ comme touché
+    setTouched(prev => ({ ...prev, [name]: true }));
+    
+    // Validation en temps réel
+    if (touched[name]) {
+      const errors = validateForm({
+        firstName: name === 'firstName' ? value : formData.firstName,
+        lastName: name === 'lastName' ? value : formData.lastName,
+        email: name === 'email' ? value : formData.email,
+        phone: name === 'phone' ? value : formData.phone,
+      });
+      
+      setValidationErrors(prev => ({
+        ...prev,
+        [name]: errors[name as keyof ValidationErrors]
+      }));
+    }
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setTouched(prev => ({ ...prev, [name]: true }));
+    
+    const errors = validateForm({
+      firstName: name === 'firstName' ? value : formData.firstName,
+      lastName: name === 'lastName' ? value : formData.lastName,
+      email: name === 'email' ? value : formData.email,
+      phone: name === 'phone' ? value : formData.phone,
+    });
+    
+    setValidationErrors(prev => ({
+      ...prev,
+      [name]: errors[name as keyof ValidationErrors]
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const emailContent = `
-      Formation souhaitée : ${formData.formation}
-      Type de formation : ${formData.trainingType}
-      Modalité : ${formData.modality}
-      ${formData.modality === 'mixte' ? `Détail modalité : ${formData.modalityDetail}` : ''}
-      Genre : ${formData.gender}
-      Prénom : ${formData.firstName}
-      Nom : ${formData.lastName}
-      Email : ${formData.email}
-      Téléphone : ${formData.phone}
-    `;
+    
+    // Validation complète avant envoi
+    const errors = validateForm({
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+    });
+    
+    // Validation spéciale pour "autre formation"
+    if (formData.formation === 'Autre formation (à préciser)' && !formData.autreFormation.trim()) {
+      setValidationErrors({ ...errors });
+      setTouched({
+        firstName: true,
+        lastName: true,
+        email: true,
+        phone: true,
+        autreFormation: true,
+      });
+      return;
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setValidationErrors(errors);
+      setTouched({
+        firstName: true,
+        lastName: true,
+        email: true,
+        phone: true,
+      });
+      return;
+    }
+
+    const emailContent = `INFORMATIONS PERSONNELLES :
+Genre : ${formData.gender === 'M' ? 'Monsieur' : 'Madame'}
+Prénom : ${formData.firstName}
+Nom : ${formData.lastName}
+Email : ${formData.email}
+Téléphone : ${formData.phone}
+
+FORMATION SOUHAITÉE :
+Formation : ${formData.formation}
+${formData.formation === 'Autre formation (à préciser)' ? `Formation personnalisée : ${formData.autreFormation}` : ''}
+Type de formation : ${formData.trainingType}
+Modalité : ${formData.modality}
+${formData.modality === 'mixte' ? `Détail modalité : ${formData.modalityDetail}` : ''}
+
+DATE D'ENVOI :
+${new Date().toLocaleDateString('fr-FR', { 
+  day: '2-digit', 
+  month: '2-digit', 
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit'
+})}`;
 
     await sendEmail({
       to: 'hello@formaprobyaccertif.fr',
@@ -48,6 +132,7 @@ const FormulaireBesoinPage = () => {
       setFormData({
         trainingType: 'individuelle',
         formation: '',
+        autreFormation: '',
         modality: '',
         modalityDetail: '',
         gender: '',
@@ -56,6 +141,8 @@ const FormulaireBesoinPage = () => {
         email: '',
         phone: '',
       });
+      setValidationErrors({});
+      setTouched({});
     }
   };
 
@@ -102,6 +189,7 @@ const FormulaireBesoinPage = () => {
                   name="formation"
                   value={formData.formation}
                   onChange={handleChange}
+                  onBlur={handleBlur}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
                   required
                 >
@@ -112,7 +200,33 @@ const FormulaireBesoinPage = () => {
                     </option>
                   ))}
                 </select>
+                {touched.formation && !formData.formation && (
+                  <p className="text-red-500 text-sm mt-1">Veuillez sélectionner une formation</p>
+                )}
               </div>
+
+              {/* Champ "Autre formation" conditionnel */}
+              {formData.formation === 'Autre formation (à préciser)' && (
+                <div>
+                  <label htmlFor="autreFormation" className="block text-gray-700 font-medium mb-2">
+                    Précisez la formation recherchée *
+                  </label>
+                  <textarea
+                    id="autreFormation"
+                    name="autreFormation"
+                    value={formData.autreFormation}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    placeholder="Décrivez la formation que vous recherchez..."
+                    rows={3}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+                    required
+                  />
+                  {touched.autreFormation && !formData.autreFormation && (
+                    <p className="text-red-500 text-sm mt-1">Veuillez préciser la formation recherchée</p>
+                  )}
+                </div>
+              )}
 
               {/* Training Type */}
               <div>
@@ -132,6 +246,7 @@ const FormulaireBesoinPage = () => {
                       value="individuelle"
                       checked={formData.trainingType === 'individuelle'}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       className="hidden"
                     />
                     <Users className="mr-2" size={20} />
@@ -149,6 +264,7 @@ const FormulaireBesoinPage = () => {
                       value="collective"
                       checked={formData.trainingType === 'collective'}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       className="hidden"
                     />
                     <Users className="mr-2" size={20} />
@@ -175,6 +291,7 @@ const FormulaireBesoinPage = () => {
                       value="presentiel"
                       checked={formData.modality === 'presentiel'}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       className="hidden"
                     />
                     <School className="mr-2" size={20} />
@@ -193,6 +310,7 @@ const FormulaireBesoinPage = () => {
                       value="visio"
                       checked={formData.modality === 'visio'}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       className="hidden"
                     />
                     <MessageSquare className="mr-2" size={20} />
@@ -211,6 +329,7 @@ const FormulaireBesoinPage = () => {
                       value="mixte"
                       checked={formData.modality === 'mixte'}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       className="hidden"
                     />
                     <BookOpen className="mr-2" size={20} />
@@ -238,6 +357,7 @@ const FormulaireBesoinPage = () => {
                         value="presentiel"
                         checked={formData.modalityDetail === 'presentiel'}
                         onChange={handleChange}
+                        onBlur={handleBlur}
                         className="hidden"
                       />
                       <School className="mr-2" size={20} />
@@ -256,6 +376,7 @@ const FormulaireBesoinPage = () => {
                         value="visio"
                         checked={formData.modalityDetail === 'visio'}
                         onChange={handleChange}
+                        onBlur={handleBlur}
                         className="hidden"
                       />
                       <MessageSquare className="mr-2" size={20} />
@@ -285,6 +406,7 @@ const FormulaireBesoinPage = () => {
                         value="M"
                         checked={formData.gender === 'M'}
                         onChange={handleChange}
+                        onBlur={handleBlur}
                         className="hidden"
                         required
                       />
@@ -302,6 +424,7 @@ const FormulaireBesoinPage = () => {
                         value="F"
                         checked={formData.gender === 'F'}
                         onChange={handleChange}
+                        onBlur={handleBlur}
                         className="hidden"
                         required
                       />
@@ -322,9 +445,13 @@ const FormulaireBesoinPage = () => {
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
                       required
                     />
+                    {touched.firstName && validationErrors.firstName && (
+                      <p className="text-red-500 text-sm mt-1">{validationErrors.firstName}</p>
+                    )}
                   </div>
                   
                   <div>
@@ -337,9 +464,13 @@ const FormulaireBesoinPage = () => {
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
                       required
                     />
+                    {touched.lastName && validationErrors.lastName && (
+                      <p className="text-red-500 text-sm mt-1">{validationErrors.lastName}</p>
+                    )}
                   </div>
                 </div>
                 
@@ -353,9 +484,13 @@ const FormulaireBesoinPage = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    onBlur={handleBlur}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
                     required
                   />
+                  {touched.email && validationErrors.email && (
+                    <p className="text-red-500 text-sm mt-1">{validationErrors.email}</p>
+                  )}
                 </div>
 
                 <div>
@@ -368,10 +503,14 @@ const FormulaireBesoinPage = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
+                    onBlur={handleBlur}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
                     placeholder="06 12 34 56 78"
                     required
                   />
+                  {touched.phone && validationErrors.phone && (
+                    <p className="text-red-500 text-sm mt-1">{validationErrors.phone}</p>
+                  )}
                 </div>
               </div>
 

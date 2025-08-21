@@ -2,20 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Award, Zap, MessageSquare, BarChart3, Phone, X, CheckCircle, Clock, Tag, CreditCard, Star, PenTool as Tool, Wallet, Search } from 'lucide-react';
+import { ArrowRight, Award, Zap, MessageSquare, BarChart3, Phone, Clock, Tag, CreditCard, Star, PenTool as Tool, Wallet, Search } from 'lucide-react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useSendEmail } from '../hooks/useSendEmail';
 
 const HomePage = () => {
-  const [isCallbackOpen, setIsCallbackOpen] = useState(false);
-  const [callbackData, setCallbackData] = useState({
-    firstName: '',
-    lastName: '',
-    phone: '',
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [contactFormData, setContactFormData] = useState({
     name: '',
     email: '',
@@ -107,10 +100,7 @@ const HomePage = () => {
     }
   }, [inView, controls]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setCallbackData(prev => ({ ...prev, [name]: value }));
-  };
+
 
   const handleContactChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -119,7 +109,22 @@ const HomePage = () => {
 
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const data = `${contactFormData.name} ${contactFormData.phone} ${contactFormData.message}`;
+    const data = `INFORMATIONS PERSONNELLES :
+Nom : ${contactFormData.name}
+Email : ${contactFormData.email}
+Téléphone : ${contactFormData.phone}
+
+MESSAGE :
+${contactFormData.message}
+
+DATE D'ENVOI :
+${new Date().toLocaleDateString('fr-FR', { 
+  day: '2-digit', 
+  month: '2-digit', 
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit'
+})}`;
     await sendEmail({
       to: 'hello@formaprobyaccertif.fr',
       subject: "Contact - FORMAPRO by Accertif",
@@ -136,27 +141,7 @@ const HomePage = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate sending email
-    setTimeout(() => {
-      console.log('Sending email to hello@formaprobyaccertif.fr');
-      console.log('Subject: Demande de rappel immédiate');
-      console.log('Data:', callbackData);
-      
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsCallbackOpen(false);
-        setIsSubmitted(false);
-        setCallbackData({ firstName: '', lastName: '', phone: '' });
-      }, 3000);
-    }, 1000);
-  };
+
   
   // Why Choose Us section animation variants
   const cardVariants = {
@@ -708,7 +693,7 @@ const HomePage = () => {
             
             <div className="text-center mt-12">
               <Link 
-                href="/contact" 
+                href="/demande-formation" 
                 className="btn-primary btn-lg"
               >
                 Je crée ma Form'action !
@@ -830,92 +815,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Callback Popup */}
-      {isCallbackOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg shadow-xl w-full max-w-md relative">
-            <button
-              onClick={() => setIsCallbackOpen(false)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-            >
-              <X size={24} />
-            </button>
-            
-            <div className="p-6">
-              {!isSubmitted ? (
-                <>
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Être rappelé immédiatement</h3>
-                  <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                      <label htmlFor="firstName" className="block text-gray-700 mb-2">Prénom</label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        value={callbackData.firstName}
-                        onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
-                        required
-                      />
-                    </div>
-                    <div className="mb-4">
-                      <label htmlFor="lastName" className="block text-gray-700 mb-2">Nom</label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        value={callbackData.lastName}
-                        onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
-                        required
-                      />
-                    </div>
-                    <div className="mb-6">
-                      <label htmlFor="phone" className="block text-gray-700 mb-2">Téléphone</label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={callbackData.phone}
-                        onChange={handleChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
-                        required
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      className="btn-primary btn-lg btn-with-icon w-full"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        <span className="inline-flex items-center">
-                          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                          </svg> Envoi en cours...
-                        </span>
-                      ) : (
-                        "Demander un rappel immédiat"
-                      )}
-                    </button>
-                  </form>
-                </>
-              ) : (
-                <div className="text-center py-8">
-                  <div className="bg-green-100 text-green-800 p-4 rounded-md mb-4 flex items-center justify-center">
-                    <CheckCircle size={24} className="mr-2" />
-                    <div>
-                      <p className="font-medium">Demande envoyée avec succès !</p>
-                      <p>Un conseiller vous contactera très rapidement.</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-600">Merci pour votre confiance.</p>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
+
     </div>
   );
 };

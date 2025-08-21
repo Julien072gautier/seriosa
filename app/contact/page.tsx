@@ -3,34 +3,114 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Calendar, Clock, CheckCircle } from 'lucide-react';
 import { useSendEmail } from "../hooks/useSendEmail";
+import { validateForm, ValidationErrors, formatPhoneNumber } from "../lib/validation";
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    gender: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
     subject: '',
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
- const { sendEmail, loading, error, success } = useSendEmail();
+  const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+  
+  const { sendEmail, loading, error, success } = useSendEmail();
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    
+    // Marquer le champ comme touché
+    setTouched(prev => ({ ...prev, [name]: true }));
+    
+    // Validation en temps réel
+    if (touched[name]) {
+      const errors = validateForm({
+        firstName: name === 'firstName' ? value : formData.firstName,
+        lastName: name === 'lastName' ? value : formData.lastName,
+        email: name === 'email' ? value : formData.email,
+        phone: name === 'phone' ? value : formData.phone,
+      });
+      
+      setValidationErrors(prev => ({
+        ...prev,
+        [name]: errors[name as keyof ValidationErrors]
+      }));
+    }
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setTouched(prev => ({ ...prev, [name]: true }));
+    
+    const errors = validateForm({
+      firstName: name === 'firstName' ? value : formData.firstName,
+      lastName: name === 'lastName' ? value : formData.lastName,
+      email: name === 'email' ? value : formData.email,
+      phone: name === 'phone' ? value : formData.phone,
+    });
+    
+    setValidationErrors(prev => ({
+      ...prev,
+      [name]: errors[name as keyof ValidationErrors]
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    let data = `${formData.name} ${formData.email} ${formData.phone} ${formData.message}`;
+    
+    // Validation complète avant envoi
+    const errors = validateForm({
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+    });
+    
+    if (Object.keys(errors).length > 0) {
+      setValidationErrors(errors);
+      setTouched({
+        gender: true,
+        firstName: true,
+        lastName: true,
+        email: true,
+        phone: true,
+      });
+      return;
+    }
+    
+    let data = `INFORMATIONS PERSONNELLES :
+Genre : ${formData.gender}
+Prénom : ${formData.firstName}
+Nom : ${formData.lastName}
+Email : ${formData.email}
+Téléphone : ${formData.phone}
+
+INFORMATIONS DE CONTACT :
+Sujet : ${formData.subject}
+
+MESSAGE :
+${formData.message}`;
     await sendEmail({ to: 'hello@formaprobyaccertif.fr', subject: formData.subject, text: data });
     setIsSubmitted(true);
+    
     // Reset form after submission
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-      });
+    setFormData({
+      gender: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: '',
+    });
+    setValidationErrors({});
+    setTouched({});
   };
 
   return (
@@ -116,16 +196,58 @@ const ContactPage = () => {
                   <form onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                       <div>
-                        <label htmlFor="name" className="block text-gray-700 mb-2">Nom complet</label>
+                        <label htmlFor="gender" className="block text-gray-700 mb-2">Genre *</label>
+                        <select
+                          id="gender"
+                          name="gender"
+                          value={formData.gender}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
+                          required
+                        >
+                          <option value="">Sélectionnez...</option>
+                          <option value="Monsieur">Monsieur</option>
+                          <option value="Madame">Madame</option>
+                        </select>
+                        {touched.gender && !formData.gender && (
+                          <p className="text-red-500 text-xs mt-1">Le genre est requis</p>
+                        )}
+                      </div>
+                      <div>
+                        <label htmlFor="firstName" className="block text-gray-700 mb-2">Prénom *</label>
                         <input
                           type="text"
-                          id="name"
-                          name="name"
-                          value={formData.name}
+                          id="firstName"
+                          name="firstName"
+                          value={formData.firstName}
                           onChange={handleChange}
+                          onBlur={handleBlur}
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
                           required
                         />
+                        {touched.firstName && validationErrors.firstName && (
+                          <p className="text-red-500 text-xs mt-1">{validationErrors.firstName}</p>
+                        )}
+                      </div>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <label htmlFor="lastName" className="block text-gray-700 mb-2">Nom *</label>
+                        <input
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
+                          required
+                        />
+                        {touched.lastName && validationErrors.lastName && (
+                          <p className="text-red-500 text-xs mt-1">{validationErrors.lastName}</p>
+                        )}
                       </div>
                       <div>
                         <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
@@ -135,9 +257,13 @@ const ContactPage = () => {
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
+                          onBlur={handleBlur}
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
                           required
                         />
+                        {touched.email && validationErrors.email && (
+                          <p className="text-red-500 text-xs mt-1">{validationErrors.email}</p>
+                        )}
                       </div>
                     </div>
 
@@ -150,9 +276,13 @@ const ContactPage = () => {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
+                          onBlur={handleBlur}
                           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
                           required
                         />
+                        {touched.phone && validationErrors.phone && (
+                          <p className="text-red-500 text-xs mt-1">{validationErrors.phone}</p>
+                        )}
                       </div>
                       <div>
                         <label htmlFor="subject" className="block text-gray-700 mb-2">Sujet</label>
