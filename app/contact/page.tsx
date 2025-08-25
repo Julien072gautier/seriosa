@@ -282,7 +282,7 @@ MESSAGE: ${formData.message}`;
                           <option value="information">Je souhaite plus d'informations</option>
                           <option value="inscription">M'inscrire à une Form'action</option>
                           <option value="financement">Financer une Form'action</option>
-                          <option value="financement">Personnaliser ma Form'action</option>                          
+                          <option value="personnalisation">Personnaliser ma Form'action</option>                          
                           <option value="partenariat">Proposition de partenariat</option>
                           <option value="autre">Autre</option>
                         </select>
