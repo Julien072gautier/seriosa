@@ -214,6 +214,7 @@ const categories = [
 export default function FormationsPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('Toutes les catégories')
+  const [cpfFilter, setCpfFilter] = useState('all') // 'all', 'eligible', 'not-eligible'
   const [isFilterOpen, setIsFilterOpen] = useState(false)
 
   const filteredFormations = formations.filter(formation => {
@@ -221,7 +222,14 @@ export default function FormationsPage() {
                           formation.description.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === 'Toutes les catégories' || formation.category === selectedCategory
     
-    return matchesSearch && matchesCategory
+    let matchesCpf = true
+    if (cpfFilter === 'eligible') {
+      matchesCpf = formation.cpf === true
+    } else if (cpfFilter === 'not-eligible') {
+      matchesCpf = formation.cpf === false
+    }
+    
+    return matchesSearch && matchesCategory && matchesCpf
   })
 
   const getIcon = (icon: any) => {
@@ -255,9 +263,21 @@ export default function FormationsPage() {
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Nos Form'actions Certifiantes</h1>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-lg mb-4">
             Découvrez notre catalogue de formations certifiantes conçues pour développer vos compétences professionnelles et booster votre carrière.
           </p>
+          <div className="bg-brand-50 border border-brand-200 rounded-lg p-6 mb-6">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-8 h-8 bg-brand rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-sm">✓</span>
+              </div>
+              <h3 className="text-lg font-semibold text-brand-800">Financement facilité</h3>
+            </div>
+            <p className="text-gray-700">
+              Toutes nos formations sont éligibles au financement <strong>OPCO</strong>, <strong>FAF</strong>, <strong>France Travail</strong>. 
+              La plupart sont également accessibles avec votre <strong>CPF</strong>.
+            </p>
+          </div>
         </div>
 
         {/* Filters */}
@@ -302,6 +322,21 @@ export default function FormationsPage() {
                 ))}
               </select>
             </div>
+            <div className="w-full">
+              <label htmlFor="cpf-filter" className="block text-sm font-medium text-gray-700 mb-1">
+                Éligibilité CPF
+              </label>
+              <select
+                id="cpf-filter"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
+                value={cpfFilter}
+                onChange={(e) => setCpfFilter(e.target.value)}
+              >
+                <option value="all">Toutes les formations</option>
+                <option value="eligible">Éligibles CPF</option>
+                <option value="not-eligible">Non éligibles CPF</option>
+              </select>
+            </div>
           </div>
 
           {isFilterOpen && (
@@ -323,14 +358,57 @@ export default function FormationsPage() {
                   ))}
                 </select>
               </div>
+              <div>
+                <label htmlFor="cpf-filter-mobile" className="block text-sm font-medium text-gray-700 mb-1">
+                  Éligibilité CPF
+                </label>
+                <select
+                  id="cpf-filter-mobile"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
+                  value={cpfFilter}
+                  onChange={(e) => setCpfFilter(e.target.value)}
+                >
+                  <option value="all">Toutes les formations</option>
+                  <option value="eligible">Éligibles CPF</option>
+                  <option value="not-eligible">Non éligibles CPF</option>
+                </select>
+              </div>
             </div>
           )}
         </div>
 
         <div className="mb-6">
-          <p className="text-gray-600">
-            {filteredFormations.length} formation{filteredFormations.length !== 1 ? 's' : ''} trouvée{filteredFormations.length !== 1 ? 's' : ''}
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <p className="text-gray-600">
+              {filteredFormations.length} formation{filteredFormations.length !== 1 ? 's' : ''} trouvée{filteredFormations.length !== 1 ? 's' : ''}
+            </p>
+            {(cpfFilter !== 'all' || selectedCategory !== 'Toutes les catégories' || searchTerm) && (
+              <div className="flex flex-wrap gap-2">
+                {cpfFilter === 'eligible' && (
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                    <CreditCard size={12} className="mr-1" />
+                    Éligibles CPF
+                  </span>
+                )}
+                {cpfFilter === 'not-eligible' && (
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                    <CreditCard size={12} className="mr-1" />
+                    Non éligibles CPF
+                  </span>
+                )}
+                {selectedCategory !== 'Toutes les catégories' && (
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                    {selectedCategory}
+                  </span>
+                )}
+                {searchTerm && (
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                    "{searchTerm}"
+                  </span>
+                )}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Formations Grid */}
@@ -372,9 +450,13 @@ export default function FormationsPage() {
                     <Tag size={16} className="mr-2 text-brand-600" />
                     <span>{formation.price}</span>
                   </div>
-                  <div className="flex items-center text-sm text-green-600 font-medium mr-3 mb-2">
-                    <CreditCard size={16} className="mr-2 text-green-600" />
-                    <span>Éligible CPF</span>
+                  <div className={`flex items-center text-sm font-medium mr-3 mb-2 ${
+                    formation.cpf ? 'text-green-600' : 'text-red-600'
+                  }`}>
+                    <CreditCard size={16} className={`mr-2 ${
+                      formation.cpf ? 'text-green-600' : 'text-red-600'
+                    }`} />
+                    <span>{formation.cpf ? 'Éligible CPF' : 'Non éligible CPF'}</span>
                   </div>
                 </div>
                 
@@ -403,6 +485,7 @@ export default function FormationsPage() {
               onClick={() => {
                 setSearchTerm('')
                 setSelectedCategory('Toutes les catégories')
+                setCpfFilter('all')
               }}
               className="text-brand font-medium hover:text-brand-700"
             >

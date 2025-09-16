@@ -191,3 +191,62 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+
+/* Cookie Banner Styles */
+@layer components {
+  .cookie-banner {
+    @apply fixed bottom-0 left-0 right-0 bg-white border-t-2 border-brand shadow-2xl z-50 transform transition-transform duration-300 ease-in-out;
+  }
+  
+  .cookie-banner-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 z-40;
+  }
+  
+  .cookie-toggle {
+    @apply relative w-12 h-6 rounded-full transition-colors;
+  }
+  
+  .cookie-toggle-thumb {
+    @apply absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full transition-transform;
+  }
+  
+  .cookie-toggle-active {
+    @apply bg-brand;
+  }
+  
+  .cookie-toggle-inactive {
+    @apply bg-gray-300;
+  }
+  
+  .cookie-toggle-thumb-active {
+    @apply translate-x-6;
+  }
+  
+  .cookie-toggle-thumb-inactive {
+    @apply translate-x-0;
+  }
+  
+  .cookie-settings-button {
+    @apply fixed bottom-4 right-4 bg-brand text-white p-3 rounded-full shadow-lg hover:bg-brand-700 transition-colors z-30;
+  }
+  
+  .cookie-modal {
+    @apply fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4;
+  }
+  
+  .cookie-modal-content {
+    @apply bg-white rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto;
+  }
+  
+  .cookie-category-necessary {
+    @apply border-green-200 bg-green-50;
+  }
+  
+  .cookie-category-optional {
+    @apply border-gray-200 bg-white;
+  }
+  
+  .cookie-required-badge {
+    @apply px-2 py-1 text-xs font-medium text-green-700 bg-green-100 rounded-full;
+  }
+}

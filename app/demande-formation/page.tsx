@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useSendEmail } from '../hooks/useSendEmail';
 import { Users, BookOpen, MessageSquare, School } from 'lucide-react';
 import { validateForm, ValidationErrors, formatPhoneNumber } from '../lib/validation';
+import Captcha from '../components/Captcha';
 
 const FormulaireBesoinPage = () => {
   const [formData, setFormData] = useState({
@@ -21,6 +22,7 @@ const FormulaireBesoinPage = () => {
 
   const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [captchaValid, setCaptchaValid] = useState(false);
 
   const { sendEmail, loading, error, success } = useSendEmail();
 
@@ -66,6 +68,12 @@ const FormulaireBesoinPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Vérifier la validation CAPTCHA
+    if (!captchaValid) {
+      alert('Veuillez compléter la vérification de sécurité avant d\'envoyer votre demande.');
+      return;
+    }
     
     // Validation complète avant envoi
     const errors = validateForm({
@@ -495,14 +503,17 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
                 </div>
               </div>
 
+              {/* CAPTCHA */}
+              <div className="pt-6 border-t border-gray-200">
+                <Captcha onValidation={setCaptchaValid} />
+              </div>
+
               {/* Error Message */}
               {error && (
                 <div className="p-4 bg-red-50 text-red-700 rounded-md">
                   {error}
                 </div>
               )}
-
-
 
               {/* Submit Button */}
               <button

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useSendEmail } from '../hooks/useSendEmail';
 import { validateForm, ValidationErrors } from '../lib/validation';
 import { X } from 'lucide-react';
+import Captcha from './Captcha';
 
 interface ContactFormProps {
   formationName: string;
@@ -23,6 +24,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formationName, onClose, isOpe
   
   const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [captchaValid, setCaptchaValid] = useState(false);
   
   const { sendEmail, loading, error, success } = useSendEmail();
 
@@ -68,6 +70,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ formationName, onClose, isOpe
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Vérifier la validation CAPTCHA
+    if (!captchaValid) {
+      alert('Veuillez compléter la vérification de sécurité avant d\'envoyer votre demande.');
+      return;
+    }
     
     // Validation complète avant envoi
     const errors = validateForm({
@@ -256,6 +264,11 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
                   <p className="text-red-500 text-xs mt-1">{validationErrors.email}</p>
                 )}
               </div>
+            </div>
+
+            {/* CAPTCHA */}
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <Captcha onValidation={setCaptchaValid} />
             </div>
 
             {error && (

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Calendar, Clock, CheckCircle } from 'lucide-react';
 import { useSendEmail } from "../hooks/useSendEmail";
 import { validateForm, ValidationErrors, formatPhoneNumber } from "../lib/validation";
+import Captcha from "../components/Captcha";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +19,7 @@ const ContactPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [captchaValid, setCaptchaValid] = useState(false);
   
   const { sendEmail, loading, error, success } = useSendEmail();
   
@@ -63,6 +65,12 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Vérifier la validation CAPTCHA
+    if (!captchaValid) {
+      alert('Veuillez compléter la vérification de sécurité avant d\'envoyer le message.');
+      return;
+    }
     
     // Validation complète avant envoi
     const errors = validateForm({
@@ -300,6 +308,11 @@ MESSAGE: ${formData.message}`;
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
                         required
                       ></textarea>
+                    </div>
+
+                    {/* CAPTCHA */}
+                    <div className="mb-6">
+                      <Captcha onValidation={setCaptchaValid} />
                     </div>
 
                     <div className="flex justify-between items-center">

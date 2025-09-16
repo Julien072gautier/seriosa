@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { MapPin, Phone, Mail, Linkedin } from 'lucide-react'
+import ManageCookies from './ManageCookies'
 
 const Footer = () => {
   return (
@@ -128,8 +129,22 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} FORMAPRO by Accertif. Tous droits réservés.</p>
+        <div className="border-t border-gray-800 mt-8 pt-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400">&copy; {new Date().getFullYear()} FORMAPRO by Accertif. Tous droits réservés.</p>
+            <div className="flex items-center gap-4 text-sm">
+              <Link href="/politique-confidentialite" className="text-gray-400 hover:text-blue-400 transition-colors">
+                Politique de confidentialité
+              </Link>
+              <Link href="/mentions-legales" className="text-gray-400 hover:text-blue-400 transition-colors">
+                Mentions légales
+              </Link>
+              <Link href="/politique-cookies" className="text-gray-400 hover:text-blue-400 transition-colors">
+                Politique de cookies
+              </Link>
+              <ManageCookies />
+            </div>
+          </div>
         </div>
       </div>
     </footer>
