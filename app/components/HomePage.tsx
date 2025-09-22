@@ -697,7 +697,7 @@ const HomePage = () => {
           <div className="bg-brand text-white rounded-lg p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold mb-2">+280</div>
+                <div className="text-3xl font-bold mb-2">+415</div>
                 <p>apprenants formés</p>
               </div>
               <div>
