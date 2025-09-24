@@ -320,15 +320,17 @@ const HomePage = () => {
               </div>
               <div className="p-6 flex flex-col flex-grow min-h-0">
                 {/* Bloc titre+icône */}
-                <div className="flex items-start mb-4 h-[64px]">
+                <div className="flex items-start mb-4 h-[80px]">
                   <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
                     <MessageSquare className="text-brand" size={20} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2">Communiquer avec impact à l'oral en présentiel et à distance</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Communiquer avec impact à l'oral en présentiel et à distance</h3>
                 </div>
+                {/* Espace obligatoire */}
+                <div className="mb-4"></div>
                 {/* Description */}
                 <div className="mb-5 h-[60px] flex items-center">
-                  <p className="text-gray-600 w-full overflow-hidden">
+                  <p className="text-sm sm:text-base text-gray-600 w-full overflow-hidden">
                     Gagnez en aisance, maîtrisez votre stress et développez votre impact, que ce soit en présentiel ou à distance.
                   </p>
                 </div>
@@ -376,15 +378,17 @@ const HomePage = () => {
               </div>
               <div className="p-6 flex flex-col flex-grow min-h-0">
                 {/* Bloc titre+icône */}
-                <div className="flex items-start mb-4 h-[64px]">
+                <div className="flex items-start mb-4 h-[80px]">
                   <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
                     <Zap className="text-brand" size={20} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2">Intégrer l'IA conversationnelle dans le cycle de vente</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Intégrer l'IA conversationnelle dans le cycle de vente</h3>
                 </div>
+                {/* Espace obligatoire */}
+                <div className="mb-4"></div>
                 {/* Description */}
                 <div className="mb-5 h-[60px] flex items-center">
-                  <p className="text-gray-600 w-full overflow-hidden">
+                  <p className="text-sm sm:text-base text-gray-600 w-full overflow-hidden">
                     Automatisez vos processus, optimisez vos ventes et engagez mieux vos clients grâce à l'IA conversationnelle.
                   </p>
                 </div>
@@ -432,15 +436,17 @@ const HomePage = () => {
               </div>
               <div className="p-6 flex flex-col flex-grow min-h-0">
                 {/* Bloc titre+icône */}
-                <div className="flex items-start mb-4 h-[64px]">
+                <div className="flex items-start mb-4 h-[80px]">
                   <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
                     <BarChart3 className="text-brand" size={20} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 leading-tight mb-2">Développer son activité avec le Webmarketing</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Développer son activité avec le Webmarketing</h3>
                 </div>
+                {/* Espace obligatoire */}
+                <div className="mb-4"></div>
                 {/* Description */}
                 <div className="mb-5 h-[60px] flex items-center">
-                  <p className="text-gray-600 w-full overflow-hidden">
+                  <p className="text-sm sm:text-base text-gray-600 w-full overflow-hidden">
                     Élaborez une stratégie digitale efficace et maîtrisez les leviers des réseaux sociaux pour votre présence en ligne.
                   </p>
                 </div>
