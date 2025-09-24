@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { STATS_CONFIG } from '../lib/stats-config';
 
 export const useStatsAnimation = (isVisible: boolean) => {
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0);
-  const [count3, setCount3] = useState(0);
-  const [count4, setCount4] = useState(0);
-  const [count5, setCount5] = useState(0);
+  const [count1, setCount1] = useState(0); // apprenantsFormes
+  const [count2, setCount2] = useState(0); // satisfaction
+  const [count3, setCount3] = useState(0); // financement
+  const [count4, setCount4] = useState(0); // recommandation
+  const [count5, setCount5] = useState(0); // expertiseFormateurs
 
   useEffect(() => {
     if (isVisible) {
@@ -15,7 +15,7 @@ export const useStatsAnimation = (isVisible: boolean) => {
       
       // Counter pour apprenants formés
       let startTime1: number | null = null;
-      const targetCount1 = STATS_CONFIG.apprenantsFormes;
+      const targetCount1 = STATS_CONFIG.hero.apprenantsFormes;
       const animateCount1 = (timestamp: number) => {
         if (!startTime1) startTime1 = timestamp;
         const progress = timestamp - startTime1;
@@ -27,9 +27,9 @@ export const useStatsAnimation = (isVisible: boolean) => {
       };
       requestAnimationFrame(animateCount1);
       
-      // Counter pour satisfaction
+      // Counter pour nouvelles compétences
       let startTime2: number | null = null;
-      const targetCount2 = STATS_CONFIG.satisfaction;
+      const targetCount2 = STATS_CONFIG.hero.nouvellesCompetences;
       const animateCount2 = (timestamp: number) => {
         if (!startTime2) startTime2 = timestamp;
         const progress = timestamp - startTime2;
@@ -43,7 +43,7 @@ export const useStatsAnimation = (isVisible: boolean) => {
       
       // Counter pour financement
       let startTime3: number | null = null;
-      const targetCount3 = STATS_CONFIG.financement;
+      const targetCount3 = STATS_CONFIG.hero.financement;
       const animateCount3 = (timestamp: number) => {
         if (!startTime3) startTime3 = timestamp;
         const progress = timestamp - startTime3;

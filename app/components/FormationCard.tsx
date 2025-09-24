@@ -13,18 +13,49 @@ interface FormationCardProps {
 const FormationCard: React.FC<FormationCardProps> = ({ formation, isCompact = false }) => {
   // Fonction pour formater les informations de certification
   const formatCertification = () => {
-    if (!formation.certifications || formation.certifications.length === 0) return null;
+    // Priorité au champ formationType (pour l'API future)
+    if (formation.formationType) {
+      switch (formation.formationType) {
+        case 'non-certifiante':
+          return 'Formation non-certifiante';
+        case 'partenariat':
+          if (formation.certificationDetails?.partenaire) {
+            return `En partenariat avec ${formation.certificationDetails.partenaire}`;
+          }
+          break;
+        case 'certifiante':
+          if (formation.certificationDetails?.organization) {
+            return `Certifié par ${formation.certificationDetails.organization}`;
+          }
+          break;
+      }
+    }
     
-    // Afficher la première certification
-    return formation.certifications[0];
+    // Fallback sur la logique Zuma (compatibilité)
+    if (!formation.cpfEligible && !formation.certificationDetails) {
+      return 'Formation non-certifiante';
+    }
+    
+    // Gestion des formations certifiantes et en partenariat
+    if (formation.certificationDetails) {
+      const { organization, partenaire } = formation.certificationDetails;
+      return partenaire ? `En partenariat avec ${partenaire}` : `Certifié par ${organization}`;
+    }
+    
+    // Fallback sur l'ancien système
+    if (formation.certifications && formation.certifications.length > 0) {
+      return formation.certifications[0];
+    }
+    
+    return null;
   };
 
   const certificationText = formatCertification();
 
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col h-full min-h-[400px]">
       {/* Image de la formation */}
-      <div className="relative">
+      <div className="relative flex-shrink-0">
         <img 
           src={formation.image} 
           alt={formation.title} 
@@ -41,14 +72,18 @@ const FormationCard: React.FC<FormationCardProps> = ({ formation, isCompact = fa
       </div>
       
       {/* Contenu de la carte */}
-      <div className="p-5 flex flex-col flex-grow">
+      <div className="p-4 sm:p-5 flex flex-col flex-grow">
         <div className="flex items-start mb-2">
-          <div className="bg-brand p-1 rounded-full mr-2 flex-shrink-0 flex items-center justify-center" style={{ width: '32px', height: '32px' }}>
+          <div className="bg-brand p-1 rounded-full mr-3 flex-shrink-0 flex items-center justify-center" style={{ width: '32px', height: '32px' }}>
             <FormationIcon icon={formation.icon || "MessageSquare"} size={20} className="" />
           </div>
-          <h3 className="text-xl font-semibold text-gray-800 leading-tight">{formation.title}</h3>
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 leading-tight min-h-[48px] flex items-start">{formation.title}</h3>
         </div>
-        <p className="text-gray-600 mb-4 flex-grow">{formation.shortDescription}</p>
+        <p className="text-sm sm:text-base text-gray-600 mb-4 flex-grow overflow-hidden" style={{
+          display: '-webkit-box',
+          WebkitLineClamp: 3,
+          WebkitBoxOrient: 'vertical'
+        }}>{formation.shortDescription}</p>
         
         {/* Détails de la formation en format compact */}
         <div className="mt-auto">
@@ -104,7 +139,7 @@ const FormationCard: React.FC<FormationCardProps> = ({ formation, isCompact = fa
           {/* Bouton d'action */}
           <Link 
             href={`/formation/${formation.slug.replace('formation-', '')}`} 
-            className="btn-primary btn-md inline-flex items-center w-full justify-center"
+            className="btn-primary btn-sm sm:btn-md inline-flex items-center w-full justify-center mt-2"
           >
             En savoir plus <ArrowRight size={16} className="ml-2" />
           </Link>

@@ -12,11 +12,15 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="mb-4">
-              <span className="text-2xl font-bold">
-                <span className="text-white">FORMA</span>
-                <span className="text-blue-400">PRO</span>
-              </span>
-              <span className="text-gray-400 text-sm ml-1">by Accertif</span>
+              <Link href="/" className="flex items-center">
+                <Image 
+                  src="/Logoblanc.png" 
+                  alt="FORMAPRO by Accertif" 
+                  width={120}
+                  height={40}
+                  className="h-10 w-auto"
+                />
+              </Link>
             </div>
             <p className="text-gray-300 mb-4">
               Organisme de formation certifié proposant des Form&apos;actions certifiantes personnalisées.

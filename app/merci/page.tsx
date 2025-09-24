@@ -134,9 +134,9 @@ const MerciPage = () => {
              <div className="text-center">
                <div className="flex items-center justify-center mb-2">
                  <Star className="text-brand mr-1" size={20} />
-                 <span className="text-2xl font-bold text-gray-800">{STATS_CONFIG.satisfaction}%</span>
+                 <span className="text-2xl font-bold text-gray-800">{STATS_CONFIG.nouvellesCompetences}%</span>
                </div>
-               <p className="text-sm text-gray-600">Satisfaction</p>
+               <p className="text-sm text-gray-600">{STATS_CONFIG.nouvellesCompetencesLabel}</p>
              </div>
              <div className="text-center">
                <div className="flex items-center justify-center mb-2">

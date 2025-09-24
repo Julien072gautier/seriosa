@@ -39,6 +39,7 @@ const formationsConfig = {
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       duration: '21 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '2 450€*', label: 'Éligible CPF' },
         collectif: { price: '1 650€*', label: 'Éligible CPF' }
@@ -171,6 +172,7 @@ const formationsConfig = {
       image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       duration: '21 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '2 450€*', label: 'Éligible CPF' },
         collectif: { price: '1 650€*', label: 'Éligible CPF' }
@@ -291,6 +293,7 @@ const formationsConfig = {
       image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       duration: '21 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '2 450€*', label: 'Éligible CPF' },
         collectif: { price: '1 650€*', label: 'Éligible CPF' }
@@ -439,6 +442,7 @@ const formationsConfig = {
       image: 'https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Allemand.png',
       duration: '30 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '1 950€*', label: 'Éligible CPF' },
         collectif: { price: '1 250€*', label: 'Éligible CPF' }
@@ -561,6 +565,7 @@ const formationsConfig = {
       image: 'https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Anglais.png',
       duration: '30 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '1 950€*', label: 'Éligible CPF' },
         collectif: { price: '1 250€*', label: 'Éligible CPF' }
@@ -683,6 +688,7 @@ const formationsConfig = {
       image: 'https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Arabe.png',
       duration: '30 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '1 950€*', label: 'Éligible CPF' },
         collectif: { price: '1 250€*', label: 'Éligible CPF' }
@@ -805,6 +811,7 @@ const formationsConfig = {
       image: 'https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Espagnol.png',
       duration: '30 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '1 950€*', label: 'Éligible CPF' },
         collectif: { price: '1 250€*', label: 'Éligible CPF' }
@@ -927,6 +934,7 @@ const formationsConfig = {
       image: 'https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Fran%C3%A7ais-61b9e88d.png',
       duration: '30 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '1 950€*', label: 'Éligible CPF' },
         collectif: { price: '1 250€*', label: 'Éligible CPF' }
@@ -1049,6 +1057,7 @@ const formationsConfig = {
       image: 'https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Italien.png',
       duration: '30 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '1 950€*', label: 'Éligible CPF' },
         collectif: { price: '1 250€*', label: 'Éligible CPF' }
@@ -1171,6 +1180,7 @@ const formationsConfig = {
       image: 'https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Chinois.png',
       duration: '30 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '1 950€*', label: 'Éligible CPF' },
         collectif: { price: '1 250€*', label: 'Éligible CPF' }
@@ -1293,6 +1303,7 @@ const formationsConfig = {
       image: 'https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Japonais.png',
       duration: '30 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '1 950€*', label: 'Éligible CPF' },
         collectif: { price: '1 250€*', label: 'Éligible CPF' }
@@ -1415,6 +1426,7 @@ const formationsConfig = {
       image: 'https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Portugais.png',
       duration: '30 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '1 950€*', label: 'Éligible CPF' },
         collectif: { price: '1 250€*', label: 'Éligible CPF' }
@@ -1537,6 +1549,7 @@ const formationsConfig = {
       image: 'https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Russe.png',
       duration: '30 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '1 950€*', label: 'Éligible CPF' },
         collectif: { price: '1 250€*', label: 'Éligible CPF' }
@@ -1659,6 +1672,7 @@ const formationsConfig = {
       image: 'https://irp.cdn-website.com/e0ab763a/dms3rep/multi/LSF.png',
       duration: '30 heures',
       formateur: '',
+      formationType: 'certifiante',
       prices: {
         individuel: { price: '1 950€*', label: 'Éligible CPF' },
         collectif: { price: '1 250€*', label: 'Éligible CPF' }

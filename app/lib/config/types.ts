@@ -29,6 +29,8 @@ export interface Formation {
   prerequis: string[];
   teachingMethods: string[];
   evaluationMethods: string[];
+  // Type de formation : certifiante, partenariat, ou non-certifiante
+  formationType: 'certifiante' | 'partenariat' | 'non-certifiante';
   certificationDetails?: {
     name: string;
     code: string;

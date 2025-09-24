@@ -187,15 +187,15 @@ const HomePage = () => {
             >
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
                 <div className="text-2xl font-bold">+{count1}</div>
-                <div className="text-sm">{STATS_CONFIG.apprenantsFormesLabel}</div>
+                <div className="text-sm">{STATS_CONFIG.hero.labels.apprenantsFormes}</div>
               </div>
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
                 <div className="text-2xl font-bold">{count2}%</div>
-                <div className="text-sm">{STATS_CONFIG.satisfactionLabel}</div>
+                <div className="text-sm">{STATS_CONFIG.hero.labels.nouvellesCompetences}</div>
               </div>
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
                 <div className="text-2xl font-bold">{count3}%</div>
-                <div className="text-sm">{STATS_CONFIG.financementLabel}</div>
+                <div className="text-sm">{STATS_CONFIG.hero.labels.financement}</div>
               </div>
             </motion.div>
             
@@ -504,7 +504,7 @@ const HomePage = () => {
               {/* Process Steps */}
               <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-brand-200 transform -translate-x-1/2"></div>
               
-              <div className="space-y-12">
+              <div className="space-y-8 md:space-y-12">
                 <motion.div 
                   className="flex flex-col md:flex-row items-center"
                   initial="hidden"
@@ -512,14 +512,14 @@ const HomePage = () => {
                   variants={processStepVariants}
                   custom={0}
                 >
-                  <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-left">
-                    <h3 className="text-xl font-semibold mb-2">Choisissez votre Form'action</h3>
-                    <p className="text-gray-600">
+                  <div className="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-left text-center md:text-left order-2 md:order-none">
+                    <h3 className="text-lg md:text-xl font-semibold mb-2">Choisissez votre Form'action</h3>
+                    <p className="text-sm md:text-base text-gray-600">
                       Parcourez notre catalogue et sélectionnez la formation adaptée à vos objectifs.
                     </p>
                   </div>
-                  <div className="md:w-12 flex justify-center">
-                    <div className="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-bold z-10">1</div>
+                  <div className="md:w-12 flex justify-center mb-4 md:mb-0 order-1 md:order-none">
+                    <div className="bg-brand text-white rounded-full w-12 h-12 md:w-10 md:h-10 flex items-center justify-center font-bold z-10 text-lg md:text-base">1</div>
                   </div>
                   <div className="md:w-1/2 md:pl-12 md:text-left"></div>
                 </motion.div>
@@ -531,13 +531,13 @@ const HomePage = () => {
                   variants={processStepVariants}
                   custom={1}
                 >
-                  <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right order-1 md:order-none"></div>
-                  <div className="md:w-12 flex justify-center">
-                    <div className="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-bold z-10">2</div>
+                  <div className="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right order-1 md:order-none"></div>
+                  <div className="md:w-12 flex justify-center mb-4 md:mb-0">
+                    <div className="bg-brand text-white rounded-full w-12 h-12 md:w-10 md:h-10 flex items-center justify-center font-bold z-10 text-lg md:text-base">2</div>
                   </div>
-                  <div className="md:w-1/2 md:pl-12 md:text-left">
-                    <h3 className="text-xl font-semibold mb-2">Concevez votre parcours idéal</h3>
-                    <p className="text-gray-600">
+                  <div className="md:w-1/2 md:pl-12 md:text-left text-center md:text-left">
+                    <h3 className="text-lg md:text-xl font-semibold mb-2">Concevez votre parcours idéal</h3>
+                    <p className="text-sm md:text-base text-gray-600">
                       Profitez d'un accompagnement personnalisé pour identifier vos besoins, adapter (rythme, modalités pédagogiques) et financer votre parcours.
                     </p>
                   </div>
@@ -550,14 +550,14 @@ const HomePage = () => {
                   variants={processStepVariants}
                   custom={2}
                 >
-                  <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-left">
-                    <h3 className="text-xl font-semibold mb-2">Formez-vous</h3>
-                    <p className="text-gray-600">
+                  <div className="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-left text-center md:text-left order-2 md:order-none">
+                    <h3 className="text-lg md:text-xl font-semibold mb-2">Formez-vous</h3>
+                    <p className="text-sm md:text-base text-gray-600">
                       Bénéficiez d'un accompagnement sur-mesure adapté à votre rythme et à vos objectifs spécifiques.
                     </p>
                   </div>
-                  <div className="md:w-12 flex justify-center">
-                    <div className="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-bold z-10">3</div>
+                  <div className="md:w-12 flex justify-center mb-4 md:mb-0 order-1 md:order-none">
+                    <div className="bg-brand text-white rounded-full w-12 h-12 md:w-10 md:h-10 flex items-center justify-center font-bold z-10 text-lg md:text-base">3</div>
                   </div>
                   <div className="md:w-1/2 md:pl-12 md:text-left"></div>
                 </motion.div>
@@ -569,13 +569,13 @@ const HomePage = () => {
                   variants={processStepVariants}
                   custom={3}
                 >
-                  <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right order-1 md:order-none"></div>
-                  <div className="md:w-12 flex justify-center">
-                    <div className="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-bold z-10">4</div>
+                  <div className="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right order-1 md:order-none"></div>
+                  <div className="md:w-12 flex justify-center mb-4 md:mb-0">
+                    <div className="bg-brand text-white rounded-full w-12 h-12 md:w-10 md:h-10 flex items-center justify-center font-bold z-10 text-lg md:text-base">4</div>
                   </div>
-                  <div className="md:w-1/2 md:pl-12 md:text-left">
-                    <h3 className="text-xl font-semibold mb-2">Accédez à SKILLUP by Accertif</h3>
-                    <p className="text-gray-600">
+                  <div className="md:w-1/2 md:pl-12 md:text-left text-center md:text-left">
+                    <h3 className="text-lg md:text-xl font-semibold mb-2">Accédez à SKILLUP by Accertif</h3>
+                    <p className="text-sm md:text-base text-gray-600">
                       Accédez à une plateforme intuitive intégrant des classes virtuelles, des parcours personnalisés, des échanges collaboratifs et un suivi de progression détaillé. Alliez flexibilité et accompagnement expert pour un apprentissage efficace et interactif.
                     </p>
                   </div>
@@ -588,24 +588,24 @@ const HomePage = () => {
                   variants={processStepVariants}
                   custom={4}
                 >
-                  <div className="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-left">
-                    <h3 className="text-xl font-semibold mb-2">Certifiez vos compétences</h3>
-                    <p className="text-gray-600">
+                  <div className="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-left text-center md:text-left order-2 md:order-none">
+                    <h3 className="text-lg md:text-xl font-semibold mb-2">Certifiez vos compétences</h3>
+                    <p className="text-sm md:text-base text-gray-600">
                       Validez vos acquis par une certification reconnue et valorisez vos nouvelles compétences sur le marché du travail.
                     </p>
                   </div>
-                  <div className="md:w-12 flex justify-center">
-                    <div className="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center font-bold z-10">5</div>
+                  <div className="md:w-12 flex justify-center mb-4 md:mb-0 order-1 md:order-none">
+                    <div className="bg-brand text-white rounded-full w-12 h-12 md:w-10 md:h-10 flex items-center justify-center font-bold z-10 text-lg md:text-base">5</div>
                   </div>
                   <div className="md:w-1/2 md:pl-12 md:text-left"></div>
                 </motion.div>
               </div>
             </div>
             
-            <div className="text-center mt-12">
+            <div className="text-center mt-8 md:mt-12">
               <Link 
                 href="/demande-formation" 
-                className="btn-primary btn-lg"
+                className="btn-primary btn-md md:btn-lg"
               >
                 Je crée ma Form'action !
               </Link>
@@ -697,20 +697,20 @@ const HomePage = () => {
           <div className="bg-brand text-white rounded-lg p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold mb-2">+415</div>
-                <p>apprenants formés</p>
+                <div className="text-3xl font-bold mb-2">+{STATS_CONFIG.bottom.apprenantsFormes}</div>
+                <p>{STATS_CONFIG.bottom.labels.apprenantsFormes}</p>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-2">97%</div>
-                <p>ont acquis de nouvelles compétences</p>
+                <div className="text-3xl font-bold mb-2">{STATS_CONFIG.bottom.nouvellesCompetences}%</div>
+                <p>{STATS_CONFIG.bottom.labels.nouvellesCompetences}</p>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-2">100%</div>
-                <p>recommandent nos formations</p>
+                <div className="text-3xl font-bold mb-2">{STATS_CONFIG.bottom.recommandation}%</div>
+                <p>{STATS_CONFIG.bottom.labels.recommandation}</p>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-2">98%</div>
-                <p>soulignent l'expertise des formateurs</p>
+                <div className="text-3xl font-bold mb-2">{STATS_CONFIG.bottom.expertiseFormateurs}%</div>
+                <p>{STATS_CONFIG.bottom.labels.expertiseFormateurs}</p>
               </div>
             </div>
           </div>
