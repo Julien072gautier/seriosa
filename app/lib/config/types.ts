@@ -40,6 +40,9 @@ export interface Formation {
     partenaireUrl?: string;
     partenaireLogo?: string;
     description?: string;
+    titre?: string; // Pour les formations RNCP
+    dureeEnregistrement?: string;
+    dateEnregistrement?: string;
     examDetails?: {
       format: string[];
       successRate: string;

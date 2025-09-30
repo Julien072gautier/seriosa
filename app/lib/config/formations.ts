@@ -25,6 +25,12 @@ const formationsConfig = {
       name: 'Langues',
       description: 'Langues',
       icon: 'Globe'
+    },
+    {
+      id: 'Développement commercial',
+      name: 'Développement commercial',
+      description: 'Développement commercial',
+      icon: 'TrendingUp'
     }
   ] as Category[],
   
@@ -124,9 +130,10 @@ const formationsConfig = {
         'Mises en situation et jeux de rôles'
       ],
       evaluationMethods: [
-        'Mise en situation réelle portant sur l\'élaboration d\'une stratégie de community management avec remise de rapport et soutenance orale',
-        'Le candidat a 15 jours de préparation avant la remise de ses écrits',
-        'L\'écrit est ensuite suivi d\'une présentation orale de 25 minutes devant un jury'
+        'Évaluation des compétences entrée vs sortie',
+        'Feuilles de présence',
+        'Certificat de réalisation',
+        'Épreuve de certification finale'
       ],
       accessibility: [
         'Formation accessible sous 15 jours après inscription',
@@ -136,7 +143,16 @@ const formationsConfig = {
         name: 'Développer son activité avec le community management',
         code: 'RS6452',
         organization: 'Webmarketing & Com',
-        organizationUrl: 'https://www.webmarketing-com.com/'
+        organizationUrl: 'https://www.webmarketing-com.com/',
+        description: 'Cette formation prépare à la certification « Développer son activité avec le Community Management » enregistrée à France Compétences sous le numéro RS6452 par l\'organisme certificateur Webmarketing & Com pour une durée de 3 ans en date du 21-12-2023',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '21-12-2023',
+        examDetails: {
+          format: [
+            'Mise en situation réelle portant sur l\'élaboration d\'une stratégie de community management avec remise de rapport et soutenance orale. Le candidat a 15 jours de préparation avant la remise de ses écrits. L\'écrit est ensuite suivi d\'une présentation orale de 25 minutes devant un jury'
+          ],
+          successRate: '100%'
+        }
       },
       reasons: [
         {
@@ -245,9 +261,10 @@ const formationsConfig = {
         'Cas pratiques, mises en situation et co-développement'
       ],
       evaluationMethods: [
-        'Évaluation des compétences en entrée et sortie',
-        'Feuilles de présence et certificat de réalisation',
-        'Épreuve finale avec mises en situation et QCM'
+        'Évaluation des compétences entrée vs sortie',
+        'Feuilles de présence',
+        'Certificat de réalisation',
+        'Épreuve de certification finale'
       ],
       accessibility: [
         'Formation accessible sous 15 jours après inscription',
@@ -257,7 +274,16 @@ const formationsConfig = {
         name: 'Intégrer l\'intelligence artificielle conversationnelle dans le cycle de vente',
         code: 'RS6792',
         organization: 'Online Sales Success',
-        organizationUrl: 'https://online-sales-success.fr/'
+        organizationUrl: 'https://online-sales-success.fr/',
+        description: 'Cette formation prépare à la certification « Intégrer l\'intelligence artificielle conversationnelle dans le cycle de vente » enregistrée à France Compétences sous le numéro RS6792 par l\'organisme certificateur Online Sales Success pour une durée de 3 ans en date du 15-03-2024',
+        dureeEnregistrement: '2',
+        dateEnregistrement: '01-10-2024',
+        examDetails: {
+          format: [
+            'Étude de cas et présentation devant le jury : le candidat doit identifier les situations professionnelles où l\'IA apporte une valeur ajoutée dans l\'acte de vente, puis rédiger un questionnement adapté à un logiciel d\'IA pour obtenir une réponse pertinente et exploitable. L\'épreuve inclut également l\'analyse de questionnements IA imparfaits et un QCM avec un taux de bonnes réponses minimum de 70%.'
+          ],
+          successRate: '60%'
+        }
       },
       reasons: [
         {
@@ -394,9 +420,10 @@ const formationsConfig = {
         'Mises en situation, jeux de rôles et co-développement'
       ],
       evaluationMethods: [
-        'Évaluation des compétences en entrée et sortie',
-        'Feuilles de présence et certificat de réalisation',
-        'Épreuve finale avec mises en situation et QCM'
+        'Évaluation des compétences entrée vs sortie',
+        'Feuilles de présence',
+        'Certificat de réalisation',
+        'Épreuve de certification finale'
       ],
       accessibility: [
         'Formation accessible sous 15 jours après inscription',
@@ -406,7 +433,16 @@ const formationsConfig = {
         name: 'Communiquer à l\'oral avec impact en présentiel et à distance',
         code: 'RS6377',
         organization: 'Pollen Conseil',
-        organizationUrl: 'https://pollenconseil.com/'
+        organizationUrl: 'https://pollenconseil.com/',
+        description: 'Cette formation prépare à la certification « Communiquer à l\'oral avec impact en présentiel et à distance » enregistrée à France Compétences sous le numéro RS6377 par l\'organisme certificateur Pollen Conseil pour une durée de 3 ans en date du 10-01-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '20-09-2023',
+        examDetails: {
+          format: [
+            'Mise en situation professionnelle simulée : le candidat choisit une situation de communication qu\'il rencontre fréquemment parmi la prise de parole face à un public d\'au moins 2 personnes, la communication en face à face, ou la prise de parole face à un groupe de plus de 20 personnes en auditorium (discours ou conférence). L\'épreuve inclut également un questionnaire d\'évaluation des acquis.'
+          ],
+          successRate: '100%'
+        }
       },
       reasons: [
         {
@@ -518,7 +554,8 @@ const formationsConfig = {
       evaluationMethods: [
         "Audit de niveau initial",
         "Mini-tests de compréhension réguliers",
-        "Évaluation finale LILATE"
+        "Feuilles de présence et certificat de réalisation",
+        "Épreuve de certification"
       ],
       accessibility: [
         "Formation accessible sous 2 semaines après inscription",
@@ -529,7 +566,16 @@ const formationsConfig = {
         name: 'Allemand professionnel',
         code: 'RS6145',
         organization: 'Lilate',
-        organizationUrl: 'https://www.lilate.org/'
+        organizationUrl: 'https://www.lilate.org/',
+        description: 'Cette formation prépare à la certification « Allemand professionnel » enregistrée à France Compétences sous le numéro RS6145 par l\'organisme certificateur Lilate pour une durée de 3 ans en date du 05-02-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '24-10-2022',
+        examDetails: {
+          format: [
+            'Mise en situation sous forme d\'un échange continu avec l\'évaluateur sous le mode de la communication simulant des interactions de premier niveau, la retranscription d\'un message écrit, et des réponses écrites via l\'interface de communication et avec des consultations d\'extraits, suivies de questions/réponses'
+          ],
+          successRate: 'En attente'
+        }
       },
       reasons: [
         {
@@ -641,7 +687,8 @@ const formationsConfig = {
       evaluationMethods: [
         "Audit de niveau initial",
         "Mini-tests de compréhension réguliers",
-        "Évaluation finale LILATE"
+        "Feuilles de présence et certificat de réalisation",
+        "Épreuve de certification"
       ],
       accessibility: [
         "Formation accessible sous 2 semaines après inscription",
@@ -652,7 +699,16 @@ const formationsConfig = {
         name: 'Anglais professionnel',
         code: 'RS6118',
         organization: 'Lilate',
-        organizationUrl: 'https://www.lilate.org/'
+        organizationUrl: 'https://www.lilate.org/',
+        description: 'Cette formation prépare à la certification « Anglais professionnel » enregistrée à France Compétences sous le numéro RS6118 par l\'organisme certificateur Lilate pour une durée de 3 ans en date du 12-02-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '24-10-2022',
+        examDetails: {
+          format: [
+            'Mise en situation sous forme d\'un échange continu avec l\'évaluateur sous le mode de la communication simulant des interactions de premier niveau, la retranscription d\'un message écrit, et des réponses écrites via l\'interface de communication et avec des consultations d\'extraits, suivies de questions/réponses'
+          ],
+          successRate: '100%'
+        }
       },
       reasons: [
         {
@@ -764,7 +820,8 @@ const formationsConfig = {
       evaluationMethods: [
         "Audit de niveau initial",
         "Mini-tests de compréhension réguliers",
-        "Évaluation finale LILATE"
+        "Feuilles de présence et certificat de réalisation",
+        "Épreuve de certification"
       ],
       accessibility: [
         "Formation accessible sous 2 semaines après inscription",
@@ -775,7 +832,16 @@ const formationsConfig = {
         name: 'Arabe professionnel',
         code: 'RS6144',
         organization: 'Lilate',
-        organizationUrl: 'https://www.lilate.org/'
+        organizationUrl: 'https://www.lilate.org/',
+        description: 'Cette formation prépare à la certification « Arabe professionnel » enregistrée à France Compétences sous le numéro RS6144 par l\'organisme certificateur Lilate pour une durée de 3 ans en date du 19-02-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '24-10-2022',
+        examDetails: {
+          format: [
+            'Mise en situation sous forme d\'un échange continu avec l\'évaluateur sous le mode de la communication simulant des interactions de premier niveau, la retranscription d\'un message écrit, et des réponses écrites via l\'interface de communication et avec des consultations d\'extraits, suivies de questions/réponses'
+          ],
+          successRate: 'En attente'
+        }
       },
       reasons: [
         {
@@ -887,7 +953,8 @@ const formationsConfig = {
       evaluationMethods: [
         "Audit de niveau initial",
         "Mini-tests de compréhension réguliers",
-        "Évaluation finale LILATE"
+        "Feuilles de présence et certificat de réalisation",
+        "Épreuve de certification"
       ],
       accessibility: [
         "Formation accessible sous 2 semaines après inscription",
@@ -898,7 +965,16 @@ const formationsConfig = {
         name: 'Espagnol professionnel',
         code: 'RS6139',
         organization: 'Lilate',
-        organizationUrl: 'https://www.lilate.org/'
+        organizationUrl: 'https://www.lilate.org/',
+        description: 'Cette formation prépare à la certification « Espagnol professionnel » enregistrée à France Compétences sous le numéro RS6139 par l\'organisme certificateur Lilate pour une durée de 3 ans en date du 26-02-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '24-10-2022',
+        examDetails: {
+          format: [
+            'Mise en situation sous forme d\'un échange continu avec l\'évaluateur sous le mode de la communication simulant des interactions de premier niveau, la retranscription d\'un message écrit, et des réponses écrites via l\'interface de communication et avec des consultations d\'extraits, suivies de questions/réponses'
+          ],
+          successRate: '100%'
+        }
       },
       reasons: [
         {
@@ -1010,7 +1086,8 @@ const formationsConfig = {
       evaluationMethods: [
         "Audit de niveau initial",
         "Mini-tests de compréhension réguliers",
-        "Évaluation finale LILATE"
+        "Feuilles de présence et certificat de réalisation",
+        "Épreuve de certification"
       ],
       accessibility: [
         "Formation accessible sous 2 semaines après inscription",
@@ -1018,10 +1095,19 @@ const formationsConfig = {
         "Assistance à la connexion en cas de visioconférence via Microsoft Teams"
       ],
       certificationDetails: {
-        name: 'Français professionnel (FLE)',
+        name: 'Français professionnel',
         code: 'RS6916',
         organization: 'Lilate',
-        organizationUrl: 'https://www.lilate.org/'
+        organizationUrl: 'https://www.lilate.org/',
+        description: 'Cette formation prépare à la certification « Français professionnel » enregistrée à France Compétences sous le numéro RS6916 par l\'organisme certificateur Lilate pour une durée de 3 ans en date du 05-03-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '28-11-2024',
+        examDetails: {
+          format: [
+            'Mise en situation sous forme d\'un échange continu avec l\'évaluateur sous le mode de la communication simulant des interactions de premier niveau, la retranscription d\'un message écrit, et des réponses écrites via l\'interface de communication et avec des consultations d\'extraits, suivies de questions/réponses'
+          ],
+          successRate: 'En attente'
+        }
       },
       reasons: [
         {
@@ -1133,7 +1219,8 @@ const formationsConfig = {
       evaluationMethods: [
         "Audit de niveau initial",
         "Mini-tests de compréhension réguliers",
-        "Évaluation finale LILATE"
+        "Feuilles de présence et certificat de réalisation",
+        "Épreuve de certification"
       ],
       accessibility: [
         "Formation accessible sous 2 semaines après inscription",
@@ -1144,7 +1231,16 @@ const formationsConfig = {
         name: 'Italien professionnel',
         code: 'RS6140',
         organization: 'Lilate',
-        organizationUrl: 'https://www.lilate.org/'
+        organizationUrl: 'https://www.lilate.org/',
+        description: 'Cette formation prépare à la certification « Italien professionnel » enregistrée à France Compétences sous le numéro RS6140 par l\'organisme certificateur Lilate pour une durée de 3 ans en date du 12-03-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '24-10-2022',
+        examDetails: {
+          format: [
+            'Mise en situation sous forme d\'un échange continu avec l\'évaluateur sous le mode de la communication simulant des interactions de premier niveau, la retranscription d\'un message écrit, et des réponses écrites via l\'interface de communication et avec des consultations d\'extraits, suivies de questions/réponses'
+          ],
+          successRate: 'En attente'
+        }
       },
       reasons: [
         {
@@ -1256,7 +1352,8 @@ const formationsConfig = {
       evaluationMethods: [
         "Audit de niveau initial",
         "Mini-tests de compréhension réguliers",
-        "Évaluation finale LILATE"
+        "Feuilles de présence et certificat de réalisation",
+        "Épreuve de certification"
       ],
       accessibility: [
         "Formation accessible sous 2 semaines après inscription",
@@ -1267,7 +1364,16 @@ const formationsConfig = {
         name: 'Chinois professionnel',
         code: 'RS6142',
         organization: 'Lilate',
-        organizationUrl: 'https://www.lilate.org/'
+        organizationUrl: 'https://www.lilate.org/',
+        description: 'Cette formation prépare à la certification « Chinois professionnel » enregistrée à France Compétences sous le numéro RS6142 par l\'organisme certificateur Lilate pour une durée de 3 ans en date du 19-03-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '24-10-2022',
+        examDetails: {
+          format: [
+            'Mise en situation sous forme d\'un échange continu avec l\'évaluateur sous le mode de la communication simulant des interactions de premier niveau, la retranscription d\'un message écrit, et des réponses écrites via l\'interface de communication et avec des consultations d\'extraits, suivies de questions/réponses'
+          ],
+          successRate: 'En attente'
+        }
       },
       reasons: [
         {
@@ -1379,7 +1485,8 @@ const formationsConfig = {
       evaluationMethods: [
         "Audit de niveau initial",
         "Mini-tests de compréhension réguliers",
-        "Évaluation finale LILATE"
+        "Feuilles de présence et certificat de réalisation",
+        "Épreuve de certification"
       ],
       accessibility: [
         "Formation accessible sous 2 semaines après inscription",
@@ -1390,7 +1497,16 @@ const formationsConfig = {
         name: 'Japonais professionnel',
         code: 'RS6141',
         organization: 'Lilate',
-        organizationUrl: 'https://www.lilate.org/'
+        organizationUrl: 'https://www.lilate.org/',
+        description: 'Cette formation prépare à la certification « Japonais professionnel » enregistrée à France Compétences sous le numéro RS6141 par l\'organisme certificateur Lilate pour une durée de 3 ans en date du 26-03-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '24-10-2022',
+        examDetails: {
+          format: [
+            'Mise en situation sous forme d\'un échange continu avec l\'évaluateur sous le mode de la communication simulant des interactions de premier niveau, la retranscription d\'un message écrit, et des réponses écrites via l\'interface de communication et avec des consultations d\'extraits, suivies de questions/réponses'
+          ],
+          successRate: 'En attente'
+        }
       },
       reasons: [
         {
@@ -1502,7 +1618,8 @@ const formationsConfig = {
       evaluationMethods: [
         "Audit de niveau initial",
         "Mini-tests de compréhension réguliers",
-        "Évaluation finale LILATE"
+        "Feuilles de présence et certificat de réalisation",
+        "Épreuve de certification"
       ],
       accessibility: [
         "Formation accessible sous 2 semaines après inscription",
@@ -1513,7 +1630,16 @@ const formationsConfig = {
         name: 'Portugais professionnel',
         code: 'RS6143',
         organization: 'Lilate',
-        organizationUrl: 'https://www.lilate.org/'
+        organizationUrl: 'https://www.lilate.org/',
+        description: 'Cette formation prépare à la certification « Portugais professionnel » enregistrée à France Compétences sous le numéro RS6143 par l\'organisme certificateur Lilate pour une durée de 3 ans en date du 02-04-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '24-10-2022',
+        examDetails: {
+          format: [
+            'Mise en situation sous forme d\'un échange continu avec l\'évaluateur sous le mode de la communication simulant des interactions de premier niveau, la retranscription d\'un message écrit, et des réponses écrites via l\'interface de communication et avec des consultations d\'extraits, suivies de questions/réponses'
+          ],
+          successRate: '100%'
+        }
       },
       reasons: [
         {
@@ -1625,7 +1751,8 @@ const formationsConfig = {
       evaluationMethods: [
         "Audit de niveau initial",
         "Mini-tests de compréhension réguliers",
-        "Évaluation finale LILATE"
+        "Feuilles de présence et certificat de réalisation",
+        "Épreuve de certification"
       ],
       accessibility: [
         "Formation accessible sous 2 semaines après inscription",
@@ -1636,7 +1763,16 @@ const formationsConfig = {
         name: 'Russe professionnel',
         code: 'RS6146',
         organization: 'Lilate',
-        organizationUrl: 'https://www.lilate.org/'
+        organizationUrl: 'https://www.lilate.org/',
+        description: 'Cette formation prépare à la certification « Russe professionnel » enregistrée à France Compétences sous le numéro RS6146 par l\'organisme certificateur Lilate pour une durée de 3 ans en date du 09-04-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '24-10-2022',
+        examDetails: {
+          format: [
+            'Mise en situation sous forme d\'un échange continu avec l\'évaluateur sous le mode de la communication simulant des interactions de premier niveau, la retranscription d\'un message écrit, et des réponses écrites via l\'interface de communication et avec des consultations d\'extraits, suivies de questions/réponses'
+          ],
+          successRate: 'En attente'
+        }
       },
       reasons: [
         {
@@ -1748,7 +1884,8 @@ const formationsConfig = {
       evaluationMethods: [
         "Audit de niveau initial",
         "Mini-tests de compréhension réguliers",
-        "Évaluation finale LILATE"
+        "Feuilles de présence et certificat de réalisation",
+        "Épreuve de certification"
       ],
       accessibility: [
         "Formation accessible sous 2 semaines après inscription",
@@ -1756,10 +1893,19 @@ const formationsConfig = {
         "Assistance à la connexion en cas de visioconférence via Microsoft Teams"
       ],
       certificationDetails: {
-        name: 'Langue des Signes Française (LSF)',
+        name: 'Langue des signes française',
         code: 'RS6796',
         organization: 'Lilate',
-        organizationUrl: 'https://www.lilate.org/'
+        organizationUrl: 'https://www.lilate.org/',
+        description: 'Cette formation prépare à la certification « Langue des signes française » enregistrée à France Compétences sous le numéro RS6796 par l\'organisme certificateur Lilate pour une durée de 3 ans en date du 16-04-2024',
+        dureeEnregistrement: '3',
+        dateEnregistrement: '01-10-2024',
+        examDetails: {
+          format: [
+            'Mise en situation sous forme d\'un échange continu avec l\'évaluateur sous le mode de la communication simulant des interactions de premier niveau, la retranscription d\'un message écrit, et des réponses écrites via l\'interface de communication et avec des consultations d\'extraits, suivies de questions/réponses'
+          ],
+          successRate: 'En attente'
+        }
       },
       reasons: [
         {
@@ -1784,7 +1930,8 @@ const formationsConfig = {
         }
       ],
       icon: '🤟'
-    }
+    },
+      
   ] as Formation[]
 };
 

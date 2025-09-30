@@ -270,7 +270,7 @@ const FormationPage = () => {
                          <CheckCircle className="text-white" size={24} />}
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-2">{reason.title}</h3>
+                        <h3 className="text-xl font-semibold mb-4">{reason.title}</h3>
                         <p className="text-gray-600">{reason.description}</p>
                       </div>
                     </div>
@@ -325,7 +325,7 @@ const FormationPage = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 {hasPublicVise && formation.publicVise && (
                   <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-2xl font-bold mb-4">Public visé</h2>
+                    <h3 className="text-xl font-semibold mb-4">Public visé</h3>
                     <ul className="space-y-2">
                       {formation.publicVise.map((public_item, index) => (
                         <li key={index} className="flex items-start">
@@ -339,7 +339,7 @@ const FormationPage = () => {
 
                 {hasPrerequisites && formation.prerequis && (
                   <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-2xl font-bold mb-4">Prérequis</h2>
+                    <h3 className="text-xl font-semibold mb-4">Prérequis</h3>
                     <ul className="space-y-2">
                       {formation.prerequis.map((prerequis, index) => (
                         <li key={index} className="flex items-start">
@@ -360,7 +360,7 @@ const FormationPage = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 {hasTeachingMethods && formation.teachingMethods && (
                   <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-2xl font-bold mb-4">Méthodes pédagogiques</h2>
+                    <h3 className="text-xl font-semibold mb-4">Méthodes pédagogiques</h3>
                     <ul className="space-y-2">
                       {formation.teachingMethods.map((method, index) => (
                         <li key={index} className="flex items-start">
@@ -374,7 +374,7 @@ const FormationPage = () => {
 
                 {hasEvaluationMethods && formation.evaluationMethods && (
                   <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-2xl font-bold mb-4">Modalités d'évaluation</h2>
+                    <h3 className="text-xl font-semibold mb-4">Modalités d'évaluation</h3>
                     <ul className="space-y-2">
                       {formation.evaluationMethods.map((method, index) => (
                         <li key={index} className="flex items-start">
@@ -396,10 +396,29 @@ const FormationPage = () => {
                 <h2 className="text-2xl font-bold mb-6">Certification</h2>
                 <div className="flex items-center mb-6">
                   <div>
-                    <p className="text-gray-600">Cette formation prépare à la certification "{formation.certificationDetails?.name || formation.title}" enregistrée à France Compétences sous le numéro <a href={`https://www.francecompetences.fr/recherche/${formation.certificationDetails?.code?.startsWith('RS') ? 'rs' : 'rncp'}/${formation.certificationDetails?.code?.replace(/^(RS|RNCP)/, '')}/`} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{formation.certificationDetails?.code}</a> par l'organisme certificateur <a href={formation.certificationDetails?.organizationUrl || '#'} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{formation.certificationDetails?.organization}</a>.</p>
+                    <p className="text-gray-600">
+                      {formation.certificationDetails?.code?.startsWith('RNCP') ? (
+                        <>
+                          Cette formation prépare au certificat de compétences "{formation.certificationDetails?.name || formation.title}", du titre "{formation.certificationDetails?.titre || formation.title}", enregistrée à France Compétences sous le numéro <a href={`https://www.francecompetences.fr/recherche/rncp/${formation.certificationDetails?.code?.replace(/^RNCP/, '')}/`} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{formation.certificationDetails?.code}</a> par l'organisme certificateur <a href={formation.certificationDetails?.organizationUrl || '#'} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{formation.certificationDetails?.organization}</a> pour une durée de {formation.certificationDetails?.dureeEnregistrement || '3'} ans en date du {formation.certificationDetails?.dateEnregistrement || '21-12-2023'}.
+                        </>
+                      ) : (
+                        <>
+                          Cette formation prépare à la certification "{formation.certificationDetails?.name || formation.title}" enregistrée à France Compétences sous le numéro <a href={`https://www.francecompetences.fr/recherche/rs/${formation.certificationDetails?.code?.replace(/^RS/, '')}/`} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{formation.certificationDetails?.code}</a> par l'organisme certificateur <a href={formation.certificationDetails?.organizationUrl || '#'} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{formation.certificationDetails?.organization}</a> pour une durée de {formation.certificationDetails?.dureeEnregistrement || '3'} ans en date du {formation.certificationDetails?.dateEnregistrement || '21-12-2023'}.
+                        </>
+                      )}
+                    </p>
                     <p className="text-gray-600 mt-3">A l'issue de la formation, le stagiaire s'engage à passer l'examen préparant à la certification.</p>
                   </div>
                 </div>
+                
+                {/* Épreuve de certification */}
+                {formation.certificationDetails?.examDetails?.format && formation.certificationDetails.examDetails.format.length > 0 && (
+                  <div className="mt-6 mb-6">
+                    <h4 className="font-semibold mb-4">Épreuve de certification</h4>
+                    <p className="text-gray-600">{formation.certificationDetails.examDetails.format[0]}</p>
+                  </div>
+                )}
+                
                 <div>
                   <h4 className="font-semibold mb-4">Statistiques</h4>
                   <div 
@@ -408,7 +427,7 @@ const FormationPage = () => {
                       background: `linear-gradient(to right, ${themeConfig.brand.primaryColor}, ${themeConfig.brand.primaryColor}dd)`
                     }}
                   >
-                    <p className="text-white font-medium mb-2 text-lg">Taux de réussite : 100%</p>
+                    <p className="text-white font-medium mb-2 text-lg">Taux de réussite : {formation.certificationDetails?.examDetails?.successRate || '100%'}</p>
                     <p className="text-white text-opacity-90">Données basées sur les candidats ayant préparé la certification "{formation.certificationDetails?.name || formation.title}" auprès de notre organisme de formation</p>
                   </div>
                 </div>
