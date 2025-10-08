@@ -1,21 +1,21 @@
-// Configuration SEO centralisée pour FormaPro by Accertif
+// Configuration SEO centralisée pour Seriosa 2.0
 
 export const SEO_CONFIG = {
   // Informations de base
-  siteName: 'FormaPro by Accertif',
-  siteUrl: 'https://www.formaprobyaccertif.fr',
-  siteDescription: 'Organisme de formation professionnelle certifié Qualiopi spécialisé dans les Form\'actions certifiantes sur-mesure. Formations éligibles CPF en intelligence artificielle, langues étrangères, communication et community management.',
+  siteName: 'Seriosa 2.0',
+  siteUrl: 'https://www.seriosa.fr',
+  siteDescription: 'Cabinet de conseil spécialisé en RSE (Responsabilité Sociétale des Entreprises) et développement durable. Accompagnement des entreprises dans leur transition écologique et sociale.',
   
   // Contact
-  contactEmail: 'hello@formaprobyaccertif.fr',
-  contactPhone: '09 75 85 65 10',
-  address: '905 Chemin de l\'Évêque, 82290 Montbeton, France',
+  contactEmail: 'olivier.guyot@seriosa.fr',
+  contactPhone: '07 76 95 70 38',
+  address: '31 rue Chevalier Paul 83000 Toulon',
   
   // Réseaux sociaux
   socialMedia: {
     linkedin: 'https://www.linkedin.com/company/93788178',
-    facebook: 'https://www.facebook.com/formapro',
-    twitter: 'https://twitter.com/formapro'
+    facebook: 'https://www.facebook.com/seriosa2.0',
+    twitter: 'https://twitter.com/seriosa2.0'
   },
   
   // Certification
@@ -27,20 +27,20 @@ export const SEO_CONFIG = {
   
   // Images par défaut
   defaultImages: {
-    logo: '/images/logos/formapro-logo.png',
-    ogImage: '/images/logos/formapro-og.jpg',
-    favicon: '/iceberg.png'
+    logo: '/logo.jpg',
+    ogImage: '/logo.jpg',
+    favicon: '/logo.jpg'
   },
   
   // Mots-clés principaux
   mainKeywords: [
-    'formation professionnelle',
-    'CPF',
-    'Qualiopi',
-    'FormaPro by Accertif',
-    'formation certifiée',
-    'formation éligible CPF',
-    'organisme de formation'
+    'RSE',
+    'responsabilité sociétale',
+    'développement durable',
+    'Seriosa 2.0',
+    'conseil RSE',
+    'transition écologique',
+    'cabinet de conseil'
   ],
   
   // Horaires d'ouverture

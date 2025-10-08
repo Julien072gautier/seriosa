@@ -4,20 +4,20 @@ export function JsonLd() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "FormaPro by Accertif",
-    "alternateName": ["FormaPro", "FormaPro Formation"],
-    "description": "Organisme de formation professionnelle certifié Qualiopi spécialisé dans les Form'actions certifiantes sur-mesure. Formations éligibles CPF en intelligence artificielle, langues étrangères, communication et community management.",
-    "url": "https://www.formaprobyaccertif.fr",
+    "name": "Seriosa 2.0",
+    "alternateName": ["Seriosa", "Seriosa RSE"],
+    "description": "Cabinet de conseil RSE et développement durable certifié Qualiopi. Accompagnement des entreprises dans leur transition écologique et sociale.",
+    "url": "https://www.seriosa.fr",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.formaprobyaccertif.fr/images/logos/formapro-logo.png",
+      "url": "https://www.seriosa.fr/logo.jpg",
       "width": 120,
       "height": 40
     },
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+33-XX-XX-XX-XX-XX",
-      "email": "hello@formaprobyaccertif.fr",
+      "email": "olivier.guyot@seriosa.fr",
       "contactType": "Customer Service",
       "availableLanguage": ["French"],
       "areaServed": "FR",
@@ -34,9 +34,9 @@ export function JsonLd() {
       "addressLocality": "France"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/formapro",
-      "https://www.facebook.com/formapro",
-      "https://twitter.com/formapro"
+      "https://www.linkedin.com/company/seriosa2.0",
+      "https://www.facebook.com/seriosa2.0",
+      "https://twitter.com/seriosa2.0"
     ],
     "hasCredential": {
       "@type": "EducationalOccupationalCredential",
@@ -51,51 +51,51 @@ export function JsonLd() {
       "@type": "Country",
       "name": "France"
     },
-    "serviceType": "Formation professionnelle",
+    "serviceType": "Conseil RSE et développement durable",
     "offers": [
       {
         "@type": "Course",
-        "name": "Formation IA et Vente",
-        "description": "Formation professionnelle en intelligence artificielle appliquée à la vente et au marketing",
+        "name": "Audit et diagnostic RSE",
+        "description": "Service d'audit et diagnostic RSE complet pour évaluer la maturité de votre entreprise",
         "provider": {
-          "@type": "EducationalOrganization",
-          "name": "FormaPro by Accertif"
+          "@type": "Organization",
+          "name": "Seriosa 2.0"
         },
-        "educationalLevel": "Formation professionnelle",
-        "teaches": ["Intelligence artificielle", "Vente", "Marketing digital"]
+        "serviceType": "Conseil RSE",
+        "teaches": ["Audit RSE", "Diagnostic environnemental", "Évaluation sociale"]
       },
       {
         "@type": "Course",
-        "name": "Formation Communication et Prise de Parole",
-        "description": "Formation professionnelle en communication et techniques de prise de parole en public",
+        "name": "Stratégie et gouvernance RSE",
+        "description": "Service de définition de stratégie RSE et gouvernance pour votre entreprise",
         "provider": {
-          "@type": "EducationalOrganization",
-          "name": "FormaPro by Accertif"
+          "@type": "Organization",
+          "name": "Seriosa 2.0"
         },
-        "educationalLevel": "Formation professionnelle",
-        "teaches": ["Communication", "Prise de parole", "Présentation"]
+        "serviceType": "Conseil RSE",
+        "teaches": ["Stratégie RSE", "Gouvernance", "Pilotage RSE"]
       },
       {
         "@type": "Course",
-        "name": "Formation Community Management",
-        "description": "Formation professionnelle en gestion de communautés et réseaux sociaux",
+        "name": "Transition écologique",
+        "description": "Service d'accompagnement transition écologique et environnementale",
         "provider": {
-          "@type": "EducationalOrganization",
-          "name": "FormaPro by Accertif"
+          "@type": "Organization",
+          "name": "Seriosa 2.0"
         },
-        "educationalLevel": "Formation professionnelle",
-        "teaches": ["Community Management", "Réseaux sociaux", "Marketing digital"]
+        "serviceType": "Conseil RSE",
+        "teaches": ["Bilan carbone", "Éco-conception", "Énergies renouvelables"]
       },
       {
         "@type": "Course",
-        "name": "Formation Anglais Professionnel",
-        "description": "Formation en anglais professionnel pour améliorer ses compétences linguistiques en entreprise",
+        "name": "Développement social et sociétal",
+        "description": "Service de développement social et sociétal pour votre entreprise",
         "provider": {
-          "@type": "EducationalOrganization",
-          "name": "FormaPro by Accertif"
+          "@type": "Organization",
+          "name": "Seriosa 2.0"
         },
-        "educationalLevel": "Formation professionnelle",
-        "teaches": ["Anglais professionnel", "Communication internationale"]
+        "serviceType": "Conseil RSE",
+        "teaches": ["Diversité", "Inclusion", "Bien-être au travail"]
       }
     ],
     "aggregateRating": {
@@ -125,12 +125,12 @@ export function FormationJsonLd({ formationSlug }: { formationSlug: string }) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Course",
-    "name": `Formation ${formation.name}`,
+    "name": `Service ${formation.name}`,
     "description": formation.fullDescription,
     "provider": {
       "@type": "EducationalOrganization",
-      "name": "FormaPro by Accertif",
-      "url": "https://www.formaprobyaccertif.fr"
+      "name": "Seriosa 2.0",
+      "url": "https://www.seriosa.fr"
     },
     "hasCourseInstance": {
       "@type": "CourseInstance",
@@ -138,7 +138,7 @@ export function FormationJsonLd({ formationSlug }: { formationSlug: string }) {
       "courseWorkload": formation.duration,
       "instructor": {
         "@type": "Person",
-        "name": "Équipe FormaPro by Accertif"
+        "name": "Équipe Seriosa 2.0"
       }
     },
     "offers": {
@@ -146,12 +146,12 @@ export function FormationJsonLd({ formationSlug }: { formationSlug: string }) {
       "price": formation.price,
       "priceCurrency": "EUR",
       "availability": "https://schema.org/InStock",
-      "url": `https://www.formaprobyaccertif.fr/formation/${formationSlug}`
+      "url": `https://www.seriosa.fr/service/${formationSlug}`
     },
     "educationalCredentialAwarded": formation.certification,
     "teaches": formation.skills,
     "image": formation.image,
-    "url": `https://www.formaprobyaccertif.fr/formation/${formationSlug}`
+    "url": `https://www.seriosa.fr/service/${formationSlug}`
   }
 
   return (

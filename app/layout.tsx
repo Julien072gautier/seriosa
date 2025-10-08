@@ -14,59 +14,58 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'FormaPro by Accertif - Formations CPF pour professionnels | Organisme certifié Qualiopi',
-    template: '%s | FormaPro by Accertif'
+    default: 'Seriosa 2.0 - Cabinet de conseil RSE et développement durable',
+    template: '%s | Seriosa 2.0'
   },
-  description: 'FormaPro by Accertif est un organisme de formation certifié Qualiopi. Nous proposons des formations professionnelles opérationnelles, éligibles au CPF, en intelligence artificielle, communication, langues étrangères et métiers du digital.',
+  description: 'Seriosa 2.0 est un cabinet de conseil spécialisé en RSE (Responsabilité Sociétale des Entreprises) et développement durable. Nous accompagnons les entreprises dans leur transition écologique et sociale.',
   keywords: [
-    'FormaPro by Accertif',
-    'organisme certifié Qualiopi',
-    'formation professionnelle CPF',
-    'intelligence artificielle',
-    'communication professionnelle',
-    'community management',
-    'anglais professionnel',
-    'langues étrangères',
-    'formation IA vente',
-    'formation en ligne',
-    'formation présentielle',
-    'formation salariés',
-    'formation indépendants',
-    'formation dirigeants'
+    'Seriosa 2.0',
+    'RSE',
+    'responsabilité sociétale',
+    'développement durable',
+    'conseil RSE',
+    'transition écologique',
+    'cabinet de conseil',
+    'audit RSE',
+    'stratégie RSE',
+    'gouvernance RSE',
+    'bilan carbone',
+    'performance durable',
+    'entreprise responsable'
   ],
-  authors: [{ name: 'FormaPro by Accertif' }],
-  creator: 'FormaPro by Accertif',
-  publisher: 'FormaPro by Accertif',
+  authors: [{ name: 'Seriosa 2.0' }],
+  creator: 'Seriosa 2.0',
+  publisher: 'Seriosa 2.0',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://www.formaprobyaccertif.fr/'),
+  metadataBase: new URL('https://www.seriosa.fr/'),
   alternates: {
-    canonical: 'https://www.formaprobyaccertif.fr/',
+    canonical: 'https://www.seriosa.fr/',
   },
   openGraph: {
-    title: 'FormaPro by Accertif - Formations CPF pour professionnels',
-    description: 'Organisme certifié Qualiopi, FormaPro by Accertif propose des formations finançables via le CPF : IA, communication, langues, community management.',
-    url: 'https://www.formaprobyaccertif.fr/',
-    siteName: 'FormaPro by Accertif',
+    title: 'Seriosa 2.0 - Cabinet de conseil RSE et développement durable',
+    description: 'Cabinet de conseil spécialisé en RSE, Seriosa 2.0 accompagne les entreprises dans leur transition écologique et sociale.',
+    url: 'https://www.seriosa.fr/',
+    siteName: 'Seriosa 2.0',
     locale: 'fr_FR',
     type: 'website',
     images: [
       {
-        url: '/images/logos/formapro-og.jpg',
+        url: '/logo.jpg',
         width: 1200,
         height: 630,
-        alt: 'FormaPro by Accertif - Formations professionnelles CPF',
+        alt: 'Seriosa 2.0 - Cabinet de conseil RSE',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FormaPro by Accertif - Formations CPF pour tous les professionnels',
-    description: 'Découvrez nos formations professionnelles éligibles au CPF. FormaPro by Accertif est un organisme certifié Qualiopi spécialisé en IA, communication, langues et digital.',
-    images: ['/images/logos/formapro-og.jpg'],
+    title: 'Seriosa 2.0 - Cabinet de conseil RSE et développement durable',
+    description: 'Découvrez nos services de conseil RSE. Seriosa 2.0 accompagne les entreprises dans leur transition écologique et sociale.',
+    images: ['/logo.jpg'],
   },
   robots: {
     index: true,
@@ -94,27 +93,27 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/iceberg.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/iceberg.png" />
-        <meta name="theme-color" content="#1e40af" />
-        <meta name="description" content="FormaPro by Accertif est un organisme de formation certifié Qualiopi. Nos formations professionnelles, éligibles au CPF, couvrent l’IA, la communication, les langues et le digital." />
-        <meta name="author" content="FormaPro by Accertif" />
-        <meta name="keywords" content="organisme certifié Qualiopi, formation CPF, formation intelligence artificielle, formation communication, community management, langues professionnelles, CPF digital, formation pour salariés et dirigeants" />
+        <link rel="icon" href="/logo.jpg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/logo.jpg" />
+        <meta name="theme-color" content="#87B946" />
+        <meta name="description" content="Seriosa 2.0 est un cabinet de conseil spécialisé en RSE et développement durable. Nous accompagnons les entreprises dans leur transition écologique et sociale." />
+        <meta name="author" content="Seriosa 2.0" />
+        <meta name="keywords" content="RSE, responsabilité sociétale, développement durable, conseil RSE, transition écologique, cabinet de conseil, audit RSE, stratégie RSE, gouvernance RSE, bilan carbone, performance durable, entreprise responsable" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.formaprobyaccertif.fr/" />
+        <link rel="canonical" href="https://www.seriosa.fr/" />
         <meta name="format-detection" content="telephone=no, address=no, email=no" />
-        <meta property="og:title" content="FormaPro by Accertif - Formations CPF pour professionnels" />
-        <meta property="og:description" content="Organisme de formation certifié Qualiopi, FormaPro by Accertif propose des formations éligibles CPF dans l’IA, la communication, les langues et les compétences digitales." />
-        <meta property="og:url" content="https://www.formaprobyaccertif.fr/" />
-        <meta property="og:image" content="/images/logos/formapro-og.jpg" />
+        <meta property="og:title" content="Seriosa 2.0 - Cabinet de conseil RSE et développement durable" />
+        <meta property="og:description" content="Cabinet de conseil spécialisé en RSE, Seriosa 2.0 accompagne les entreprises dans leur transition écologique et sociale." />
+        <meta property="og:url" content="https://www.seriosa.fr/" />
+        <meta property="og:image" content="/logo.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="FormaPro by Accertif - Formations professionnelles CPF" />
+        <meta property="og:image:alt" content="Seriosa 2.0 - Cabinet de conseil RSE" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="FormaPro by Accertif - Organisme certifié Qualiopi" />
-        <meta name="twitter:description" content="FormaPro by Accertif, organisme certifié Qualiopi, propose des formations 100 % CPF en IA, communication, digital et langues. Pour salariés, indépendants, dirigeants." />
-        <meta name="twitter:image" content="/images/logos/formapro-og.jpg" />
+        <meta name="twitter:title" content="Seriosa 2.0 - Cabinet de conseil RSE" />
+        <meta name="twitter:description" content="Seriosa 2.0, cabinet de conseil RSE, accompagne les entreprises dans leur transition écologique et sociale. Audit, stratégie, gouvernance RSE." />
+        <meta name="twitter:image" content="/logo.jpg" />
         <JsonLd />
       </head>
       <body className={inter.className}>

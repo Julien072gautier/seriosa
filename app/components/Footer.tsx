@@ -14,8 +14,8 @@ const Footer = () => {
             <div className="mb-4">
               <Link href="/" className="flex items-center">
                 <Image 
-                  src="/Logoblanc.png" 
-                  alt="FORMAPRO by Accertif" 
+                  src="/logo.jpg" 
+                  alt="Seriosa 2.0" 
                   width={120}
                   height={40}
                   className="h-10 w-auto"
@@ -23,19 +23,19 @@ const Footer = () => {
               </Link>
             </div>
             <p className="text-gray-300 mb-4">
-              Organisme de formation certifié proposant des Form&apos;actions certifiantes personnalisées.
+              Cabinet de conseil spécialisé en RSE (Responsabilité Sociétale des Entreprises) et développement durable.
             </p>
             <div className="flex items-center text-gray-300 mb-2">
               <MapPin size={18} className="mr-2" />
-              <span>905 Chemin de l&apos;Évêque, 82290 Montbeton, France</span>
+              <span>31 rue Chevalier Paul 83000 Toulon</span>
             </div>
             <div className="flex items-center text-gray-300 mb-2">
               <Phone size={18} className="mr-2" />
-              <span>09 75 85 65 10</span>
+              <span>07 76 95 70 38</span>
             </div>
             <div className="flex items-center text-gray-300 mb-2">
               <Mail size={18} className="mr-2" />
-              <span>hello@formaprobyaccertif.fr</span>
+              <span>olivier.guyot@seriosa.fr</span>
             </div>
             <div className="flex items-center text-gray-300">
               <Linkedin size={18} className="mr-2" />
@@ -45,7 +45,7 @@ const Footer = () => {
                 rel="noopener noreferrer" 
                 className="hover:text-blue-400 transition-colors"
               >
-                FORMAPRO by Accertif LinkedIn
+                Seriosa 2.0 LinkedIn
               </a>
             </div>
           </div>
@@ -61,7 +61,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/formations" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  Nos Formations
+                  Formations
                 </Link>
               </li>
               <li>
@@ -114,13 +114,13 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Certification</h3>
             <div className="bg-white p-3 rounded-lg inline-block mb-4">
               <a 
-                href="https://irp.cdn-website.com/e0ab763a/files/uploaded/Certificat_Qualiopi_Sign%C3%A9_HD.pdf" 
+                href="/certificat.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
                 <Image 
-                  src="https://irp.cdn-website.com/e0ab763a/dms3rep/multi/qualiopi.png" 
-                  alt="Certification Qualiopi" 
+                  src="/certificat.pdf" 
+                  alt="Certificat Qualiopi Seriosa 2.0" 
                   width={80}
                   height={64}
                   className="h-16 w-auto cursor-pointer"
@@ -128,14 +128,14 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-gray-300">
-              Certifié Qualiopi - Éligible au CPF et autres dispositifs de financement de la formation professionnelle.
+              Certifié Qualiopi - Cabinet de conseil RSE et développement durable.
             </p>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400">&copy; {new Date().getFullYear()} FORMAPRO by Accertif. Tous droits réservés.</p>
+            <p className="text-gray-400">&copy; 2025 Accertif Connect. Tous droits réservés.</p>
             <div className="flex items-center gap-4 text-sm">
               <Link href="/politique-confidentialite" className="text-gray-400 hover:text-blue-400 transition-colors">
                 Politique de confidentialité

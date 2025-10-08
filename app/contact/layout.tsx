@@ -1,19 +1,19 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contactez-nous | FormaPro by Accertif',
-  description: 'Contactez FormaPro by Accertif pour plus d\'informations sur nos formations professionnelles. Notre équipe vous accompagne dans votre projet de formation. Prenez rendez-vous ou envoyez-nous un message.',
+  title: 'Contactez-nous | Seriosa 2.0',
+  description: 'Contactez Seriosa 2.0 pour plus d\'informations sur nos services RSE. Notre équipe vous accompagne dans votre transition écologique et sociale. Prenez rendez-vous ou envoyez-nous un message.',
   keywords: [
-    'contact FormaPro',
-    'information formation',
-    'conseiller formation',
-    'accompagnement',
-    'rendez-vous formation',
-    'renseignements CPF'
+    'contact Seriosa',
+    'information RSE',
+    'conseiller RSE',
+    'accompagnement RSE',
+    'rendez-vous RSE',
+    'renseignements RSE'
   ],
   openGraph: {
-    title: 'Contactez-nous | FormaPro by Accertif',
-    description: 'Notre équipe vous accompagne dans votre projet de formation professionnelle. Contactez-nous pour plus d\'informations.',
+    title: 'Contactez-nous | Seriosa 2.0',
+    description: 'Notre équipe vous accompagne dans votre transition écologique et sociale. Contactez-nous pour plus d\'informations.',
     type: 'website',
   },
 }

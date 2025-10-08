@@ -13,17 +13,16 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image 
-            src="https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Logo-bdcdc0e7.png" 
-            alt="FORMAPRO by Accertif" 
-            width={120}
-            height={40}
-            className="h-10 w-auto mr-2"
+            src="/logo.jpg" 
+            alt="Seriosa 2.0" 
+            width={180}
+            height={60}
+            className="h-16 w-auto mr-2"
             priority
           />
           <span className="text-2xl font-bold hidden">
-            <span className="text-black">FORMA</span>
-            <span className="text-brand">PRO</span>
-            <span className="text-gray-500 text-sm ml-1">by Accertif</span>
+            <span className="text-black">SERIOSA</span>
+            <span className="text-brand">2.0</span>
           </span>
         </Link>
 
@@ -42,12 +41,10 @@ const Header = () => {
             Contact
           </Link>
           <a 
-            href="https://skillup.accertif.fr" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+            href="/contact" 
             className="btn-primary btn-md btn-with-icon"
           >
-            <span>SKILLUP</span>
+            <span>Contact</span>
             <ExternalLink size={16} className="ml-2" />
           </a>
         </nav>
@@ -95,13 +92,11 @@ const Header = () => {
               Contact
             </Link>
             <a 
-              href="https://skillup.accertif.fr" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+              href="/contact" 
               className="btn-primary btn-md btn-with-icon"
               onClick={() => setIsMenuOpen(false)}
             >
-              <span>SKILLUP</span>
+              <span>Contact</span>
               <ExternalLink size={16} className="ml-2" />
             </a>
           </nav>

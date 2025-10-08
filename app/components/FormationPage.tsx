@@ -558,7 +558,7 @@ const FormationPage = () => {
       />
 
       <Head>
-        <title>{formation?.title} | FORMAPRO by ACCERTIF</title>
+        <title>{formation?.title} | Seriosa 2.0</title>
         <meta name="description" content={formation?.fullDescription} />
       </Head>
     </div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Calendar, Clock, CheckCircle } from 'lucide-react';
-import { useSendEmail } from "../hooks/useSendEmail";
+import useSendEmail from "../hooks/useSendEmail";
 import { validateForm, ValidationErrors, formatPhoneNumber } from "../lib/validation";
 import Captcha from "../components/Captcha";
 
@@ -99,7 +99,7 @@ EMAIL: ${formData.email}
 TELEPHONE: ${formData.phone}
 SUJET: ${formData.subject}
 MESSAGE: ${formData.message}`;
-    const result = await sendEmail({ to: 'hello@formaprobyaccertif.fr', subject: formData.subject, text: data });
+    const result = await sendEmail({ to: 'olivier.guyot@seriosa.fr', subject: formData.subject, text: data });
     
     // Redirection vers la page de remerciement après envoi réussi
     window.location.href = '/merci';
@@ -128,7 +128,7 @@ MESSAGE: ${formData.message}`;
                     <MapPin size={20} className="mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-medium mb-1">Adresse</h3>
-                      <p>905 Chemin de l'Évêque, 82290 Montbeton, France</p>
+                      <p>31 rue Chevalier Paul 83000 Toulon</p>
                     </div>
                   </div>
 
@@ -136,7 +136,7 @@ MESSAGE: ${formData.message}`;
                     <Phone size={20} className="mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-medium mb-1">Téléphone</h3>
-                      <p>09 75 85 65 10</p>
+                      <p>07 76 95 70 38</p>
                     </div>
                   </div>
 
@@ -144,7 +144,7 @@ MESSAGE: ${formData.message}`;
                     <Mail size={20} className="mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="font-medium mb-1">Email</h3>
-                      <p>hello@formaprobyaccertif.fr</p>
+                      <p>olivier.guyot@seriosa.fr</p>
                     </div>
                   </div>
 
@@ -288,9 +288,9 @@ MESSAGE: ${formData.message}`;
                         >
                           <option value="">Sélectionnez un sujet</option>
                           <option value="information">Je souhaite plus d'informations</option>
-                          <option value="inscription">M'inscrire à une Form'action</option>
-                          <option value="financement">Financer une Form'action</option>
-                          <option value="surmesure">Personnaliser ma Form'action</option>                          
+                          <option value="inscription">M'inscrire à une Formation</option>
+                          <option value="financement">Financer une Formation</option>
+                          <option value="surmesure">Personnaliser ma Formation</option>                          
                           <option value="partenariat">Proposition de partenariat</option>
                           <option value="autre">Autre</option>
                         </select>
@@ -324,7 +324,7 @@ MESSAGE: ${formData.message}`;
                       </button>
 
                       <a
-                        href="https://calendly.com/julien-gautier-accertif/formaprobyaccertif"
+                        href="https://calendly.com/olivier-guyot-seriosa"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-brand hover:text-brand-700 font-medium inline-flex items-center"
@@ -354,7 +354,7 @@ MESSAGE: ${formData.message}`;
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-semibold mb-2">Combien de temps dure une Form'action certifiante ?</h3>
+              <h3 className="text-lg font-semibold mb-2">Combien de temps dure une Formation certifiante ?</h3>
               <p className="text-gray-600">
                 La durée varie selon les formations, généralement entre 14 et 60 heures. Chaque parcours est adapté à vos disponibilités et peut être réalisé à votre rythme grâce à notre plateforme e-learning.
               </p>

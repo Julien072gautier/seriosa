@@ -1,4 +1,4 @@
-// Configuration centralisée des statistiques FORMAPRO
+// Configuration centralisée des statistiques Seriosa 2.0
 export const STATS_CONFIG = {
   // Statistiques principales
   apprenantsFormes: 415,

@@ -165,7 +165,7 @@ const FormationsPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Nos Form'actions Certifiantes</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">Nos Formations</h1>
           <p className="text-gray-600 text-lg mb-4">
             Découvrez notre catalogue de formations certifiantes conçues pour développer vos compétences professionnelles et booster votre carrière.
           </p>

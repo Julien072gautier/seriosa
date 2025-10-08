@@ -73,12 +73,12 @@ const MerciPage = () => {
                  </div>
                </a>
                <a 
-                 href="mailto:hello@formaprobyaccertif.fr"
+                 href="mailto:olivier.guyot@seriosa.fr"
                  className="flex items-center justify-center p-3 bg-white rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
                >
                  <Mail className="text-brand mr-3" size={20} />
                  <div className="text-left">
-                   <p className="font-medium text-gray-800">hello@formaprobyaccertif.fr</p>
+                   <p className="font-medium text-gray-800">olivier.guyot@seriosa.fr</p>
                    <p className="text-sm text-gray-600">Email</p>
                  </div>
                </a>

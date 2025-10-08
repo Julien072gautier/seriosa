@@ -163,7 +163,7 @@ const HomePage = () => {
               Des compétences <span className="relative inline-block">
                 <span className="relative z-10">pratiques</span>
                 <span className="absolute bottom-1 left-0 w-full h-2 bg-white opacity-20 rounded animate-pulse"></span>
-              </span>, une Form'action <span className="relative inline-block">
+              </span>, une Formation <span className="relative inline-block">
                 <span className="relative z-10">sur-mesure</span>
                 <span className="absolute bottom-1 left-0 w-full h-2 bg-white opacity-20 rounded animate-pulse"></span>
               </span>.
@@ -175,7 +175,7 @@ const HomePage = () => {
               animate={controls}
               variants={subtitleVariants}
             >
-              Apprenez à votre rythme avec une Form'action individualisée, conçue pour une mise en pratique immédiate et 100 % finançable.
+              Apprenez à votre rythme avec une Formation individualisée, conçue pour une mise en pratique immédiate et 100 % finançable.
             </motion.p>
             
             {/* Dynamic Stats */}
@@ -209,7 +209,7 @@ const HomePage = () => {
                 href="/formations" 
                 className="btn-primary btn-lg btn-with-icon"
               >
-                Découvrir nos Form'actions
+                Découvrir nos Formations
               </Link>
               <a 
                 href="tel:0975856510"
@@ -260,7 +260,7 @@ const HomePage = () => {
               <div className="bg-brand-100 p-3 rounded-full inline-flex justify-center items-center mb-4 transition-transform duration-300 hover:scale-110">
                 <Tool className="text-brand" size={28} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Nos Form'actions vous permettent de construire un parcours sur mesure.</h3>
+              <h3 className="text-xl font-semibold mb-3">Nos Formations vous permettent de construire un parcours sur mesure.</h3>
               <p className="text-gray-600">
               Vous choisissez le rythme, les modalités et les formats les plus adaptés pour atteindre vos objectifs professionnels tout en valorisant vos acquis.
               </p>
@@ -296,25 +296,25 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Form'actions Certifiantes */}
+      {/* Formations Certifiantes */}
       <section className="py-16">
          <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6">Le top 3 de nos Form'actions</h2>
+            <h2 className="text-3xl font-bold mb-6">Le top 3 de nos Formations</h2>
             <p className="text-gray-600 mb-8">
-              Atteignez vos objectifs avec nos Form'actions certifiantes, 100% opérationnelles et finançables !
+              Découvrez nos formations certifiantes conçues pour développer vos compétences professionnelles et booster votre carrière !
             </p>
           </div>
           
           {/* Featured Formations - Alignement parfait (hauteurs fixes) */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Formation 1 */}
+            {/* Formation 1 - Audit et diagnostic RSE */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform h-full flex flex-col">
               {/* Image on top - Fixed height */}
               <div className="h-48 overflow-hidden flex-shrink-0">
                 <img 
-                  src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
-                  alt="Communication professionnelle" 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
+                  alt="Audit et diagnostic RSE" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
@@ -322,57 +322,57 @@ const HomePage = () => {
                 {/* Bloc titre+icône */}
                 <div className="flex items-start mb-4 h-[80px]">
                   <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
-                    <MessageSquare className="text-brand" size={20} />
+                    <Search className="text-brand" size={20} />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Communiquer avec impact à l'oral en présentiel et à distance</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Audit et diagnostic RSE complet</h3>
                 </div>
                 {/* Espace obligatoire */}
                 <div className="mb-4"></div>
                 {/* Description */}
                 <div className="mb-5 h-[60px] flex items-center">
                   <p className="text-sm sm:text-base text-gray-600 w-full overflow-hidden">
-                    Gagnez en aisance, maîtrisez votre stress et développez votre impact, que ce soit en présentiel ou à distance.
+                    Évaluez la maturité RSE de votre entreprise et identifiez les axes d'amélioration prioritaires pour votre transition écologique et sociale.
                   </p>
                 </div>
                 {/* Infos */}
                 <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3 h-[48px]">
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Clock size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>21 heures</span>
+                    <span>2-4 semaines</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>2450€</span>
+                    <span>Sur devis</span>
                   </div>
-                  <div className="flex items-center text-sm text-green-600 font-medium mr-3 mb-2">
-                    <CreditCard size={16} className="mr-2 text-green-600 flex-shrink-0" />
-                    <span>Éligible CPF</span>
+                  <div className="flex items-center text-sm text-blue-600 font-medium mr-3 mb-2">
+                    <CreditCard size={16} className="mr-2 text-blue-600 flex-shrink-0" />
+                    <span>Formation</span>
                   </div>
                 </div>
                 {/* Certification */}
                 <div className="flex items-center text-sm text-gray-600 mb-5 h-[28px]">
                   <Award size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                  <span>Certifié par Pollen Conseil</span>
+                  <span>Certification Qualiopi</span>
                 </div>
                 {/* Bouton */}
                 <div className="mt-auto flex-shrink-0">
                   <Link 
-                    href="/formation/communication-prise-parole" 
+                    href="/formation/service-audit-rse" 
                     className="btn-primary btn-md btn-with-icon w-full"
                   >
-                    Découvrir cette Form'actions <ArrowRight size={14} className="ml-2" />
+                    Découvrir ce service <ArrowRight size={14} className="ml-2" />
                   </Link>
                 </div>
               </div>
             </div>
 
-            {/* Formation 2 */}
+            {/* Formation 2 - Stratégie RSE et gouvernance */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform h-full flex flex-col">
               {/* Image on top - Fixed height */}
               <div className="h-48 overflow-hidden flex-shrink-0">
                 <img 
-                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
-                  alt="Intelligence Artificielle pour le marketing" 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
+                  alt="Stratégie RSE et gouvernance" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
@@ -382,55 +382,55 @@ const HomePage = () => {
                   <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
                     <Zap className="text-brand" size={20} />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Intégrer l'IA conversationnelle dans le cycle de vente</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Définition de stratégie RSE et gouvernance</h3>
                 </div>
                 {/* Espace obligatoire */}
                 <div className="mb-4"></div>
                 {/* Description */}
                 <div className="mb-5 h-[60px] flex items-center">
                   <p className="text-sm sm:text-base text-gray-600 w-full overflow-hidden">
-                    Automatisez vos processus, optimisez vos ventes et engagez mieux vos clients grâce à l'IA conversationnelle.
+                    Définissez une stratégie RSE alignée avec vos objectifs business et mettez en place une gouvernance efficace pour piloter votre transformation durable.
                   </p>
                 </div>
                 {/* Infos */}
                 <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3 h-[48px]">
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Clock size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>21 heures</span>
+                    <span>3-6 mois</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>2450€</span>
+                    <span>Sur devis</span>
                   </div>
-                  <div className="flex items-center text-sm text-green-600 font-medium mr-3 mb-2">
-                    <CreditCard size={16} className="mr-2 text-green-600 flex-shrink-0" />
-                    <span>Éligible CPF</span>
+                  <div className="flex items-center text-sm text-blue-600 font-medium mr-3 mb-2">
+                    <CreditCard size={16} className="mr-2 text-blue-600 flex-shrink-0" />
+                    <span>Formation</span>
                   </div>
                 </div>
                 {/* Certification */}
                 <div className="flex items-center text-sm text-gray-600 mb-5 h-[28px]">
                   <Award size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                  <span>Certifié par Online Sales Success</span>
+                  <span>Certification Qualiopi</span>
                 </div>
                 {/* Bouton */}
                 <div className="mt-auto flex-shrink-0">
                   <Link 
-                    href="/formation/ia-vente" 
+                    href="/formation/service-strategie-rse" 
                     className="btn-primary btn-md btn-with-icon w-full"
                   >
-                    Découvrir cette Form'action <ArrowRight size={14} className="ml-2" />
+                    Découvrir ce service <ArrowRight size={14} className="ml-2" />
                   </Link>
                 </div>
               </div>
             </div>
 
-            {/* Formation 3 */}
+            {/* Formation 3 - Transition écologique */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform h-full flex flex-col">
               {/* Image on top - Fixed height */}
               <div className="h-48 overflow-hidden flex-shrink-0">
                 <img 
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
-                  alt="Stratégie digitale et réseaux sociaux" 
+                  src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
+                  alt="Accompagnement transition écologique" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
@@ -440,43 +440,43 @@ const HomePage = () => {
                   <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
                     <BarChart3 className="text-brand" size={20} />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Développer son activité avec le Webmarketing</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Accompagnement transition écologique et environnementale</h3>
                 </div>
                 {/* Espace obligatoire */}
                 <div className="mb-4"></div>
                 {/* Description */}
                 <div className="mb-5 h-[60px] flex items-center">
                   <p className="text-sm sm:text-base text-gray-600 w-full overflow-hidden">
-                    Élaborez une stratégie digitale efficace et maîtrisez les leviers des réseaux sociaux pour votre présence en ligne.
+                    Accompagnez votre entreprise dans sa transition écologique avec des solutions concrètes pour réduire votre empreinte environnementale et optimiser vos performances durables.
                   </p>
                 </div>
                 {/* Infos */}
                 <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3 h-[48px]">
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Clock size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>21 heures</span>
+                    <span>6-12 mois</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>2450€</span>
+                    <span>Sur devis</span>
                   </div>
-                  <div className="flex items-center text-sm text-green-600 font-medium mr-3 mb-2">
-                    <CreditCard size={16} className="mr-2 text-green-600 flex-shrink-0" />
-                    <span>Éligible CPF</span>
+                  <div className="flex items-center text-sm text-blue-600 font-medium mr-3 mb-2">
+                    <CreditCard size={16} className="mr-2 text-blue-600 flex-shrink-0" />
+                    <span>Formation</span>
                   </div>
                 </div>
                 {/* Certification */}
                 <div className="flex items-center text-sm text-gray-600 mb-5 h-[28px]">
                   <Award size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                  <span>Certifié par Webmarketing & Com</span>
+                  <span>Certification Qualiopi</span>
                 </div>
                 {/* Bouton */}
                 <div className="mt-auto flex-shrink-0">
                   <Link 
-                    href="/formation/community-management" 
+                    href="/formation/service-transition-ecologique" 
                     className="btn-primary btn-md btn-with-icon w-full"
                   >
-                    Découvrir cette Form'action <ArrowRight size={14} className="ml-2" />
+                    Découvrir ce service <ArrowRight size={14} className="ml-2" />
                   </Link>
                 </div>
               </div>
@@ -489,7 +489,7 @@ const HomePage = () => {
               className="btn-primary btn-lg btn-with-icon btn-rounded group"
             >
               <Search size={20} className="mr-2 group-hover:animate-pulse" />
-              <span>Toutes nos Form'action</span>
+              <span>Toutes nos Formations</span>
             </Link>
           </div>
         </div>
@@ -519,7 +519,7 @@ const HomePage = () => {
                   custom={0}
                 >
                   <div className="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-left text-center md:text-left order-2 md:order-none">
-                    <h3 className="text-lg md:text-xl font-semibold mb-2">Choisissez votre Form'action</h3>
+                    <h3 className="text-lg md:text-xl font-semibold mb-2">Choisissez votre Formation</h3>
                     <p className="text-sm md:text-base text-gray-600">
                       Parcourez notre catalogue et sélectionnez la formation adaptée à vos objectifs.
                     </p>
@@ -613,7 +613,7 @@ const HomePage = () => {
                 href="/demande-formation" 
                 className="btn-primary btn-md md:btn-lg"
               >
-                Je crée ma Form'action !
+                Je crée ma Formation !
               </Link>
             </div>
           </div>

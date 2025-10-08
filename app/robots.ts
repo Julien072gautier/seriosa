@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/', '/_next/', '/private/'],
       },
     ],
-    sitemap: 'https://www.formaprobyaccertif.fr/sitemap.xml',
+    sitemap: 'https://www.seriosa.fr/sitemap.xml',
   }
 }

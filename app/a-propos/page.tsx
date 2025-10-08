@@ -11,7 +11,7 @@ const AboutPage = () => {
         <div className="max-w-4xl mx-auto text-center mb-16">
                     <h1 className="text-3xl md:text-4xl font-bold mb-6">L'Excellence en Formation Professionnelle</h1>
           <p className="text-xl text-gray-600 mb-4">
-            Organisme de formation certifié et reconnu, spécialisé dans les Form'actions certifiantes sur-mesure pour les professionnels et les entreprises.
+            Organisme de formation certifié et reconnu, spécialisé dans les Formations certifiantes sur-mesure pour les professionnels et les entreprises.
           </p>
           <p className="text-lg text-gray-600">
             Notre approche unique allie flexibilité, expertise et certification officielle pour une montée en compétences immédiatement applicable.
@@ -61,7 +61,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Form'action Concept - Enhanced with better layout */}
+        {/* Formation Concept - Enhanced with better layout */}
         <section className="mb-12">
           <div className="bg-gradient-to-r from-brand-600 to-brand text-white rounded-lg shadow-md overflow-hidden">
             <div className="md:flex">

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useSendEmail } from '../hooks/useSendEmail';
+import useSendEmail from '../hooks/useSendEmail';
 import { validateForm, ValidationErrors } from '../lib/validation';
 import { X } from 'lucide-react';
 import Captcha from './Captcha';
@@ -115,7 +115,7 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
       : `Demande d'information - Formation ${formationName}`;
       
     const result = await sendEmail({
-      to: 'hello@formaprobyaccertif.fr',
+      to: 'olivier.guyot@seriosa.fr',
       subject: subject,
       text: data
     });

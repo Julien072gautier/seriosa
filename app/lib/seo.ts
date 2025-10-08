@@ -85,7 +85,7 @@ export function generateFormationSEO(formationSlug: string): SEOData {
   
   if (!formation) {
     return {
-      title: 'Formation | FormaPro by Accertif',
+      title: 'Service | Seriosa 2.0',
       description: 'Formation professionnelle certifiée Qualiopi éligible CPF.',
       keywords: ['formation professionnelle', 'CPF', 'Qualiopi'],
       canonical: `/formation/${formationSlug}`,
@@ -94,7 +94,7 @@ export function generateFormationSEO(formationSlug: string): SEOData {
   }
 
   return {
-    title: `Formation ${formation.name} | FormaPro by Accertif`,
+    title: `Service ${formation.name} | Seriosa 2.0`,
     description: `Formation professionnelle ${formation.name} certifiée Qualiopi. ${formation.shortDescription} Éligible CPF. Inscrivez-vous dès maintenant.`,
     keywords: [
       `formation ${formation.name.toLowerCase()}`,
@@ -114,8 +114,8 @@ export function generateFormationSEO(formationSlug: string): SEOData {
       "description": formation.fullDescription,
       "provider": {
         "@type": "EducationalOrganization",
-        "name": "FormaPro by Accertif",
-        "url": "https://www.formaprobyaccertif.fr"
+        "name": "Seriosa 2.0",
+        "url": "https://www.seriosa.fr"
       },
       "hasCourseInstance": {
         "@type": "CourseInstance",
@@ -123,7 +123,7 @@ export function generateFormationSEO(formationSlug: string): SEOData {
         "courseWorkload": formation.duration,
         "instructor": {
           "@type": "Person",
-          "name": "Équipe FormaPro by Accertif"
+          "name": "Équipe Seriosa 2.0"
         }
       },
       "offers": {
@@ -131,12 +131,12 @@ export function generateFormationSEO(formationSlug: string): SEOData {
         "price": formation.price,
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
-        "url": `https://www.formaprobyaccertif.fr/formation/${formationSlug}`
+        "url": `https://www.seriosa.fr/service/${formationSlug}`
       },
       "educationalCredentialAwarded": formation.certification,
       "teaches": formation.skills,
       "image": formation.image,
-      "url": `https://www.formaprobyaccertif.fr/formation/${formationSlug}`
+      "url": `https://www.seriosa.fr/service/${formationSlug}`
     }
   }
 }
@@ -144,24 +144,24 @@ export function generateFormationSEO(formationSlug: string): SEOData {
 export function generatePageSEO(pageType: string, customData?: any): SEOData {
   const baseSEO = {
     website: {
-      title: 'FormaPro by Accertif - Formation Professionnelle de Qualité | Certifiée Qualiopi',
-      description: 'FormaPro by Accertif propose des formations professionnelles certifiées Qualiopi dans de nombreux domaines. Formations éligibles CPF avec un accompagnement personnalisé.',
+      title: 'Seriosa 2.0 - Cabinet de conseil RSE et développement durable | Certifié Qualiopi',
+      description: 'Seriosa 2.0 est un cabinet de conseil RSE et développement durable. Nous accompagnons les entreprises dans leur transition écologique et sociale.',
       keywords: ['formation professionnelle', 'CPF', 'Qualiopi', 'intelligence artificielle', 'langues étrangères', 'communication']
     },
     formations: {
-      title: 'Toutes nos Formations Professionnelles | FormaPro by Accertif',
-      description: 'Découvrez toutes nos formations professionnelles certifiées Qualiopi : IA, langues étrangères, communication, community management. Éligibles CPF.',
+      title: 'Toutes nos Formations | Seriosa 2.0',
+      description: 'Découvrez toutes nos formations : audit, stratégie, transition écologique, développement social, formation. Organisme de formation certifié Qualiopi.',
       keywords: ['formations professionnelles', 'liste formations', 'catalogue formation', 'CPF', 'Qualiopi']
     },
     contact: {
-      title: 'Contactez-nous | FormaPro by Accertif',
-      description: 'Contactez FormaPro by Accertif pour plus d\'informations sur nos formations professionnelles. Notre équipe vous accompagne dans votre projet de formation.',
-      keywords: ['contact FormaPro', 'information formation', 'conseiller formation', 'accompagnement']
+      title: 'Contactez-nous | Seriosa 2.0',
+      description: 'Contactez Seriosa 2.0 pour plus d\'informations sur nos services RSE. Notre équipe vous accompagne dans votre transition écologique et sociale.',
+      keywords: ['contact Seriosa', 'information RSE', 'conseiller RSE', 'accompagnement']
     },
     about: {
-      title: 'À Propos de FormaPro by Accertif | Organisme de Formation Certifié',
-      description: 'FormaPro by Accertif est un organisme de formation certifié Qualiopi. Découvrez notre histoire, nos valeurs et notre engagement qualité.',
-      keywords: ['FormaPro by Accertif', 'organisme formation', 'Qualiopi', 'à propos', 'certification qualité']
+      title: 'À Propos de Seriosa 2.0 | Cabinet de Conseil RSE Certifié',
+      description: 'Seriosa 2.0 est un cabinet de conseil RSE et développement durable certifié Qualiopi. Découvrez notre histoire, nos valeurs et notre engagement.',
+      keywords: ['Seriosa 2.0', 'cabinet conseil RSE', 'Qualiopi', 'à propos', 'certification qualité']
     }
   }
 
@@ -176,7 +176,7 @@ export function generateBreadcrumbStructuredData(breadcrumbs: Array<{name: strin
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": `https://www.formaprobyaccertif.fr${item.url}`
+      "item": `https://www.seriosa.fr${item.url}`
     }))
   }
 }
@@ -196,14 +196,14 @@ export function generateAllFormationsMetadata() {
       openGraph: {
         title: seoData.title,
         description: seoData.description,
-        url: `https://www.formaprobyaccertif.fr/formation/${slug}`,
+        url: `https://www.seriosa.fr/service/${slug}`,
         type: 'article',
         images: [
           {
             url: seoData.ogImage || `/images/formations/${slug}-og.jpg`,
             width: 1200,
             height: 630,
-            alt: `Formation ${formation?.name} - FormaPro by Accertif`,
+            alt: `Service ${formation?.name} - Seriosa 2.0`,
           },
         ],
       },
@@ -214,7 +214,7 @@ export function generateAllFormationsMetadata() {
         images: [seoData.ogImage || `/images/formations/${slug}-og.jpg`],
       },
       alternates: {
-        canonical: `https://www.formaprobyaccertif.fr/formation/${slug}`,
+        canonical: `https://www.seriosa.fr/service/${slug}`,
       },
     }
   })
@@ -234,14 +234,14 @@ export function getFormationMetadata(slug: string): Metadata {
     openGraph: {
       title: seoData.title,
       description: seoData.description,
-      url: `https://www.formaprobyaccertif.fr/formation/${slug}`,
+      url: `https://www.seriosa.fr/service/${slug}`,
       type: 'article',
       images: [
         {
           url: seoData.ogImage || `/images/formations/${slug}-og.jpg`,
           width: 1200,
           height: 630,
-          alt: `Formation ${formation?.name} - FormaPro by Accertif`,
+          alt: `Service ${formation?.name} - Seriosa 2.0`,
         },
       ],
     },
@@ -252,7 +252,7 @@ export function getFormationMetadata(slug: string): Metadata {
       images: [seoData.ogImage || `/images/formations/${slug}-og.jpg`],
     },
     alternates: {
-      canonical: `https://www.formaprobyaccertif.fr/formation/${slug}`,
+      canonical: `https://www.seriosa.fr/service/${slug}`,
     },
   }
 }

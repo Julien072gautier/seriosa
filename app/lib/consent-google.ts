@@ -1,5 +1,5 @@
 /**
- * Gestion Google Consent Mode v2 pour FormaPro
+ * Gestion Google Consent Mode v2 pour Seriosa 2.0
  * Conforme RGPD - Bloque par défaut tous les cookies non essentiels
  */
 
@@ -33,8 +33,8 @@ const DEFAULT_CONSENT: GoogleConsentSignals = {
 };
 
 // Clés de stockage localStorage
-const CONSENT_KEY = 'formapro_cookie_consent';
-const PREFERENCES_KEY = 'formapro_cookie_preferences';
+const CONSENT_KEY = 'seriosa_cookie_consent';
+const PREFERENCES_KEY = 'seriosa_cookie_preferences';
 
 /**
  * Initialise Google Consent Mode v2 avec les paramètres par défaut

@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { Shield, BarChart3, Target, Settings, Info } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Politique des cookies - FormaPro',
-  description: 'Politique de gestion des cookies de FormaPro - Conforme RGPD',
+  title: 'Politique des cookies - Seriosa 2.0',
+  description: 'Politique de gestion des cookies de Seriosa 2.0 - Conforme RGPD',
   robots: 'index, follow',
 };
 
@@ -36,7 +36,7 @@ export default function PolitiqueCookiesPage() {
               appareil et de mémoriser certaines informations sur vos préférences ou actions passées.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              ACCERTIF s'engage à respecter votre vie privée et à utiliser les cookies de manière 
+              Seriosa 2.0 s'engage à respecter votre vie privée et à utiliser les cookies de manière 
               transparente et conforme au Règlement Général sur la Protection des Données (RGPD).
             </p>
           </div>
@@ -205,9 +205,9 @@ export default function PolitiqueCookiesPage() {
             </p>
             <div className="bg-gray-50 rounded-lg p-4">
               <p className="text-sm text-gray-600">
-                <strong>ACCERTIF</strong><br />
-                Email : contact@accertif.fr<br />
-                Téléphone : 09 75 85 65 10
+                <strong>Seriosa 2.0</strong><br />
+                Email : olivier.guyot@seriosa.fr<br />
+                Téléphone : 07 76 95 70 38
               </p>
             </div>
           </div>

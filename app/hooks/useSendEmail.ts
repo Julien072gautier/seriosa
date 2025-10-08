@@ -8,7 +8,7 @@ interface EmailParams {
   text: string
 }
 
-export const useSendEmail = () => {
+const useSendEmail = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState<boolean | null>(null)
@@ -45,3 +45,5 @@ export const useSendEmail = () => {
 
   return { sendEmail, loading, error, success }
 }
+
+export default useSendEmail

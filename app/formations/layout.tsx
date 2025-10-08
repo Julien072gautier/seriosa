@@ -1,20 +1,20 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Nos Formations Professionnelles | FormaPro by Accertif',
-  description: 'Découvrez toutes nos formations professionnelles certifiées Qualiopi : IA, langues étrangères, communication, community management. Formations éligibles CPF.',
+  title: 'Nos Formations | Seriosa 2.0',
+  description: 'Découvrez toutes nos formations : audit, stratégie, transition écologique, développement social, formation. Organisme de formation certifié Qualiopi.',
   keywords: [
-    'formations professionnelles',
-    'liste formations',
-    'formation IA',
-    'formation langues',
-    'formation communication',
-    'CPF',
+    'services RSE',
+    'liste services RSE',
+    'audit RSE',
+    'stratégie RSE',
+    'transition écologique',
+    'développement social',
     'Qualiopi'
   ],
   openGraph: {
-    title: 'Nos Formations Professionnelles | FormaPro by Accertif',
-    description: 'Découvrez toutes nos formations professionnelles certifiées Qualiopi : IA, langues étrangères, communication, community management.',
+    title: 'Nos Formations | Seriosa 2.0',
+    description: 'Découvrez toutes nos formations : audit, stratégie, transition écologique, développement social, formation.',
     type: 'website',
   },
 }

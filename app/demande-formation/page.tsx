@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useSendEmail } from '../hooks/useSendEmail';
+import useSendEmail from '../hooks/useSendEmail';
 import { Users, BookOpen, MessageSquare, School } from 'lucide-react';
 import { validateForm, ValidationErrors, formatPhoneNumber } from '../lib/validation';
 import Captcha from '../components/Captcha';
@@ -126,8 +126,8 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
 })}`;
 
     const result = await sendEmail({
-      to: 'hello@formaprobyaccertif.fr',
-      subject: "Demande de formation personnalisée - FORMAPRO by Accertif",
+      to: 'olivier.guyot@seriosa.fr',
+      subject: "Demande de service RSE personnalisé - Seriosa 2.0",
       text: emailContent
     });
 
@@ -159,7 +159,7 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
         <div className="max-w-2xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Demande de Form'action personnalisée</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">Demande de Formation personnalisée</h1>
             <p className="text-xl text-gray-600">
               Créez votre parcours sur-mesure en quelques clics
             </p>
@@ -322,7 +322,7 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
                       className="hidden"
                     />
                     <BookOpen className="mr-2" size={20} />
-                    <span>Form'action mixte (E-learning + pratique tutorée)</span>
+                    <span>Formation mixte (E-learning + pratique tutorée)</span>
                   </label>
                 </div>
               </div>

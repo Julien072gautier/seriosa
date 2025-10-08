@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Politique de Confidentialité - FormaPro',
-  description: 'Politique de confidentialité et protection des données personnelles de FormaPro.',
+  title: 'Politique de Confidentialité - Seriosa 2.0',
+  description: 'Politique de confidentialité et protection des données personnelles de Seriosa 2.0.',
   robots: 'index, follow',
 };
 
@@ -17,9 +17,9 @@ export default function PolitiqueConfidentialite() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">1. Introduction</h2>
               <p className="mb-4">
-                ACCERTIF, société par actions simplifiée au capital de 1 000 €, immatriculée au RCS de Montauban sous le numéro 918 199 951, 
-                dont le siège social est situé 905 chemin de l'évêque, 82290 Montbeton, France, s'engage à protéger la confidentialité et la sécurité 
-                des informations personnelles de ses utilisateurs et stagiaires.
+                Seriosa 2.0, SASU (société par actions simplifiée unipersonnelle) au capital de 1 000,00 €, immatriculée au RCS de Toulon sous le numéro 921 588 091, 
+                dont le siège social est situé 31 rue Chevalier Paul 83000 Toulon, s'engage à protéger la confidentialité et la sécurité 
+                des informations personnelles de ses utilisateurs et clients.
               </p>
               <p>
                 Cette politique de confidentialité décrit comment nous collectons, utilisons, stockons et protégeons vos informations personnelles 
@@ -30,11 +30,15 @@ export default function PolitiqueConfidentialite() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">2. Responsable du traitement</h2>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p><strong>Responsable du traitement :</strong> ACCERTIF</p>
-                <p><strong>Adresse :</strong> 905 chemin de l'évêque, 82290 Montbeton, France</p>
-                <p><strong>Email :</strong> contact@accertif.fr</p>
-                <p><strong>Téléphone :</strong> 09 75 85 65 10</p>
-                <p><strong>SIRET :</strong> 91819995100016</p>
+                <p><strong>Responsable du traitement :</strong> Seriosa 2.0</p>
+                <p><strong>Adresse :</strong> 31 rue Chevalier Paul 83000 Toulon</p>
+                <p><strong>Email :</strong> olivier.guyot@seriosa.fr</p>
+                <p><strong>Téléphone :</strong> 07 76 95 70 38</p>
+                <p><strong>SIREN :</strong> 921 588 091</p>
+                <p><strong>SIRET (siège) :</strong> 921 588 091 00048</p>
+                <p><strong>NDA :</strong> 93830786983</p>
+                <p><strong>Date d'enregistrement :</strong> 27/08/2024</p>
+                <p><strong>Région :</strong> PACA</p>
               </div>
             </section>
 
@@ -69,7 +73,7 @@ export default function PolitiqueConfidentialite() {
               <p className="mb-4">Nous utilisons vos données personnelles pour :</p>
               <ul className="list-disc pl-6 mb-4">
                 <li><strong>Gestion des demandes :</strong> Traitement de vos demandes de contact et de devis</li>
-                <li><strong>Conseil et accompagnement :</strong> Fourniture de nos services de conseil et d'accompagnement des professionnels de la formation</li>
+                <li><strong>Conseil et accompagnement :</strong> Fourniture de nos services de conseil RSE et d'accompagnement des entreprises</li>
                 <li><strong>Communication :</strong> Envoi d'informations sur nos services et actualités</li>
                 <li><strong>Amélioration du site :</strong> Analyse de l'utilisation du site pour l'améliorer</li>
                 <li><strong>Obligations légales :</strong> Respect des obligations comptables et fiscales</li>
@@ -124,7 +128,7 @@ export default function PolitiqueConfidentialite() {
                 <li><strong>Droit de retrait du consentement :</strong> Retirer votre consentement à tout moment</li>
               </ul>
               <p className="mb-4">
-                Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@accertif.fr" className="text-blue-600 hover:underline">contact@accertif.fr</a>
+                Pour exercer ces droits, contactez-nous à : <a href="mailto:olivier.guyot@seriosa.fr" className="text-blue-600 hover:underline">olivier.guyot@seriosa.fr</a>
               </p>
               <p>
                 Vous avez également le droit d'introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) 
@@ -180,9 +184,9 @@ export default function PolitiqueConfidentialite() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">13. Contact</h2>
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p className="mb-2">Pour toute question concernant cette politique de confidentialité :</p>
-                <p><strong>Email :</strong> <a href="mailto:contact@accertif.fr" className="text-blue-600 hover:underline">contact@accertif.fr</a></p>
-                <p><strong>Téléphone :</strong> 09 75 85 65 10</p>
-                <p><strong>Adresse :</strong> 905 chemin de l'évêque, 82290 Montbeton, France</p>
+                <p><strong>Email :</strong> <a href="mailto:olivier.guyot@seriosa.fr" className="text-blue-600 hover:underline">olivier.guyot@seriosa.fr</a></p>
+                <p><strong>Téléphone :</strong> 07 76 95 70 38</p>
+                <p><strong>Adresse :</strong> 31 rue Chevalier Paul 83000 Toulon</p>
               </div>
             </section>
 
