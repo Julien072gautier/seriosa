@@ -45,7 +45,7 @@ const formationsConfig = {
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       duration: '2-4 semaines',
       formateur: 'Olivier GUYOT',
-      formationType: 'service',
+      formationType: 'non-certifiante',
       prices: {
         individuel: { price: 'Sur devis', label: 'Personnalisé' },
         collectif: { price: 'Sur devis', label: 'Personnalisé' }
@@ -184,7 +184,7 @@ const formationsConfig = {
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       duration: '3-6 mois',
       formateur: 'Olivier GUYOT',
-      formationType: 'service',
+      formationType: 'non-certifiante',
       prices: {
         individuel: { price: 'Sur devis', label: 'Personnalisé' },
         collectif: { price: 'Sur devis', label: 'Personnalisé' }
@@ -323,7 +323,7 @@ const formationsConfig = {
       image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       duration: '6-12 mois',
       formateur: 'Olivier GUYOT',
-      formationType: 'service',
+      formationType: 'non-certifiante',
       prices: {
         individuel: { price: 'Sur devis', label: 'Personnalisé' },
         collectif: { price: 'Sur devis', label: 'Personnalisé' }
@@ -462,7 +462,7 @@ const formationsConfig = {
       image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       duration: '4-8 mois',
       formateur: 'Olivier GUYOT',
-      formationType: 'service',
+      formationType: 'non-certifiante',
       prices: {
         individuel: { price: 'Sur devis', label: 'Personnalisé' },
         collectif: { price: 'Sur devis', label: 'Personnalisé' }
@@ -601,7 +601,7 @@ const formationsConfig = {
       image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
       duration: '1-3 mois',
       formateur: 'Olivier GUYOT',
-      formationType: 'service',
+      formationType: 'non-certifiante',
       prices: {
         individuel: { price: 'Sur devis', label: 'Personnalisé' },
         collectif: { price: 'Sur devis', label: 'Personnalisé' }
