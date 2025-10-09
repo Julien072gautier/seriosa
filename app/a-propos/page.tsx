@@ -66,10 +66,10 @@ const AboutPage = () => {
           <div className="bg-gradient-to-r from-brand-600 to-brand text-white rounded-lg shadow-md overflow-hidden">
             <div className="md:flex">
               <div className="md:w-1/2 p-8">
-                <h2 className="text-2xl font-bold mb-6">Le Concept "Form'action"</h2>
+                <h2 className="text-2xl font-bold mb-6">Le Concept "Formation"</h2>
                 <div className="bg-white bg-opacity-10 p-4 rounded-lg mb-6">
                   <p className="text-lg">
-                    Une Form'action, c'est bien plus qu'une formation ! C'est un parcours complet vers l'excellence professionnelle.
+                    Une formation, c'est bien plus qu'un simple apprentissage ! C'est un parcours complet vers l'excellence professionnelle.
                   </p>
                 </div>
                 <ul className="space-y-4">
@@ -98,7 +98,7 @@ const AboutPage = () => {
               <div className="md:w-1/2 bg-brand-700 p-8 flex items-center justify-center">
                 <img 
                   src="https://irp.cdn-website.com/e0ab763a/dms3rep/multi/Form-action.png" 
-                  alt="Form'action Concept" 
+                  alt="Formation Concept" 
                   className="rounded-lg shadow-lg"
                 />
               </div>
@@ -137,7 +137,7 @@ const AboutPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Éligibilité CPF</h3>
               <p className="text-gray-600">
-                Toutes nos Form'actions sont éligibles au CPF pour un financement simplifié de votre montée en compétences.
+                Toutes nos formations sont éligibles au CPF pour un financement simplifié de votre montée en compétences.
               </p>
             </div>
             
@@ -162,14 +162,14 @@ const AboutPage = () => {
           <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8">
             <h2 className="text-2xl font-bold mb-4">Prêt à Développer Votre Potentiel ?</h2>
             <p className="text-gray-600 mb-8">
-              Découvrez nos Form'actions certifiantes et bénéficiez d'un accompagnement personnalisé par nos experts pour atteindre vos objectifs professionnels.
+              Découvrez nos formations certifiantes et bénéficiez d'un accompagnement personnalisé par nos experts pour atteindre vos objectifs professionnels.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link 
                 href="/formations" 
                 className="btn-primary btn-lg btn-with-icon group"
               >
-                Découvrir nos Form'actions 
+                Découvrir nos formations 
                 <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link 

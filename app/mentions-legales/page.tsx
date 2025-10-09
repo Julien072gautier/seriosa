@@ -50,9 +50,9 @@ export default function MentionsLegales() {
                 <p><strong>Activité principale :</strong> Conseil en RSE et développement durable</p>
                 <p><strong>Code APE :</strong> 7022Z - Conseil pour les affaires et autres conseils de gestion</p>
                 <p><strong>Activité secondaire :</strong> Accompagnement transition écologique et sociale</p>
-                <p><strong>NDA :</strong> 76820111882</p>
-                <p><strong>Date d'enregistrement :</strong> 10/10/2022</p>
-                <p><strong>Région :</strong> Occitanie</p>
+                <p><strong>NDA :</strong> 93830786983</p>
+                <p><strong>Date d'enregistrement :</strong> 27/08/2024</p>
+                <p><strong>Région :</strong> PACA</p>
               </div>
             </section>
 

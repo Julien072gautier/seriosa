@@ -119,15 +119,15 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <Image 
-                  src="/certificat.pdf" 
+                  src="/qualité.png" 
                   alt="Certificat Qualiopi Seriosa 2.0" 
-                  width={80}
-                  height={64}
-                  className="h-16 w-auto cursor-pointer"
+                  width={120}
+                  height={120}
+                  className="h-30 w-auto cursor-pointer hover:scale-105 transition-transform"
                 />
               </a>
             </div>
-            <p className="text-gray-300">
+            <p className="text-gray-300 text-sm">
               Certifié Qualiopi - Cabinet de conseil RSE et développement durable.
             </p>
           </div>

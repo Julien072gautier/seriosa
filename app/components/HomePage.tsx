@@ -290,7 +290,7 @@ const HomePage = () => {
               className="btn-primary btn-lg btn-with-icon btn-rounded group"
             >
               <Search size={20} className="mr-2 group-hover:animate-pulse" />
-              <span>Découvrez nos form'actions et personnalisez votre parcours</span>
+              <span>Découvrez nos formations et personnalisez votre parcours</span>
             </Link>
           </div>
         </div>
