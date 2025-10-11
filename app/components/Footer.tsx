@@ -121,9 +121,9 @@ const Footer = () => {
                 <Image 
                   src="/qualité.png" 
                   alt="Certificat Qualiopi Seriosa 2.0" 
-                  width={120}
-                  height={120}
-                  className="h-30 w-auto cursor-pointer hover:scale-105 transition-transform"
+                  width={100}
+                  height={100}
+                  className="h-26 w-auto cursor-pointer hover:scale-105 transition-transform"
                 />
               </a>
             </div>
