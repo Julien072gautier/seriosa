@@ -126,7 +126,7 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
 })}`;
 
     const result = await sendEmail({
-      to: 'olivier.guyot@seriosa.fr',
+      to: 'contact@accertif.fr',
       subject: "Demande de service RSE personnalisé - Seriosa 2.0",
       text: emailContent
     });
