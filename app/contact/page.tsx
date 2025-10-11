@@ -99,7 +99,7 @@ EMAIL: ${formData.email}
 TELEPHONE: ${formData.phone}
 SUJET: ${formData.subject}
 MESSAGE: ${formData.message}`;
-    const result = await sendEmail({ to: 'julien.gautier@accertif.fr', subject: formData.subject, text: data });
+    const result = await sendEmail({ to: 'olivier.guyot@seriosa.fr', subject: formData.subject, text: data });
     
     // Redirection vers la page de remerciement après envoi réussi
     window.location.href = '/merci';
