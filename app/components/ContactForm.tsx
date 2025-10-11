@@ -115,7 +115,7 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
       : `Demande d'information - Formation ${formationName}`;
       
     const result = await sendEmail({
-      to: 'contact@accertif.fr',
+      to: 'julien.gautier@accertif.fr',
       subject: subject,
       text: data
     });
