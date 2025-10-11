@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ExternalLink } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -40,13 +40,6 @@ const Header = () => {
           <Link href="/contact" className="text-gray-800 hover:text-brand font-medium transition-colors">
             Contact
           </Link>
-          <a 
-            href="/contact" 
-            className="btn-primary btn-md btn-with-icon"
-          >
-            <span>Contact</span>
-            <ExternalLink size={16} className="ml-2" />
-          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -91,14 +84,6 @@ const Header = () => {
             >
               Contact
             </Link>
-            <a 
-              href="/contact" 
-              className="btn-primary btn-md btn-with-icon"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <span>Contact</span>
-              <ExternalLink size={16} className="ml-2" />
-            </a>
           </nav>
         </div>
       )}
