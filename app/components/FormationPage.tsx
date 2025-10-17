@@ -392,7 +392,7 @@ const FormationPage = () => {
           )}
 
           {/* Certification - Toutes les formations certifiantes */}
-          {formation.cpfEligible && formation.certificationDetails?.code && (
+          {formation.cpfEligible && formation.certificationDetails && formation.certificationDetails.code && (
             <section className="mb-12">
               <div className="bg-white rounded-lg shadow-md p-8">
                 <h2 className="text-2xl font-bold mb-6">Certification</h2>
@@ -438,7 +438,7 @@ const FormationPage = () => {
           )}
 
           {/* Processus de candidature */}
-          {formation.cpfEligible && formation.certificationDetails?.code && (
+          {formation.cpfEligible && formation.certificationDetails && formation.certificationDetails.code && (
             <section className="mb-12">
               <div className="bg-white rounded-lg shadow-md p-8">
                 <div className="flex items-center mb-6">
