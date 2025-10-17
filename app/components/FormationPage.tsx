@@ -103,7 +103,7 @@ const FormationPage = () => {
   const hasTeachingMethods = formation?.teachingMethods && formation.teachingMethods.length > 0;
   const hasEvaluationMethods = formation?.evaluationMethods && formation.evaluationMethods.length > 0;
   const hasAccessibility = formation?.accessibility && formation.accessibility.length > 0;
-  const hasCertificationDetails = formation?.certificationDetails;
+  const hasCertificationDetails = formation?.certifications && formation.certifications.length > 0;
 
   return (
     <div className="min-h-screen bg-gray-50">
