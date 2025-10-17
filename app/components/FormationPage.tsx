@@ -6,6 +6,7 @@ import Head from 'next/head';
 import { Clock, Award, Users, CheckCircle, ArrowRight, Calendar, Phone, X, Tag, MessageSquare, Target, Brain, Star, Globe, BookOpen, Laptop, Shield, DollarSign, FileCheck } from 'lucide-react';
 import formationsConfig from '../lib/config/formations';
 import themeConfig from '../lib/config/theme';
+import { Formation } from '../lib/config/types';
 import Link from 'next/link';
 import ContactForm from './ContactForm';
 
@@ -45,13 +46,13 @@ const FormationPage = () => {
         case 'non-certifiante':
           return 'Formation non-certifiante';
         case 'partenariat':
-          if (formation.certificationDetails?.partenaire) {
-            return `En partenariat avec ${formation.certificationDetails.partenaire}`;
+          if ((formation as any).certificationDetails?.partenaire) {
+            return `En partenariat avec ${(formation as any).certificationDetails.partenaire}`;
           }
           break;
         case 'certifiante':
-          if (formation.certificationDetails?.organization) {
-            return `Certifié par ${formation.certificationDetails.organization}`;
+          if ((formation as any).certificationDetails?.organization) {
+            return `Certifié par ${(formation as any).certificationDetails.organization}`;
           }
           break;
       }
@@ -65,7 +66,7 @@ const FormationPage = () => {
     // Gestion des formations certifiantes et en partenariat
     if (!formation?.certificationDetails) return null;
     
-    const { name, code, organization, partenaire } = formation.certificationDetails;
+    const { name, code, organization, partenaire } = (formation as any).certificationDetails;
     if (!name || !code || !organization) return null;
     
     // Si la formation a un code de certification
@@ -391,21 +392,21 @@ const FormationPage = () => {
             </section>
           )}
 
-          {/* Certification - Toutes les formations certifiantes */}
-          {formation.cpfEligible && formation.certificationDetails?.code && (
+          {/* Certification */}
+          {formation.formationType === 'certifiante' && (formation as any).certificationDetails?.code && (
             <section className="mb-12">
               <div className="bg-white rounded-lg shadow-md p-8">
                 <h2 className="text-2xl font-bold mb-6">Certification</h2>
                 <div className="flex items-center mb-6">
                   <div>
                     <p className="text-gray-600">
-                      {formation.certificationDetails?.code?.startsWith('RNCP') ? (
+                      {(formation as any).certificationDetails?.code?.startsWith('RNCP') ? (
                         <>
-                          Cette formation prépare au certificat de compétences "{formation.certificationDetails?.name || formation.title}", du titre "{formation.certificationDetails?.titre || formation.title}", enregistrée à France Compétences sous le numéro <a href={`https://www.francecompetences.fr/recherche/rncp/${formation.certificationDetails?.code?.replace(/^RNCP/, '')}/`} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{formation.certificationDetails?.code}</a> par l'organisme certificateur <a href={formation.certificationDetails?.organizationUrl || '#'} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{formation.certificationDetails?.organization}</a> pour une durée de {formation.certificationDetails?.dureeEnregistrement || '3'} ans en date du {formation.certificationDetails?.dateEnregistrement || '21-12-2023'}.
+                          Cette formation prépare au certificat de compétences "{(formation as any).certificationDetails?.name || formation.title}", du titre "{(formation as any).certificationDetails?.titre || formation.title}", enregistrée à France Compétences sous le numéro <a href={`https://www.francecompetences.fr/recherche/rncp/${(formation as any).certificationDetails?.code?.replace(/^RNCP/, '')}/`} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{(formation as any).certificationDetails?.code}</a> par l'organisme certificateur <a href={(formation as any).certificationDetails?.organizationUrl || '#'} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{(formation as any).certificationDetails?.organization}</a> pour une durée de {(formation as any).certificationDetails?.dureeEnregistrement || '3'} ans en date du {(formation as any).certificationDetails?.dateEnregistrement || '21-12-2023'}.
                         </>
                       ) : (
                         <>
-                          Cette formation prépare à la certification "{formation.certificationDetails?.name || formation.title}" enregistrée à France Compétences sous le numéro <a href={`https://www.francecompetences.fr/recherche/rs/${formation.certificationDetails?.code?.replace(/^RS/, '')}/`} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{formation.certificationDetails?.code}</a> par l'organisme certificateur <a href={formation.certificationDetails?.organizationUrl || '#'} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{formation.certificationDetails?.organization}</a> pour une durée de {formation.certificationDetails?.dureeEnregistrement || '3'} ans en date du {formation.certificationDetails?.dateEnregistrement || '21-12-2023'}.
+                          Cette formation prépare à la certification "{(formation as any).certificationDetails?.name || formation.title}" enregistrée à France Compétences sous le numéro <a href={`https://www.francecompetences.fr/recherche/rs/${(formation as any).certificationDetails?.code?.replace(/^RS/, '')}/`} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{(formation as any).certificationDetails?.code}</a> par l'organisme certificateur <a href={(formation as any).certificationDetails?.organizationUrl || '#'} target="_blank" rel="noopener noreferrer" className="text-brand underline hover:no-underline focus:no-underline active:no-underline" style={{backgroundColor: 'transparent', border: 'none', padding: '0', margin: '0'}}>{(formation as any).certificationDetails?.organization}</a> pour une durée de {(formation as any).certificationDetails?.dureeEnregistrement || '3'} ans en date du {(formation as any).certificationDetails?.dateEnregistrement || '21-12-2023'}.
                         </>
                       )}
                     </p>
@@ -414,10 +415,10 @@ const FormationPage = () => {
                 </div>
                 
                 {/* Épreuve de certification */}
-                {formation.certificationDetails?.examDetails?.format && formation.certificationDetails.examDetails.format.length > 0 && (
+                {(formation as any).certificationDetails?.examDetails?.format && (formation as any).certificationDetails.examDetails.format.length > 0 && (
                   <div className="mt-6 mb-6">
                     <h4 className="font-semibold mb-4">Épreuve de certification</h4>
-                    <p className="text-gray-600">{formation.certificationDetails.examDetails.format[0]}</p>
+                    <p className="text-gray-600">{(formation as any).certificationDetails.examDetails.format[0]}</p>
                   </div>
                 )}
                 
@@ -429,8 +430,8 @@ const FormationPage = () => {
                       background: `linear-gradient(to right, ${themeConfig.brand.primaryColor}, ${themeConfig.brand.primaryColor}dd)`
                     }}
                   >
-                    <p className="text-white font-medium mb-2 text-lg">Taux de réussite : {formation.certificationDetails?.examDetails?.successRate || '100%'}</p>
-                    <p className="text-white text-opacity-90">Données basées sur les candidats ayant préparé la certification "{formation.certificationDetails?.name || formation.title}" auprès de notre organisme de formation</p>
+                    <p className="text-white font-medium mb-2 text-lg">Taux de réussite : {(formation as any).certificationDetails?.examDetails?.successRate || '100%'}</p>
+                    <p className="text-white text-opacity-90">Données basées sur les candidats ayant préparé la certification "{(formation as any).certificationDetails?.name || formation.title}" auprès de notre organisme de formation</p>
                   </div>
                 </div>
               </div>
@@ -438,7 +439,7 @@ const FormationPage = () => {
           )}
 
           {/* Processus de candidature */}
-          {formation.cpfEligible && formation.certificationDetails?.code && (
+          {formation.formationType === 'certifiante' && (formation as any).certificationDetails?.code && (
             <section className="mb-12">
               <div className="bg-white rounded-lg shadow-md p-8">
                 <div className="flex items-center mb-6">
