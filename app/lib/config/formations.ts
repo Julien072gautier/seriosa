@@ -41,9 +41,7 @@ const formationsConfig = {
         'Ateliers pratiques',
         'Suivi et évaluation'
       ],
-      certifications: [
-        'Certification Qualiopi'
-      ],
+      certifications: [],
       objectives: [
         'Comprendre les enjeux et les principes fondamentaux de la Responsabilité Sociétale des Entreprises (RSE)',
         'Savoir identifier et prioriser les actions RSE adaptées à une PME',
@@ -157,9 +155,7 @@ const formationsConfig = {
         'Ateliers pratiques',
         'Suivi et évaluation'
       ],
-      certifications: [
-        'Certification Qualiopi'
-      ],
+      certifications: [],
       objectives: [
         'Comprendre l\'utilité du diagnostic dans la stratégie de développement durable',
         'Savoir utiliser des outils d\'analyse, cartographier les parties prenantes, réaliser un audit RSE, et identifier les actions prioritaires',
@@ -272,9 +268,7 @@ const formationsConfig = {
         'Mesure de performance RSE',
         'Communication des engagements'
       ],
-      certifications: [
-        'Certification Qualiopi'
-      ],
+      certifications: [],
       objectives: [
         'Acquisition des fondamentaux de la stratégie RSE',
         'Capacité à élaborer une stratégie RSE personnalisée',
