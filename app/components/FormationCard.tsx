@@ -19,26 +19,26 @@ const FormationCard: React.FC<FormationCardProps> = ({ formation, isCompact = fa
         case 'non-certifiante':
           return 'Formation non-certifiante';
         case 'partenariat':
-          if (formation.certificationDetails?.partenaire) {
-            return `En partenariat avec ${formation.certificationDetails.partenaire}`;
+          if ((formation as any).certificationDetails?.partenaire) {
+            return `En partenariat avec ${(formation as any).certificationDetails.partenaire}`;
           }
           break;
         case 'certifiante':
-          if (formation.certificationDetails?.organization) {
-            return `Certifié par ${formation.certificationDetails.organization}`;
+          if ((formation as any).certificationDetails?.organization) {
+            return `Certifié par ${(formation as any).certificationDetails.organization}`;
           }
           break;
       }
     }
     
     // Fallback sur la logique Zuma (compatibilité)
-    if (!formation.cpfEligible && !formation.certificationDetails) {
+    if (!formation.cpfEligible && !(formation as any).certificationDetails) {
       return 'Formation non-certifiante';
     }
     
     // Gestion des formations certifiantes et en partenariat
-    if (formation.certificationDetails) {
-      const { organization, partenaire } = formation.certificationDetails;
+    if ((formation as any).certificationDetails) {
+      const { organization, partenaire } = (formation as any).certificationDetails;
       return partenaire ? `En partenariat avec ${partenaire}` : `Certifié par ${organization}`;
     }
     

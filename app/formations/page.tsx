@@ -77,8 +77,8 @@ const FormationsPage: React.FC = () => {
           category: formationsConfig.categories.find(cat => cat.id === formation.category)?.name || formation.category,
           level: "Intermédiaire", // Valeur par défaut
           duration: formation.duration,
-          certification: formation.certificationDetails && formation.certificationDetails.code ? 
-            (formation.certificationDetails.partenaire ? `En partenariat avec ${formation.certificationDetails.partenaire}` : `Certifié par ${formation.certificationDetails.organization}`) : "",
+          certification: (formation.formationType === 'partenariat' || formation.formationType === 'certifiante') && formation.certifications && formation.certifications.length > 0 ?
+            formation.certifications.join(', ') : "",
           price: formation.prices.collectif.price,
           cpf: formation.cpfEligible,
           description: formation.shortDescription,
