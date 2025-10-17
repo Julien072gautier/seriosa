@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Award, Zap, MessageSquare, BarChart3, Phone, Clock, Tag, CreditCard, Star, PenTool as Tool, Wallet, Search } from 'lucide-react';
+import { ArrowRight, Award, Zap, MessageSquare, BarChart3, Phone, Clock, Tag, CreditCard, Star, PenTool as Tool, Wallet, Search, Globe, Target } from 'lucide-react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -160,11 +160,11 @@ const HomePage = () => {
               animate={controls}
               variants={titleVariants}
             >
-              Des compétences <span className="relative inline-block">
-                <span className="relative z-10">pratiques</span>
+              La RSE n'est plus un <span className="relative inline-block">
+                <span className="relative z-10">choix</span>
                 <span className="absolute bottom-1 left-0 w-full h-2 bg-white opacity-20 rounded animate-pulse"></span>
-              </span>, une Formation <span className="relative inline-block">
-                <span className="relative z-10">sur-mesure</span>
+              </span>, c'est un <span className="relative inline-block">
+                <span className="relative z-10">cap</span>
                 <span className="absolute bottom-1 left-0 w-full h-2 bg-white opacity-20 rounded animate-pulse"></span>
               </span>.
             </motion.h1>
@@ -175,7 +175,7 @@ const HomePage = () => {
               animate={controls}
               variants={subtitleVariants}
             >
-              Apprenez à votre rythme avec une Formation individualisée, conçue pour une mise en pratique immédiate et 100 % finançable.
+              Des formations sur mesure, qui parlent vrai, qui font bouger les lignes et pas juste les slides.
             </motion.p>
             
             {/* Dynamic Stats */}
@@ -186,16 +186,16 @@ const HomePage = () => {
               variants={statsVariants}
             >
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
-                <div className="text-2xl font-bold">+{count1}</div>
-                <div className="text-sm">{STATS_CONFIG.hero.labels.apprenantsFormes}</div>
+                <div className="text-2xl font-bold">+13%</div>
+                <div className="text-sm">de compétitivité en moyenne pour les entreprises engagées en RSE</div>
               </div>
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
-                <div className="text-2xl font-bold">{count2}%</div>
-                <div className="text-sm">{STATS_CONFIG.hero.labels.nouvellesCompetences}</div>
+                <div className="text-2xl font-bold">10 ans</div>
+                <div className="text-sm">une entreprise sera RSE — ou ne sera plus</div>
               </div>
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
-                <div className="text-2xl font-bold">{count3}%</div>
-                <div className="text-sm">{STATS_CONFIG.hero.labels.financement}</div>
+                <div className="text-2xl font-bold">100%</div>
+                <div className="text-sm">de nos formations sont finançables (OPCO, CPF, etc.)</div>
               </div>
             </motion.div>
             
@@ -227,9 +227,9 @@ const HomePage = () => {
       <section className="py-16 bg-gray-50" ref={whyChooseUsRef}>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6">Pourquoi nous choisir ?</h2>
+            <h2 className="text-3xl font-bold mb-6">🧭 Pourquoi choisir Seriosa 2.0 ?</h2>
             <p className="text-gray-600 mb-8">
-              Un accompagnement expert, une formation sur-mesure, des compétences certifiées.
+              Parce qu'ici, la RSE n'est pas qu'un acronyme à la mode. C'est une équipe d'experts engagés, un réseau solide et des formations certifiantes qui mènent à de vrais résultats.
             </p>
           </div>
           
@@ -242,11 +242,11 @@ const HomePage = () => {
               custom={0}
             >
               <div className="bg-brand-100 p-3 rounded-full inline-flex justify-center items-center mb-4 transition-transform duration-300 hover:scale-110">
-                <Star className="text-brand" size={28} />
+                <Globe className="text-brand" size={28} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Un suivi personnalisé pour une montée en compétences efficace</h3>
+              <h3 className="text-xl font-semibold mb-3">🌍 Un réseau d'experts RSE</h3>
               <p className="text-gray-600">
-                Nos experts métier vous accompagnent tout au long de votre parcours pour garantir l'acquisition de compétences immédiatement exploitables en situation réelle.
+                Des spécialistes reconnus de la transition écologique, du sport, du management et du développement durable. On mutualise nos compétences pour t'offrir des solutions concrètes, adaptées à ton secteur et à ta taille d'entreprise.
               </p>
             </motion.div>
             
@@ -258,11 +258,11 @@ const HomePage = () => {
               custom={1}
             >
               <div className="bg-brand-100 p-3 rounded-full inline-flex justify-center items-center mb-4 transition-transform duration-300 hover:scale-110">
-                <Tool className="text-brand" size={28} />
+                <Target className="text-brand" size={28} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Nos Formations vous permettent de construire un parcours sur mesure.</h3>
+              <h3 className="text-xl font-semibold mb-3">💪 Un engagement réel, pas juste un discours</h3>
               <p className="text-gray-600">
-              Vous choisissez le rythme, les modalités et les formats les plus adaptés pour atteindre vos objectifs professionnels tout en valorisant vos acquis.
+                Nous appliquons ce que nous transmettons : sobriété, respect, inclusion, impact local. Chaque accompagnement est pensé pour faire progresser les organisations sans perdre leur âme.
               </p>
             </motion.div>
             
@@ -274,11 +274,11 @@ const HomePage = () => {
               custom={2}
             >
               <div className="bg-brand-100 p-3 rounded-full inline-flex justify-center items-center mb-4 transition-transform duration-300 hover:scale-110">
-                <Wallet className="text-brand" size={28} />
+                <Award className="text-brand" size={28} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Des formations conçues pour certifier vos compétences avec votre CPF</h3>
+              <h3 className="text-xl font-semibold mb-3">🎓 Des formations certifiantes et finançables</h3>
               <p className="text-gray-600">
-                Toutes nos formations certifient vos acquis et renforcent vos compétences. Elles sont donc 100 % finançables par votre CPF et tous les autres dispositifs de financement.
+                Formations Qualiopi et éligibles CPF/OPCO, axées sur la mise en pratique immédiate. Tu repars avec des outils, des preuves et une vraie montée en compétences. Et surtout : tu comprends pourquoi tu le fais.
               </p>
             </motion.div>
           </div>
@@ -302,19 +302,77 @@ const HomePage = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-6">Le top 3 de nos Formations</h2>
             <p className="text-gray-600 mb-8">
-              Découvrez nos formations certifiantes conçues pour développer vos compétences professionnelles et booster votre carrière !
+              Découvrez nos formations RSE conçues pour développer vos compétences en responsabilité sociétale et booster votre expertise !
             </p>
           </div>
           
           {/* Featured Formations - Alignement parfait (hauteurs fixes) */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Formation 1 - Audit et diagnostic RSE */}
+            {/* Formation 1 - Pourquoi et comment la RSE */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform h-full flex flex-col">
               {/* Image on top - Fixed height */}
               <div className="h-48 overflow-hidden flex-shrink-0">
                 <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
-                  alt="Audit et diagnostic RSE" 
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
+                  alt="Pourquoi et comment la RSE" 
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow min-h-0">
+                {/* Bloc titre+icône */}
+                <div className="flex items-start mb-4 h-[80px]">
+                  <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
+                    <Star className="text-brand" size={20} />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Pourquoi et comment la RSE</h3>
+                </div>
+                {/* Espace obligatoire */}
+                <div className="mb-4"></div>
+                {/* Description */}
+                <div className="mb-5 h-[60px] flex items-center">
+                  <p className="text-sm sm:text-base text-gray-600 w-full overflow-hidden">
+                    Comprenez les enjeux et les principes fondamentaux de la RSE et apprenez à identifier et prioriser les actions adaptées à votre PME.
+                  </p>
+                </div>
+                {/* Infos */}
+                <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3 h-[48px]">
+                  <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
+                    <Clock size={16} className="mr-2 text-brand-600 flex-shrink-0" />
+                    <span>4h</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
+                    <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
+                    <span>Dès 650€ HT</span>
+                  </div>
+                  <div className="flex items-center text-sm text-blue-600 font-medium mr-3 mb-2">
+                    <CreditCard size={16} className="mr-2 text-blue-600 flex-shrink-0" />
+                    <span>Formation</span>
+                  </div>
+                </div>
+                {/* Certification */}
+                <div className="flex items-center text-sm text-gray-600 mb-5 h-[28px]">
+                  <Award size={16} className="mr-2 text-brand-600 flex-shrink-0" />
+                  <span>Certification Qualiopi</span>
+                </div>
+                {/* Bouton */}
+                <div className="mt-auto flex-shrink-0">
+                  <Link 
+                    href="/formation/pourquoi-comment-rse" 
+                    className="btn-primary btn-md btn-with-icon w-full"
+                  >
+                    Découvrir cette formation <ArrowRight size={14} className="ml-2" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Formation 2 - Le diagnostic RSE */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform h-full flex flex-col">
+              {/* Image on top - Fixed height */}
+              <div className="h-48 overflow-hidden flex-shrink-0">
+                <img 
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
+                  alt="Le diagnostic RSE" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
@@ -324,25 +382,25 @@ const HomePage = () => {
                   <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
                     <Search className="text-brand" size={20} />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Audit et diagnostic RSE complet</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Le diagnostic RSE</h3>
                 </div>
                 {/* Espace obligatoire */}
                 <div className="mb-4"></div>
                 {/* Description */}
                 <div className="mb-5 h-[60px] flex items-center">
                   <p className="text-sm sm:text-base text-gray-600 w-full overflow-hidden">
-                    Évaluez la maturité RSE de votre entreprise et identifiez les axes d'amélioration prioritaires pour votre transition écologique et sociale.
+                    Maîtrisez les outils et méthodes pour réaliser un diagnostic RSE complet et identifier les enjeux prioritaires de votre entreprise.
                   </p>
                 </div>
                 {/* Infos */}
                 <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3 h-[48px]">
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Clock size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>2-4 semaines</span>
+                    <span>4h</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>Sur devis</span>
+                    <span>Dès 650€ HT</span>
                   </div>
                   <div className="flex items-center text-sm text-blue-600 font-medium mr-3 mb-2">
                     <CreditCard size={16} className="mr-2 text-blue-600 flex-shrink-0" />
@@ -357,22 +415,22 @@ const HomePage = () => {
                 {/* Bouton */}
                 <div className="mt-auto flex-shrink-0">
                   <Link 
-                    href="/formation/service-audit-rse" 
+                    href="/formation/diagnostic-rse" 
                     className="btn-primary btn-md btn-with-icon w-full"
                   >
-                    Découvrir ce service <ArrowRight size={14} className="ml-2" />
+                    Découvrir cette formation <ArrowRight size={14} className="ml-2" />
                   </Link>
                 </div>
               </div>
             </div>
 
-            {/* Formation 2 - Stratégie RSE et gouvernance */}
+            {/* Formation 3 - La stratégie RSE */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform h-full flex flex-col">
               {/* Image on top - Fixed height */}
               <div className="h-48 overflow-hidden flex-shrink-0">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
-                  alt="Stratégie RSE et gouvernance" 
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
+                  alt="La stratégie RSE" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
@@ -382,25 +440,25 @@ const HomePage = () => {
                   <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
                     <Zap className="text-brand" size={20} />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Définition de stratégie RSE et gouvernance</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">La stratégie RSE</h3>
                 </div>
                 {/* Espace obligatoire */}
                 <div className="mb-4"></div>
                 {/* Description */}
                 <div className="mb-5 h-[60px] flex items-center">
                   <p className="text-sm sm:text-base text-gray-600 w-full overflow-hidden">
-                    Définissez une stratégie RSE alignée avec vos objectifs business et mettez en place une gouvernance efficace pour piloter votre transformation durable.
+                    Acquérez les fondamentaux pour élaborer et mettre en œuvre une stratégie RSE personnalisée et mesurer sa performance.
                   </p>
                 </div>
                 {/* Infos */}
                 <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3 h-[48px]">
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Clock size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>3-6 mois</span>
+                    <span>4h</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>Sur devis</span>
+                    <span>Dès 650€ HT</span>
                   </div>
                   <div className="flex items-center text-sm text-blue-600 font-medium mr-3 mb-2">
                     <CreditCard size={16} className="mr-2 text-blue-600 flex-shrink-0" />
@@ -415,68 +473,10 @@ const HomePage = () => {
                 {/* Bouton */}
                 <div className="mt-auto flex-shrink-0">
                   <Link 
-                    href="/formation/service-strategie-rse" 
+                    href="/formation/strategie-rse" 
                     className="btn-primary btn-md btn-with-icon w-full"
                   >
-                    Découvrir ce service <ArrowRight size={14} className="ml-2" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Formation 3 - Transition écologique */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform h-full flex flex-col">
-              {/* Image on top - Fixed height */}
-              <div className="h-48 overflow-hidden flex-shrink-0">
-                <img 
-                  src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
-                  alt="Accompagnement transition écologique" 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-grow min-h-0">
-                {/* Bloc titre+icône */}
-                <div className="flex items-start mb-4 h-[80px]">
-                  <div className="bg-brand-100 p-2 rounded-full mr-3 flex-shrink-0">
-                    <BarChart3 className="text-brand" size={20} />
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 leading-tight">Accompagnement transition écologique et environnementale</h3>
-                </div>
-                {/* Espace obligatoire */}
-                <div className="mb-4"></div>
-                {/* Description */}
-                <div className="mb-5 h-[60px] flex items-center">
-                  <p className="text-sm sm:text-base text-gray-600 w-full overflow-hidden">
-                    Accompagnez votre entreprise dans sa transition écologique avec des solutions concrètes pour réduire votre empreinte environnementale et optimiser vos performances durables.
-                  </p>
-                </div>
-                {/* Infos */}
-                <div className="flex flex-wrap items-center justify-between mb-5 border-t border-b border-gray-100 py-3 h-[48px]">
-                  <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
-                    <Clock size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>6-12 mois</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
-                    <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>Sur devis</span>
-                  </div>
-                  <div className="flex items-center text-sm text-blue-600 font-medium mr-3 mb-2">
-                    <CreditCard size={16} className="mr-2 text-blue-600 flex-shrink-0" />
-                    <span>Formation</span>
-                  </div>
-                </div>
-                {/* Certification */}
-                <div className="flex items-center text-sm text-gray-600 mb-5 h-[28px]">
-                  <Award size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                  <span>Certification Qualiopi</span>
-                </div>
-                {/* Bouton */}
-                <div className="mt-auto flex-shrink-0">
-                  <Link 
-                    href="/formation/service-transition-ecologique" 
-                    className="btn-primary btn-md btn-with-icon w-full"
-                  >
-                    Découvrir ce service <ArrowRight size={14} className="ml-2" />
+                    Découvrir cette formation <ArrowRight size={14} className="ml-2" />
                   </Link>
                 </div>
               </div>
@@ -632,14 +632,14 @@ const HomePage = () => {
                   <MessageSquare size={20} />
                 </div>
                 <p className="italic text-gray-700">
-                  "Grâce à cette formation, j'ai enfin dépassé mon stress et découvert que l'aisance orale pouvait s'apprendre ! Lors de ma certification, j'ai pris la parole avec plaisir et confiance."
+                  "J'avais une image un peu floue de la RSE. Avec Seriosa 2.0, j'ai compris que ça pouvait être concret, utile, et même fun. Les exemples dans le sport m'ont vraiment parlé."
                 </p>
               </div>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
                 <div>
-                  <p className="font-medium">Marianne</p>
-                  <p className="text-sm text-gray-600">Assistante de direction</p>
+                  <p className="font-medium">🎓 Emma</p>
+                  <p className="text-sm text-gray-600">Étudiante en management du sport</p>
                 </div>
               </div>
             </div>
@@ -650,14 +650,14 @@ const HomePage = () => {
                   <MessageSquare size={20} />
                 </div>
                 <p className="italic text-gray-700">
-                  "Hyper complet, énormément de ressources, beaucoup de retours d'expériences ultra intéressants. Formateurs très talentueux et dynamiques."
+                  "Ce n'est pas juste une formation, c'est une prise de conscience. On en ressort avec des outils, mais aussi avec l'envie d'agir pour son club et sa communauté."
                 </p>
               </div>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
                 <div>
-                  <p className="font-medium">Arthur</p>
-                  <p className="text-sm text-gray-600">Entrepreneur digital</p>
+                  <p className="font-medium">🏉 Lucas</p>
+                  <p className="text-sm text-gray-600">Étudiant en gestion d'association sportive</p>
                 </div>
               </div>
             </div>
@@ -668,14 +668,14 @@ const HomePage = () => {
                   <MessageSquare size={20} />
                 </div>
                 <p className="italic text-gray-700">
-                  "Cette formation est une pépite pour mieux comprendre l'univers du financement de la formation en France. Tellement pépite, qu'elle devrait rester confidentielle... seulement pour quelques heureux élus !"
+                  "J'étais sceptique au début. Aujourd'hui, notre plan d'action RSE nous aide à mieux gérer les déchets, à motiver nos équipes et à gagner des appels d'offres. Du concret, pas du jargon."
                 </p>
               </div>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
                 <div>
-                  <p className="font-medium">Benjamin</p>
-                  <p className="text-sm text-gray-600">Formateur en management</p>
+                  <p className="font-medium">🧱 Marc</p>
+                  <p className="text-sm text-gray-600">Dirigeant PME – secteur BTP</p>
                 </div>
               </div>
             </div>
@@ -686,14 +686,14 @@ const HomePage = () => {
                   <MessageSquare size={20} />
                 </div>
                 <p className="italic text-gray-700">
-                  "Le format demi-journée permet de garder un bon rythme de concentration tout en assimilant toutes les informations. L'expérience et l'expertise du formateur sont riches et permettent d'illustrer chaque concept de manière claire et engageante."
+                  "L'accompagnement Seriosa 2.0 nous a permis d'obtenir une meilleure note EcoVadis en quelques mois. Sérieux, réactif et humain. On avance, et on comprend pourquoi."
                 </p>
               </div>
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
                 <div>
-                  <p className="font-medium">Virginie</p>
-                  <p className="text-sm text-gray-600">Consultante</p>
+                  <p className="font-medium">⚙️ Isabelle</p>
+                  <p className="text-sm text-gray-600">Chef d'entreprise – industrie</p>
                 </div>
               </div>
             </div>

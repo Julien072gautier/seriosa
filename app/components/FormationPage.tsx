@@ -153,7 +153,7 @@ const FormationPage = () => {
               <div className="md:w-1/2 p-8">
                 <h2 className="text-2xl font-bold mb-6">Détails de la formation</h2>
                 <div className="space-y-4">
-                  {formation.certifications && formation.certifications.length > 0 && (
+                  {formation.certifications && formation.certifications.length > 0 && formation.formationType !== 'non-certifiante' && (
                     <div className="flex items-center">
                       <Award className="text-brand mr-3 flex-shrink-0" size={20} />
                       <div>
@@ -206,7 +206,9 @@ const FormationPage = () => {
                         </span>
                       )}
                     </div>
-                    <p className="text-sm text-gray-600 mb-4">*Prix pour une formation en blended learning avec 20% d'e-learning et 80% de formation live</p>
+                    {formation.formationType === 'certifiante' && (
+                      <p className="text-sm text-gray-600 mb-4">*Prix pour une formation en blended learning avec 20% d'e-learning et 80% de formation live</p>
+                    )}
                    
                     {formation.dates && formation.dates[selectedModality] && (
                       <div className="mt-4">

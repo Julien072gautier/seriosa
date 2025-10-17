@@ -13,7 +13,8 @@ export const SEO_CONFIG = {
   
   // Réseaux sociaux
   socialMedia: {
-    linkedin: 'https://www.linkedin.com/company/93788178',
+    linkedin: 'https://www.linkedin.com/company/seriosa-2-0/',
+    instagram: 'https://www.instagram.com/ethic_solutions/',
     facebook: 'https://www.facebook.com/seriosa2.0',
     twitter: 'https://twitter.com/seriosa2.0'
   },

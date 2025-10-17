@@ -93,7 +93,7 @@ const FormationCard: React.FC<FormationCardProps> = ({ formation, isCompact = fa
                 <Clock size={16} className="mr-1" />
                 <span>{formation.duration}</span>
               </div>
-              {certificationText && (
+              {certificationText && formation.formationType !== 'non-certifiante' && (
                 <div className="flex items-center text-gray-600 text-sm mb-2">
                   <Award size={16} className="mr-1" />
                   <span className="text-xs">{certificationText}</span>
@@ -127,7 +127,7 @@ const FormationCard: React.FC<FormationCardProps> = ({ formation, isCompact = fa
                   <span><strong>Financement:</strong> Éligible CPF</span>
                 </div>
               )}
-              {certificationText && (
+              {certificationText && formation.formationType !== 'non-certifiante' && (
                 <div className="flex items-center text-gray-600">
                   <Award size={18} className="mr-2" />
                   <span><strong>Certification:</strong> {certificationText}</span>
