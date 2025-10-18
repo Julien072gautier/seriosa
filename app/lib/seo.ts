@@ -10,73 +10,40 @@ interface SEOData {
   structuredData?: any
 }
 
-// Données des formations pour le SEO
+// Données des formations RSE pour le SEO
 export const formationData = {
-  'anglais-professionnel': {
-    name: 'Anglais Professionnel',
-    shortDescription: 'Développez des automatismes de communication en anglais et renforcez votre impact professionnel à l\'international.',
-    fullDescription: 'Formation professionnelle en anglais certifiée LILATE - RS6118. Développez vos compétences linguistiques pour communiquer efficacement en anglais dans un contexte professionnel. Formation éligible CPF.',
-    keywords: ['anglais professionnel', 'formation anglais', 'certification LILATE', 'anglais entreprise', 'communication internationale'],
-    duration: '30 heures',
-    price: '1950€',
-    skills: ['Communication en anglais', 'Vocabulaire professionnel', 'Grammaire anglaise', 'Présentation en anglais'],
-    image: '/images/formations/anglais-og.jpg',
-    certification: 'LILATE - RS6118'
+  'pourquoi-comment-rse': {
+    name: 'Pourquoi et comment la RSE',
+    shortDescription: 'Comprenez les enjeux et les principes fondamentaux de la RSE et apprenez à identifier et prioriser les actions adaptées à votre PME.',
+    fullDescription: 'Formation RSE pour comprendre les enjeux et principes fondamentaux de la responsabilité sociétale des entreprises. Apprenez à identifier et prioriser les actions RSE adaptées à votre PME. Formation non-certifiante.',
+    keywords: ['RSE', 'responsabilité sociétale', 'formation RSE', 'développement durable', 'PME', 'transition écologique'],
+    duration: '4h',
+    price: 'Dès 650€ HT',
+    skills: ['Compréhension RSE', 'Identification des enjeux', 'Priorisation des actions', 'Stratégie PME'],
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    certification: 'Formation non-certifiante'
   },
-  'allemand-professionnel': {
-    name: 'Allemand Professionnel',
-    shortDescription: 'Maîtrisez l\'allemand professionnel pour développer vos relations commerciales et votre carrière.',
-    fullDescription: 'Formation professionnelle en allemand pour améliorer vos compétences linguistiques en contexte professionnel. Formation éligible CPF.',
-    keywords: ['allemand professionnel', 'formation allemand', 'allemand entreprise', 'communication allemande'],
-    duration: '30 heures',
-    price: '1950€',
-    skills: ['Communication en allemand', 'Vocabulaire professionnel', 'Grammaire allemande'],
-    image: '/images/formations/allemand-og.jpg',
-    certification: 'Certification professionnelle'
+  'formation-diagnostic-rse': {
+    name: 'Le diagnostic RSE',
+    shortDescription: 'Maîtrisez les outils et méthodes pour réaliser un diagnostic RSE complet et identifier les enjeux prioritaires de votre entreprise.',
+    fullDescription: 'Formation RSE pour maîtriser les outils et méthodes de diagnostic RSE. Apprenez à cartographier les parties prenantes, réaliser un audit RSE complet et identifier les actions prioritaires. Formation non-certifiante.',
+    keywords: ['diagnostic RSE', 'audit RSE', 'parties prenantes', 'formation RSE', 'outils RSE', 'analyse RSE'],
+    duration: '4h',
+    price: 'Dès 650€ HT',
+    skills: ['Diagnostic RSE', 'Cartographie parties prenantes', 'Audit RSE', 'Analyse des enjeux'],
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    certification: 'Formation non-certifiante'
   },
-  'espagnol-professionnel': {
-    name: 'Espagnol Professionnel',
-    shortDescription: 'Développez vos compétences en espagnol pour élargir vos opportunités professionnelles.',
-    fullDescription: 'Formation professionnelle en espagnol pour communiquer efficacement dans un contexte professionnel hispanophone. Formation éligible CPF.',
-    keywords: ['espagnol professionnel', 'formation espagnol', 'espagnol entreprise', 'communication espagnole'],
-    duration: '30 heures',
-    price: '1950€',
-    skills: ['Communication en espagnol', 'Vocabulaire professionnel', 'Grammaire espagnole'],
-    image: '/images/formations/espagnol-og.jpg',
-    certification: 'Certification professionnelle'
-  },
-  'communication-prise-parole': {
-    name: 'Communication et Prise de Parole',
-    shortDescription: 'Maîtrisez l\'art de la communication et de la prise de parole en public.',
-    fullDescription: 'Formation professionnelle en communication et techniques de prise de parole en public. Développez votre charisme et votre impact lors de présentations. Formation éligible CPF.',
-    keywords: ['communication', 'prise de parole', 'présentation', 'charisme', 'leadership'],
-    duration: '30 heures',
-    price: '1950€',
-    skills: ['Prise de parole en public', 'Communication non verbale', 'Présentation', 'Leadership'],
-    image: '/images/formations/communication-og.jpg',
-    certification: 'Certification professionnelle'
-  },
-  'ia-vente': {
-    name: 'IA et Vente',
-    shortDescription: 'Intégrez l\'intelligence artificielle dans vos stratégies de vente et de marketing.',
-    fullDescription: 'Formation professionnelle en intelligence artificielle appliquée à la vente et au marketing. Découvrez les outils IA pour optimiser vos performances commerciales. Formation éligible CPF.',
-    keywords: ['intelligence artificielle', 'IA vente', 'marketing digital', 'outils IA', 'vente'],
-    duration: '30 heures',
-    price: '1950€',
-    skills: ['Intelligence artificielle', 'Outils IA', 'Marketing digital', 'Stratégies de vente'],
-    image: '/images/formations/ia-og.jpg',
-    certification: 'Certification professionnelle'
-  },
-  'community-management': {
-    name: 'Community Management',
-    shortDescription: 'Maîtrisez la gestion de communautés et l\'animation de réseaux sociaux.',
-    fullDescription: 'Formation professionnelle en community management et gestion de réseaux sociaux. Apprenez à créer et animer des communautés en ligne. Formation éligible CPF.',
-    keywords: ['community management', 'réseaux sociaux', 'animation communauté', 'social media'],
-    duration: '30 heures',
-    price: '1950€',
-    skills: ['Community Management', 'Réseaux sociaux', 'Animation de communauté', 'Content marketing'],
-    image: '/images/formations/community-og.jpg',
-    certification: 'Certification professionnelle'
+  'formation-strategie-rse': {
+    name: 'La stratégie RSE',
+    shortDescription: 'Acquérez les fondamentaux pour élaborer et mettre en œuvre une stratégie RSE personnalisée et mesurer sa performance.',
+    fullDescription: 'Formation RSE pour élaborer et mettre en œuvre une stratégie RSE personnalisée. Intégrez les enjeux économiques, sociaux et environnementaux et mesurez la performance de votre stratégie. Formation non-certifiante.',
+    keywords: ['stratégie RSE', 'élaboration stratégie', 'performance RSE', 'formation RSE', 'mesure RSE', 'KPI RSE'],
+    duration: '4h',
+    price: 'Dès 650€ HT',
+    skills: ['Élaboration stratégie RSE', 'Définition objectifs', 'Mesure performance', 'Communication RSE'],
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    certification: 'Formation non-certifiante'
   }
 }
 
@@ -131,12 +98,12 @@ export function generateFormationSEO(formationSlug: string): SEOData {
         "price": formation.price,
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
-        "url": `https://www.seriosa.fr/service/${formationSlug}`
+        "url": `https://www.seriosa.fr/formation/${formationSlug}`
       },
       "educationalCredentialAwarded": formation.certification,
       "teaches": formation.skills,
       "image": formation.image,
-      "url": `https://www.seriosa.fr/service/${formationSlug}`
+      "url": `https://www.seriosa.fr/formation/${formationSlug}`
     }
   }
 }
@@ -146,12 +113,12 @@ export function generatePageSEO(pageType: string, customData?: any): SEOData {
     website: {
       title: 'Seriosa 2.0 - Cabinet de conseil RSE et développement durable | Certifié Qualiopi',
       description: 'Seriosa 2.0 est un cabinet de conseil RSE et développement durable. Nous accompagnons les entreprises dans leur transition écologique et sociale.',
-      keywords: ['formation professionnelle', 'CPF', 'Qualiopi', 'intelligence artificielle', 'langues étrangères', 'communication']
+      keywords: ['RSE', 'responsabilité sociétale', 'développement durable', 'conseil RSE', 'transition écologique', 'PME']
     },
     formations: {
-      title: 'Toutes nos Formations | Seriosa 2.0',
-      description: 'Découvrez toutes nos formations : audit, stratégie, transition écologique, développement social, formation. Organisme de formation certifié Qualiopi.',
-      keywords: ['formations professionnelles', 'liste formations', 'catalogue formation', 'CPF', 'Qualiopi']
+      title: 'Formations RSE | Seriosa 2.0',
+      description: 'Découvrez nos formations RSE : diagnostic RSE, stratégie RSE, sensibilisation RSE. Formations non-certifiantes adaptées aux PME.',
+      keywords: ['formations RSE', 'formation responsabilité sociétale', 'diagnostic RSE', 'stratégie RSE', 'PME']
     },
     contact: {
       title: 'Contactez-nous | Seriosa 2.0',
@@ -196,7 +163,7 @@ export function generateAllFormationsMetadata() {
       openGraph: {
         title: seoData.title,
         description: seoData.description,
-        url: `https://www.seriosa.fr/service/${slug}`,
+        url: `https://www.seriosa.fr/formation/${slug}`,
         type: 'article',
         images: [
           {
@@ -214,7 +181,7 @@ export function generateAllFormationsMetadata() {
         images: [seoData.ogImage || `/images/formations/${slug}-og.jpg`],
       },
       alternates: {
-        canonical: `https://www.seriosa.fr/service/${slug}`,
+        canonical: `https://www.seriosa.fr/formation/${slug}`,
       },
     }
   })

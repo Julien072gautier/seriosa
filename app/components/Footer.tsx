@@ -89,34 +89,34 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/demande-formation" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  Demande de Formation
+                  Formation sur-mesure
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Formations Principales */}
+          {/* Formations RSE */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Formations Populaires</h3>
+            <h3 className="text-xl font-semibold mb-4">Formations RSE</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/formation/anglais-professionnel" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  Anglais Professionnel
+                <Link href="/formation/pourquoi-comment-rse" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  Pourquoi et comment la RSE
                 </Link>
               </li>
               <li>
-                <Link href="/formation/ia-vente" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  IA et Vente
+                <Link href="/formation/formation-diagnostic-rse" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  Le diagnostic RSE
                 </Link>
               </li>
               <li>
-                <Link href="/formation/communication-prise-parole" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  Communication et Prise de Parole
+                <Link href="/formation/formation-strategie-rse" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  La stratégie RSE
                 </Link>
               </li>
               <li>
-                <Link href="/formation/community-management" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  Community Management
+                <Link href="/formations" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  Toutes nos formations
                 </Link>
               </li>
             </ul>

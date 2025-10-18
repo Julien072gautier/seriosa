@@ -127,7 +127,7 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
 
     const result = await sendEmail({
       to: 'olivier.guyot@seriosa.fr',
-      subject: "Demande de service RSE personnalisé - Seriosa 2.0",
+      subject: "Demande de formation RSE personnalisée - Seriosa 2.0",
       text: emailContent
     });
 
@@ -136,20 +136,9 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
   };
 
   const formations = [
-    { value: 'allemand-professionnel', label: 'Allemand professionnel' },
-    { value: 'anglais-professionnel', label: 'Anglais professionnel' },
-    { value: 'arabe-professionnel', label: 'Arabe professionnel' },
-    { value: 'chinois-professionnel', label: 'Chinois professionnel' },
-    { value: 'communication-prise-parole', label: 'Communication et prise de parole' },
-    { value: 'community-management', label: 'Community Management' },
-    { value: 'espagnol-professionnel', label: 'Espagnol professionnel' },
-    { value: 'francais-professionnel', label: 'Français professionnel' },
-    { value: 'ia-vente', label: 'IA et vente' },
-    { value: 'italien-professionnel', label: 'Italien professionnel' },
-    { value: 'japonais-professionnel', label: 'Japonais professionnel' },
-    { value: 'langue-des-signes', label: 'Langue des signes' },
-    { value: 'portugais-professionnel', label: 'Portugais professionnel' },
-    { value: 'russe-professionnel', label: 'Russe professionnel' },
+    { value: 'pourquoi-comment-rse', label: 'Pourquoi et comment la RSE' },
+    { value: 'formation-diagnostic-rse', label: 'Le diagnostic RSE' },
+    { value: 'formation-strategie-rse', label: 'La stratégie RSE' },
     { value: 'autre', label: 'Autre formation (à préciser)' },
   ];
 
@@ -159,9 +148,9 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
         <div className="max-w-2xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Demande de Formation personnalisée</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">Demande de Formation RSE personnalisée</h1>
             <p className="text-xl text-gray-600">
-              Créez votre parcours sur-mesure en quelques clics
+              Créez votre parcours RSE sur-mesure en quelques clics
             </p>
           </div>
 

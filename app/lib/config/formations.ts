@@ -97,9 +97,9 @@ const formationsConfig = {
         'Attestation de participation délivrée'
       ],
       accessibility: [
-        'Formation accessible sous 15 jours après inscription',
-        'Adaptations possibles sur demande pour les personnes en situation de handicap',
-        'Assistance à la connexion en cas de visioconférence via Microsoft Teams'
+        "Formation accessible sous 15 jours après inscription.",
+        "Adaptation des conditions d'examen aux personnes en situation de handicap",
+        "Le référent handicap prendra en compte dès l'inscription du candidat sa situation de handicap, si celle-ci est mentionnée. Il sera alors proposé au candidat un entretien afin d'envisager avec lui les aménagements qui pourront être apportés."
       ],
       reasons: [
         {
@@ -210,9 +210,9 @@ const formationsConfig = {
         'Attestation de participation délivrée'
       ],
       accessibility: [
-        'Formation accessible sous 15 jours après inscription',
-        'Adaptations possibles sur demande pour les personnes en situation de handicap',
-        'Assistance à la connexion en cas de visioconférence via Microsoft Teams'
+        "Formation accessible sous 15 jours après inscription.",
+        "Adaptation des conditions d'examen aux personnes en situation de handicap",
+        "Le référent handicap prendra en compte dès l'inscription du candidat sa situation de handicap, si celle-ci est mentionnée. Il sera alors proposé au candidat un entretien afin d'envisager avec lui les aménagements qui pourront être apportés."
       ],
       reasons: [
         {
@@ -330,9 +330,9 @@ const formationsConfig = {
         'Attestation de participation délivrée'
       ],
       accessibility: [
-        'Formation accessible sous 15 jours après inscription',
-        'Adaptations possibles sur demande pour les personnes en situation de handicap',
-        'Assistance à la connexion en cas de visioconférence via Microsoft Teams'
+        "Formation accessible sous 15 jours après inscription.",
+        "Adaptation des conditions d'examen aux personnes en situation de handicap",
+        "Le référent handicap prendra en compte dès l'inscription du candidat sa situation de handicap, si celle-ci est mentionnée. Il sera alors proposé au candidat un entretien afin d'envisager avec lui les aménagements qui pourront être apportés."
       ],
       reasons: [
         {

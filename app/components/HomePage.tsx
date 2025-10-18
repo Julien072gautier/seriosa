@@ -344,16 +344,9 @@ const HomePage = () => {
                     <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
                     <span>Dès 650€ HT</span>
                   </div>
-                  <div className="flex items-center text-sm text-blue-600 font-medium mr-3 mb-2">
-                    <CreditCard size={16} className="mr-2 text-blue-600 flex-shrink-0" />
-                    <span>Formation</span>
-                  </div>
                 </div>
-                {/* Certification */}
-                <div className="flex items-center text-sm text-gray-600 mb-5 h-[28px]">
-                  <Award size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                  <span>Certification Qualiopi</span>
-                </div>
+                {/* Certification - Hidden for non-certifying formations */}
+                <div className="mb-5 h-[28px]"></div>
                 {/* Bouton */}
                 <div className="mt-auto flex-shrink-0">
                   <Link 
@@ -402,16 +395,9 @@ const HomePage = () => {
                     <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
                     <span>Dès 650€ HT</span>
                   </div>
-                  <div className="flex items-center text-sm text-blue-600 font-medium mr-3 mb-2">
-                    <CreditCard size={16} className="mr-2 text-blue-600 flex-shrink-0" />
-                    <span>Formation</span>
-                  </div>
                 </div>
-                {/* Certification */}
-                <div className="flex items-center text-sm text-gray-600 mb-5 h-[28px]">
-                  <Award size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                  <span>Certification Qualiopi</span>
-                </div>
+                {/* Certification - Hidden for non-certifying formations */}
+                <div className="mb-5 h-[28px]"></div>
                 {/* Bouton */}
                 <div className="mt-auto flex-shrink-0">
                   <Link 
@@ -460,16 +446,9 @@ const HomePage = () => {
                     <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
                     <span>Dès 650€ HT</span>
                   </div>
-                  <div className="flex items-center text-sm text-blue-600 font-medium mr-3 mb-2">
-                    <CreditCard size={16} className="mr-2 text-blue-600 flex-shrink-0" />
-                    <span>Formation</span>
-                  </div>
                 </div>
-                {/* Certification */}
-                <div className="flex items-center text-sm text-gray-600 mb-5 h-[28px]">
-                  <Award size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                  <span>Certification Qualiopi</span>
-                </div>
+                {/* Certification - Hidden for non-certifying formations */}
+                <div className="mb-5 h-[28px]"></div>
                 {/* Bouton */}
                 <div className="mt-auto flex-shrink-0">
                   <Link 

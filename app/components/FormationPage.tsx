@@ -516,10 +516,17 @@ const FormationPage = () => {
                     <Users className="text-white" size={24} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold mb-3 text-lg text-white">Accessibilité</h3>
-                    <p className="text-white text-opacity-90 mb-4">
-                      Cette formation est accessible à tous. Des adaptations peuvent être proposées selon les besoins spécifiques des participants.
-                    </p>
+                    <h3 className="font-semibold mb-3 text-lg text-white">Accessibilité de la formation</h3>
+                    <div className="text-white text-opacity-90 mb-4">
+                      {formation.accessibility.map((item, index) => {
+                        if (index === 1) {
+                          // La deuxième ligne (index 1) doit être en gras comme sous-titre
+                          return <p key={index} className="mb-2 font-semibold">{item}</p>;
+                        } else {
+                          return <p key={index} className="mb-2">{item}</p>;
+                        }
+                      })}
+                    </div>
                   </div>
                 </div>
               </div>
