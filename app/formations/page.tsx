@@ -79,7 +79,7 @@ const FormationsPage: React.FC = () => {
           duration: formation.duration,
           certification: (formation.formationType === 'partenariat' || formation.formationType === 'certifiante') && formation.certifications && formation.certifications.length > 0 ?
             formation.certifications.join(', ') : "",
-          price: formation.prices.collectif.price,
+          price: formation.prices.individuel.price,
           cpf: formation.cpfEligible,
           description: formation.shortDescription,
           image: formation.image,

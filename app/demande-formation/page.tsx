@@ -139,6 +139,9 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
     { value: 'pourquoi-comment-rse', label: 'Pourquoi et comment la RSE' },
     { value: 'formation-diagnostic-rse', label: 'Le diagnostic RSE' },
     { value: 'formation-strategie-rse', label: 'La stratégie RSE' },
+    { value: 'formation-evenement-eco-responsable', label: 'Organiser un événement éco-responsable et impactant' },
+    { value: 'formation-mecenat', label: 'Les différentes formes de mécénat' },
+    { value: 'formation-communication-rse', label: 'Communiquer sa RSE avec impact' },
     { value: 'autre', label: 'Autre formation (à préciser)' },
   ];
 

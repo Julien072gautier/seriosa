@@ -18,31 +18,64 @@ export const formationData = {
     fullDescription: 'Formation RSE pour comprendre les enjeux et principes fondamentaux de la responsabilité sociétale des entreprises. Apprenez à identifier et prioriser les actions RSE adaptées à votre PME. Formation non-certifiante.',
     keywords: ['RSE', 'responsabilité sociétale', 'formation RSE', 'développement durable', 'PME', 'transition écologique'],
     duration: '4h',
-    price: 'Dès 650€ HT',
+    price: '650€ HT',
     skills: ['Compréhension RSE', 'Identification des enjeux', 'Priorisation des actions', 'Stratégie PME'],
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    image: '/pourquoi.png',
     certification: 'Formation non-certifiante'
   },
   'formation-diagnostic-rse': {
     name: 'Le diagnostic RSE',
-    shortDescription: 'Maîtrisez les outils et méthodes pour réaliser un diagnostic RSE complet et identifier les enjeux prioritaires de votre entreprise.',
-    fullDescription: 'Formation RSE pour maîtriser les outils et méthodes de diagnostic RSE. Apprenez à cartographier les parties prenantes, réaliser un audit RSE complet et identifier les actions prioritaires. Formation non-certifiante.',
-    keywords: ['diagnostic RSE', 'audit RSE', 'parties prenantes', 'formation RSE', 'outils RSE', 'analyse RSE'],
+    shortDescription: 'Réaliser un état des lieux RSE pour identifier vos forces, faiblesses et priorités d\'action.',
+    fullDescription: 'Apprenez à réaliser un véritable état des lieux RSE de votre organisation afin d\'évaluer vos pratiques actuelles, repérer vos marges de progrès et définir des actions prioritaires. Grâce à des outils simples et concrets, cette formation vous guide pas à pas vers une démarche structurée et adaptée à votre réalité.',
+    keywords: ['diagnostic RSE', 'audit RSE', 'parties prenantes', 'formation RSE', 'outils RSE', 'analyse RSE', 'état des lieux RSE', 'cartographie parties prenantes'],
     duration: '4h',
-    price: 'Dès 650€ HT',
-    skills: ['Diagnostic RSE', 'Cartographie parties prenantes', 'Audit RSE', 'Analyse des enjeux'],
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    price: '650€ HT',
+    skills: ['Diagnostic RSE', 'État des lieux structuré', 'Cartographie parties prenantes', 'Analyse des enjeux', 'Synthèse des résultats'],
+    image: '/diagnostique.png',
     certification: 'Formation non-certifiante'
   },
   'formation-strategie-rse': {
     name: 'La stratégie RSE',
-    shortDescription: 'Acquérez les fondamentaux pour élaborer et mettre en œuvre une stratégie RSE personnalisée et mesurer sa performance.',
-    fullDescription: 'Formation RSE pour élaborer et mettre en œuvre une stratégie RSE personnalisée. Intégrez les enjeux économiques, sociaux et environnementaux et mesurez la performance de votre stratégie. Formation non-certifiante.',
-    keywords: ['stratégie RSE', 'élaboration stratégie', 'performance RSE', 'formation RSE', 'mesure RSE', 'KPI RSE'],
+    shortDescription: 'Construire une stratégie RSE claire, alignée sur vos valeurs et vos objectifs.',
+    fullDescription: 'Apprenez à transformer votre diagnostic RSE en une véritable stratégie durable. Cette formation vous guide pour définir vos priorités, fixer des objectifs mesurables et intégrer la RSE au cœur de votre modèle économique. Vous découvrirez comment piloter vos actions, suivre vos indicateurs et mobiliser vos équipes autour d\'une vision responsable et partagée.',
+    keywords: ['stratégie RSE', 'élaboration stratégie', 'performance RSE', 'formation RSE', 'mesure RSE', 'KPI RSE', 'feuille de route RSE', 'objectifs RSE'],
     duration: '4h',
-    price: 'Dès 650€ HT',
-    skills: ['Élaboration stratégie RSE', 'Définition objectifs', 'Mesure performance', 'Communication RSE'],
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
+    price: '650€ HT',
+    skills: ['Élaboration stratégie RSE', 'Définition objectifs RSE', 'Feuille de route opérationnelle', 'Mobilisation équipes', 'Mesure performance RSE'],
+    image: '/strategie.png',
+    certification: 'Formation non-certifiante'
+  },
+  'formation-evenement-eco-responsable': {
+    name: 'Organiser un événement éco-responsable et impactant',
+    shortDescription: 'Apprendre à concevoir, organiser et valoriser un événement aligné avec les valeurs du développement durable.',
+    fullDescription: 'De la conception à la mise en œuvre, apprenez à organiser des événements éco-responsables qui allient sens, convivialité et impact. Cette formation vous guide dans toutes les étapes : définition des objectifs, gestion des partenaires, logistique durable, communication responsable et évaluation post-événement. Idéal pour allier performance, engagement et plaisir collectif.',
+    keywords: ['événement éco-responsable', 'organisation événement', 'événementiel durable', 'formation événement', 'communication responsable', 'logistique durable', 'développement durable'],
+    duration: '4h',
+    price: '650€ HT',
+    skills: ['Conception événement éco-responsable', 'Planification événement durable', 'Communication responsable', 'Évaluation impact', 'Gestion logistique durable'],
+    image: '/evenement.png',
+    certification: 'Formation non-certifiante'
+  },
+  'formation-mecenat': {
+    name: 'Les différentes formes de mécénat',
+    shortDescription: 'Découvrir les différentes formes de mécénat et apprendre à bâtir une stratégie d\'engagement efficace.',
+    fullDescription: 'Explorez toutes les formes de mécénat – financier, en nature, de compétences ou technologique – et comprenez comment les utiliser pour renforcer votre impact social tout en valorisant votre image. Cette formation vous aide à structurer une démarche de mécénat alignée avec vos valeurs, vos ressources et vos objectifs stratégiques.',
+    keywords: ['mécénat', 'mécénat financier', 'mécénat de compétences', 'mécénat en nature', 'mécénat technologique', 'avantages fiscaux mécénat', 'stratégie mécénat', 'responsabilité sociale'],
+    duration: '4h',
+    price: '650€ HT',
+    skills: ['Comprendre le mécénat', 'Formes de mécénat', 'Avantages fiscaux', 'Stratégie mécénat', 'Mesure impact'],
+    image: '/mecenat.png',
+    certification: 'Formation non-certifiante'
+  },
+  'formation-communication-rse': {
+    name: 'Communiquer sa RSE avec impact',
+    shortDescription: 'Apprendre à construire une communication claire, cohérente et engagée autour de sa démarche RSE.',
+    fullDescription: 'Définissez votre stratégie de communication RSE et apprenez à faire passer vos messages avec justesse et impact. De la définition des cibles à la création de contenus engageants, cette formation vous aide à valoriser vos actions responsables, renforcer la cohérence de vos messages et donner du sens à votre communication.',
+    keywords: ['communication RSE', 'stratégie communication', 'communication responsable', 'contenus RSE', 'plan communication', 'valorisation RSE', 'storytelling RSE'],
+    duration: '4h',
+    price: '650€ HT',
+    skills: ['Stratégie communication RSE', 'Création contenus', 'Plan communication', 'Storytelling', 'Calendrier éditorial'],
+    image: '/communication.png',
     certification: 'Formation non-certifiante'
   }
 }
@@ -52,7 +85,7 @@ export function generateFormationSEO(formationSlug: string): SEOData {
   
   if (!formation) {
     return {
-      title: 'Service | Seriosa 2.0',
+      title: 'Formation | Seriosa 2.0',
       description: 'Formation professionnelle certifiée Qualiopi éligible CPF.',
       keywords: ['formation professionnelle', 'CPF', 'Qualiopi'],
       canonical: `/formation/${formationSlug}`,
@@ -61,7 +94,7 @@ export function generateFormationSEO(formationSlug: string): SEOData {
   }
 
   return {
-    title: `Service ${formation.name} | Seriosa 2.0`,
+    title: `Formation ${formation.name} | Seriosa 2.0`,
     description: `Formation professionnelle ${formation.name} certifiée Qualiopi. ${formation.shortDescription} Éligible CPF. Inscrivez-vous dès maintenant.`,
     keywords: [
       `formation ${formation.name.toLowerCase()}`,
@@ -170,7 +203,7 @@ export function generateAllFormationsMetadata() {
             url: seoData.ogImage || `/images/formations/${slug}-og.jpg`,
             width: 1200,
             height: 630,
-            alt: `Service ${formation?.name} - Seriosa 2.0`,
+            alt: `Formation ${formation?.name} - Seriosa 2.0`,
           },
         ],
       },
@@ -201,14 +234,14 @@ export function getFormationMetadata(slug: string): Metadata {
     openGraph: {
       title: seoData.title,
       description: seoData.description,
-      url: `https://www.seriosa.fr/service/${slug}`,
+      url: `https://www.seriosa.fr/formation/${slug}`,
       type: 'article',
       images: [
         {
           url: seoData.ogImage || `/images/formations/${slug}-og.jpg`,
           width: 1200,
           height: 630,
-          alt: `Service ${formation?.name} - Seriosa 2.0`,
+          alt: `Formation ${formation?.name} - Seriosa 2.0`,
         },
       ],
     },
@@ -219,7 +252,7 @@ export function getFormationMetadata(slug: string): Metadata {
       images: [seoData.ogImage || `/images/formations/${slug}-og.jpg`],
     },
     alternates: {
-      canonical: `https://www.seriosa.fr/service/${slug}`,
+      canonical: `https://www.seriosa.fr/formation/${slug}`,
     },
   }
 }

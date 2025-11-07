@@ -8,10 +8,13 @@ import { useInView } from 'react-intersection-observer';
 
 import { useStatsAnimation } from '../hooks/useStatsAnimation';
 import { STATS_CONFIG } from '../lib/stats-config';
+import formationsConfig from '../lib/config/formations';
 
 const HomePage = () => {
-
-
+  // Récupérer les formations du top 3
+  const formation1 = formationsConfig.formations.find(f => f.slug === 'formation-pourquoi-comment-rse');
+  const formation2 = formationsConfig.formations.find(f => f.slug === 'formation-diagnostic-rse');
+  const formation3 = formationsConfig.formations.find(f => f.slug === 'formation-strategie-rse');
   
   // Animation controls
   const controls = useAnimation();
@@ -212,11 +215,11 @@ const HomePage = () => {
                 Découvrir nos Formations
               </Link>
               <a 
-                href="tel:0975856510"
+                href="tel:0776957038"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-700 font-medium py-3 px-6 rounded-md transition-colors inline-flex items-center justify-center"
               >
                 <Phone size={18} className="mr-2" />
-                09 75 85 65 10
+                07 76 95 70 38
               </a>
             </motion.div>
           </div>
@@ -313,7 +316,7 @@ const HomePage = () => {
               {/* Image on top - Fixed height */}
               <div className="h-48 overflow-hidden flex-shrink-0">
                 <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
+                  src="/pourquoi.png" 
                   alt="Pourquoi et comment la RSE" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
@@ -342,7 +345,7 @@ const HomePage = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>Dès 650€ HT</span>
+                    <span>{formation1?.prices.individuel.price || '650€ HT'}</span>
                   </div>
                 </div>
                 {/* Certification - Hidden for non-certifying formations */}
@@ -364,7 +367,7 @@ const HomePage = () => {
               {/* Image on top - Fixed height */}
               <div className="h-48 overflow-hidden flex-shrink-0">
                 <img 
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
+                  src="/diagnostique.png" 
                   alt="Le diagnostic RSE" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
@@ -382,7 +385,7 @@ const HomePage = () => {
                 {/* Description */}
                 <div className="mb-5 h-[60px] flex items-center">
                   <p className="text-sm sm:text-base text-gray-600 w-full overflow-hidden">
-                    Maîtrisez les outils et méthodes pour réaliser un diagnostic RSE complet et identifier les enjeux prioritaires de votre entreprise.
+                    Réaliser un état des lieux RSE pour identifier vos forces, faiblesses et priorités d'action.
                   </p>
                 </div>
                 {/* Infos */}
@@ -393,7 +396,7 @@ const HomePage = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>Dès 650€ HT</span>
+                    <span>{formation2?.prices.individuel.price || '650€ HT'}</span>
                   </div>
                 </div>
                 {/* Certification - Hidden for non-certifying formations */}
@@ -415,7 +418,7 @@ const HomePage = () => {
               {/* Image on top - Fixed height */}
               <div className="h-48 overflow-hidden flex-shrink-0">
                 <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" 
+                  src="/strategie.png" 
                   alt="La stratégie RSE" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
@@ -444,7 +447,7 @@ const HomePage = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-600 mr-3 mb-2">
                     <Tag size={16} className="mr-2 text-brand-600 flex-shrink-0" />
-                    <span>Dès 650€ HT</span>
+                    <span>{formation3?.prices.individuel.price || '650€ HT'}</span>
                   </div>
                 </div>
                 {/* Certification - Hidden for non-certifying formations */}

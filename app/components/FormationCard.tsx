@@ -115,11 +115,7 @@ const FormationCard: React.FC<FormationCardProps> = ({ formation, isCompact = fa
               </div>
               <div className="flex items-center text-gray-600">
                 <Tag size={18} className="mr-2" />
-                <span><strong>Prix individuel:</strong> {formation.prices.individuel.price}</span>
-              </div>
-              <div className="flex items-center text-gray-600">
-                <Users size={18} className="mr-2" />
-                <span><strong>Prix collectif:</strong> {formation.prices.collectif.price}</span>
+                <span><strong>Prix:</strong> {formation.prices.individuel.price}</span>
               </div>
               {formation.cpfEligible && (
                 <div className="flex items-center text-brand">

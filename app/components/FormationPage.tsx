@@ -35,7 +35,7 @@ const FormationPage = () => {
   const params = useParams();
   const slug = params?.slug as string;
   const router = useRouter();
-  const [selectedModality, setSelectedModality] = useState<'individuel' | 'collectif'>('individuel');
+  const selectedModality: 'individuel' | 'collectif' = 'individuel';
   const [isCallbackOpen, setIsCallbackOpen] = useState(false);
 
   // Fonction pour formater les informations de certification
@@ -128,11 +128,11 @@ const FormationPage = () => {
                 Demander plus d'informations
               </button>
               <a 
-                href="tel:0975856510"
+                href="tel:0776957038"
                 className="bg-brand text-white hover:bg-brand-600 font-medium py-3 px-6 rounded-md transition-colors inline-flex items-center justify-center"
               >
                 <Phone size={18} className="mr-2" />
-                09 75 85 65 10
+                07 76 95 70 38
               </a>
             </div>
           </div>
@@ -144,11 +144,19 @@ const FormationPage = () => {
           {/* Formation Details */}
           <section className="bg-white rounded-lg shadow-md overflow-hidden mb-12">
             <div className="md:flex">
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 flex-shrink-0">
                 <img 
                   src={formation.image}
                   alt={formation.title} 
-                  className="w-full h-full object-cover"
+                  className={`w-full object-cover ${
+                    formation.dates && 
+                    formation.dates[selectedModality] && 
+                    formation.dates[selectedModality].length > 0 && 
+                    formation.dates[selectedModality][0] !== 'Sur demande' &&
+                    selectedModality !== 'individuel'
+                      ? 'h-full min-h-[300px]' 
+                      : 'h-[250px] md:h-[300px]'
+                  }`}
                 />
               </div>
               <div className="md:w-1/2 p-8">
@@ -183,20 +191,6 @@ const FormationPage = () => {
                     </div>
                   )}
 
-                  <div className="flex gap-4 mb-4">
-                    <button 
-                      onClick={() => setSelectedModality('collectif')} 
-                      className={`px-4 py-2 border rounded-md ${selectedModality === 'collectif' ? 'bg-brand text-white' : 'bg-gray-100'}`}
-                    >
-                      Collectif
-                    </button>
-                    <button 
-                      onClick={() => setSelectedModality('individuel')} 
-                      className={`px-4 py-2 border rounded-md ${selectedModality === 'individuel' ? 'bg-brand text-white' : 'bg-gray-100'}`}
-                    >
-                      Individuel
-                    </button>
-                  </div>
                   <div className="pt-4 border-t border-gray-100">
                     <div className="flex items-center mb-2">
                       <Tag size={16} className="mr-2 text-brand-600" />
@@ -548,11 +542,11 @@ const FormationPage = () => {
                 Je lance mon parcours
               </button>
               <a
-                href="tel:0975856510"
+                href="tel:0776957038"
                 className="bg-brand text-white font-medium py-3 px-6 rounded-md hover:bg-brand-600 transition-colors inline-flex items-center justify-center"
               >
                 <Phone size={18} className="mr-2" />
-                09 75 85 65 10
+                07 76 95 70 38
               </a>
             </div>
           </section>
