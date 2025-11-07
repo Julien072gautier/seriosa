@@ -211,18 +211,7 @@ const FormationPage = () => {
                           <Calendar size={20} className="mr-2 text-brand-600" />
                           <p className="text-medium font-medium text-gray-800">Prochaines sessions</p>
                         </div>
-
-                        {selectedModality === "individuel" ? (
-                          <p className="italic text-gray-500 ml-6">Dates à planifier avec votre formateur</p>
-                        ) : formation.dates[selectedModality] && Array.isArray(formation.dates[selectedModality]) && formation.dates[selectedModality].length > 0 ? (
-                          <ul className="pl-6 space-y-1 text-sm text-gray-600 list-disc">
-                            {formation.dates[selectedModality].map((session: string, index: number) => (
-                              <li key={index}>{session}</li>
-                            ))}
-                          </ul>
-                        ) : (
-                          <p className="italic text-gray-500 ml-6">Aucune session prévue pour le moment</p>
-                        )}
+                        <p className="italic text-gray-500 ml-6">Dates à planifier avec votre formateur</p>
                       </div>
                     )}
                     
