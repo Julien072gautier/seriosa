@@ -7,13 +7,13 @@ export const SEO_CONFIG = {
   siteDescription: 'Cabinet de conseil spécialisé en RSE (Responsabilité Sociétale des Entreprises) et développement durable. Accompagnement des entreprises dans leur transition écologique et sociale.',
   
   // Contact
-  contactEmail: 'olivier.guyot@seriosa.fr',
-  contactPhone: '07 76 95 70 38',
+  contactEmail: 'info@seriosa.fr',
+  contactPhone: '04 89 30 85 54',
   address: '31 rue Chevalier Paul 83000 Toulon',
   
   // Réseaux sociaux
   socialMedia: {
-    linkedin: 'https://www.linkedin.com/company/seriosa-2-0/',
+    linkedin: 'https://www.linkedin.com/in/olivier-guyot-226541a4/',
     instagram: 'https://www.instagram.com/ethic_solutions/',
     facebook: 'https://www.facebook.com/seriosa2.0',
     twitter: 'https://twitter.com/seriosa2.0'

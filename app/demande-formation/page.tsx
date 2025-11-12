@@ -126,7 +126,7 @@ DATE_ENVOI: ${new Date().toLocaleDateString('fr-FR', {
 })}`;
 
     const result = await sendEmail({
-      to: 'olivier.guyot@seriosa.fr',
+      to: 'info@seriosa.fr',
       subject: "Demande de formation RSE personnalisée - Seriosa 2.0",
       text: emailContent
     });

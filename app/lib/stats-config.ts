@@ -32,15 +32,15 @@ export const STATS_CONFIG = {
   },
   
   bottom: {
-    apprenantsFormes: 415,
-    nouvellesCompetences: 98, // Bottom affiche aussi "nouvelles compétences"
-    recommandation: 100,
-    expertiseFormateurs: 98,
+    apprenantsFormes: 100, // 100 % de nos formations intègrent une approche RSE
+    nouvellesCompetences: 280000, // 280 000 PME à accompagner dans la région Sud
+    recommandation: 100, // 100% recommandent nos formations
+    expertiseFormateurs: 70, // 70 % des jeunes actifs choisissent une entreprise engagée
     labels: {
-      apprenantsFormes: "apprenants formés",
-      nouvellesCompetences: "ont acquis de nouvelles compétences",
+      apprenantsFormes: "de nos formations intègrent une approche RSE",
+      nouvellesCompetences: "PME à accompagner dans la région Sud",
       recommandation: "recommandent nos formations",
-      expertiseFormateurs: "soulignent l'expertise des formateurs"
+      expertiseFormateurs: "des jeunes actifs choisissent une entreprise engagée"
     }
   }
 };

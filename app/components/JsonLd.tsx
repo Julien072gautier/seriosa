@@ -16,8 +16,8 @@ export function JsonLd() {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+33-XX-XX-XX-XX-XX",
-      "email": "olivier.guyot@seriosa.fr",
+      "telephone": "+33489308554",
+      "email": "info@seriosa.fr",
       "contactType": "Customer Service",
       "availableLanguage": ["French"],
       "areaServed": "FR",
@@ -34,7 +34,7 @@ export function JsonLd() {
       "addressLocality": "France"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/seriosa2.0",
+      "https://www.linkedin.com/in/olivier-guyot-226541a4/",
       "https://www.facebook.com/seriosa2.0",
       "https://twitter.com/seriosa2.0"
     ],

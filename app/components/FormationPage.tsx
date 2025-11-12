@@ -128,11 +128,11 @@ const FormationPage = () => {
                 Demander plus d'informations
               </button>
               <a 
-                href="tel:0776957038"
+                href="tel:0489308554"
                 className="bg-brand text-white hover:bg-brand-600 font-medium py-3 px-6 rounded-md transition-colors inline-flex items-center justify-center"
               >
                 <Phone size={18} className="mr-2" />
-                07 76 95 70 38
+                04 89 30 85 54
               </a>
             </div>
           </div>
@@ -531,11 +531,11 @@ const FormationPage = () => {
                 Je lance mon parcours
               </button>
               <a
-                href="tel:0776957038"
+                href="tel:0489308554"
                 className="bg-brand text-white font-medium py-3 px-6 rounded-md hover:bg-brand-600 transition-colors inline-flex items-center justify-center"
               >
                 <Phone size={18} className="mr-2" />
-                07 76 95 70 38
+                04 89 30 85 54
               </a>
             </div>
           </section>

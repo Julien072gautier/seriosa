@@ -206,8 +206,8 @@ export default function PolitiqueCookiesPage() {
             <div className="bg-gray-50 rounded-lg p-4">
               <p className="text-sm text-gray-600">
                 <strong>Seriosa 2.0</strong><br />
-                Email : olivier.guyot@seriosa.fr<br />
-                Téléphone : 07 76 95 70 38
+                Email : info@seriosa.fr<br />
+                Téléphone : 04 89 30 85 54
               </p>
             </div>
           </div>

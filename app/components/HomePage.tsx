@@ -193,7 +193,7 @@ const HomePage = () => {
                 <div className="text-sm">de compétitivité en moyenne pour les entreprises engagées en RSE</div>
               </div>
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
-                <div className="text-2xl font-bold">10 ans</div>
+                <div className="text-2xl font-bold">Dans 10 ans</div>
                 <div className="text-sm">une entreprise sera RSE — ou ne sera plus</div>
               </div>
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
@@ -215,11 +215,11 @@ const HomePage = () => {
                 Découvrir nos Formations
               </Link>
               <a 
-                href="tel:0776957038"
+                href="tel:0489308554"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-700 font-medium py-3 px-6 rounded-md transition-colors inline-flex items-center justify-center"
               >
                 <Phone size={18} className="mr-2" />
-                07 76 95 70 38
+                04 89 30 85 54
               </a>
             </motion.div>
           </div>
@@ -232,8 +232,7 @@ const HomePage = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-6">🧭 Pourquoi choisir Seriosa 2.0 ?</h2>
             <p className="text-gray-600 mb-8">
-              Parce qu'ici, la RSE n'est pas qu'un acronyme à la mode. C'est une équipe d'experts engagés, un réseau solide et des formations certifiantes qui mènent à de vrais résultats.
-            </p>
+            Parce qu’ici, la RSE n’est pas une mode, c’est un engagement : celui d’une équipe passionnée, d’un réseau d’experts et de formations certifiantes qui font avancer les organisations.            </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -685,11 +684,11 @@ const HomePage = () => {
           <div className="bg-brand text-white rounded-lg p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold mb-2">+{STATS_CONFIG.bottom.apprenantsFormes}</div>
+                <div className="text-3xl font-bold mb-2">{STATS_CONFIG.bottom.apprenantsFormes} %</div>
                 <p>{STATS_CONFIG.bottom.labels.apprenantsFormes}</p>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-2">{STATS_CONFIG.bottom.nouvellesCompetences}%</div>
+                <div className="text-3xl font-bold mb-2">{STATS_CONFIG.bottom.nouvellesCompetences.toLocaleString('fr-FR')}</div>
                 <p>{STATS_CONFIG.bottom.labels.nouvellesCompetences}</p>
               </div>
               <div>
@@ -697,7 +696,7 @@ const HomePage = () => {
                 <p>{STATS_CONFIG.bottom.labels.recommandation}</p>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-2">{STATS_CONFIG.bottom.expertiseFormateurs}%</div>
+                <div className="text-3xl font-bold mb-2">{STATS_CONFIG.bottom.expertiseFormateurs} %</div>
                 <p>{STATS_CONFIG.bottom.labels.expertiseFormateurs}</p>
               </div>
             </div>

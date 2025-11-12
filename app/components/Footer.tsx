@@ -31,16 +31,16 @@ const Footer = () => {
             </div>
             <div className="flex items-center text-gray-300 mb-2">
               <Phone size={18} className="mr-2" />
-              <span>07 76 95 70 38</span>
+              <span>04 89 30 85 54</span>
             </div>
             <div className="flex items-center text-gray-300 mb-2">
               <Mail size={18} className="mr-2" />
-              <span>olivier.guyot@seriosa.fr</span>
+              <span>info@seriosa.fr</span>
             </div>
             <div className="flex items-center text-gray-300 mb-2">
               <Linkedin size={18} className="mr-2" />
               <a 
-                href="https://www.linkedin.com/company/seriosa-2-0/" 
+                href="https://www.linkedin.com/in/olivier-guyot-226541a4/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="hover:text-blue-400 transition-colors"

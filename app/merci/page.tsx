@@ -63,22 +63,22 @@ const MerciPage = () => {
             </h3>
                          <div className="grid md:grid-cols-2 gap-4">
                <a 
-                 href="tel:0776957038"
+                 href="tel:0489308554"
                  className="flex items-center justify-center p-3 bg-white rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
                >
                  <Phone className="text-brand mr-3" size={20} />
                  <div className="text-left">
-                   <p className="font-medium text-gray-800">07 76 95 70 38</p>
+                   <p className="font-medium text-gray-800">04 89 30 85 54</p>
                    <p className="text-sm text-gray-600">Appel direct</p>
                  </div>
                </a>
                <a 
-                 href="mailto:olivier.guyot@seriosa.fr"
+                 href="mailto:info@seriosa.fr"
                  className="flex items-center justify-center p-3 bg-white rounded-lg hover:bg-gray-50 transition-colors cursor-pointer"
                >
                  <Mail className="text-brand mr-3" size={20} />
                  <div className="text-left">
-                   <p className="font-medium text-gray-800">olivier.guyot@seriosa.fr</p>
+                   <p className="font-medium text-gray-800">info@seriosa.fr</p>
                    <p className="text-sm text-gray-600">Email</p>
                  </div>
                </a>

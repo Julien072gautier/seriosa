@@ -59,8 +59,8 @@ export default function MentionsLegales() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">4. Contact</h2>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p><strong>Téléphone :</strong> 07 76 95 70 38</p>
-                <p><strong>Email :</strong> olivier.guyot@seriosa.fr</p>
+                <p><strong>Téléphone :</strong> 04 89 30 85 54</p>
+                <p><strong>Email :</strong> info@seriosa.fr</p>
                 <p><strong>Adresse :</strong> 31 rue Chevalier Paul 83000 Toulon</p>
               </div>
             </section>
@@ -85,7 +85,7 @@ export default function MentionsLegales() {
                 Les informations contenues sur ce site sont aussi précises que possible et le site remis à jour à différentes périodes de l'année, mais peut toutefois contenir des inexactitudes ou des omissions.
               </p>
               <p className="mb-4">
-                Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email, à l'adresse olivier.guyot@seriosa.fr, en décrivant le problème de la manière la plus précise possible.
+                Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email, à l'adresse info@seriosa.fr, en décrivant le problème de la manière la plus précise possible.
               </p>
               <p>
                 Tout contenu téléchargé se fait aux risques et périls de l'utilisateur et sous sa seule responsabilité. En conséquence, ne saurait être tenu responsable d'un quelconque dommage subi par l'ordinateur de l'utilisateur ou d'une quelconque perte de données consécutives au téléchargement.

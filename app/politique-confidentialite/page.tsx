@@ -32,8 +32,8 @@ export default function PolitiqueConfidentialite() {
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p><strong>Responsable du traitement :</strong> Seriosa 2.0</p>
                 <p><strong>Adresse :</strong> 31 rue Chevalier Paul 83000 Toulon</p>
-                <p><strong>Email :</strong> olivier.guyot@seriosa.fr</p>
-                <p><strong>Téléphone :</strong> 07 76 95 70 38</p>
+                <p><strong>Email :</strong> info@seriosa.fr</p>
+                <p><strong>Téléphone :</strong> 04 89 30 85 54</p>
                 <p><strong>SIREN :</strong> 921 588 091</p>
                 <p><strong>SIRET (siège) :</strong> 921 588 091 00048</p>
                 <p><strong>NDA :</strong> 93830786983</p>
@@ -128,7 +128,7 @@ export default function PolitiqueConfidentialite() {
                 <li><strong>Droit de retrait du consentement :</strong> Retirer votre consentement à tout moment</li>
               </ul>
               <p className="mb-4">
-                Pour exercer ces droits, contactez-nous à : <a href="mailto:olivier.guyot@seriosa.fr" className="text-blue-600 hover:underline">olivier.guyot@seriosa.fr</a>
+                Pour exercer ces droits, contactez-nous à : <a href="mailto:info@seriosa.fr" className="text-blue-600 hover:underline">info@seriosa.fr</a>
               </p>
               <p>
                 Vous avez également le droit d'introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) 
@@ -184,8 +184,8 @@ export default function PolitiqueConfidentialite() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">13. Contact</h2>
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p className="mb-2">Pour toute question concernant cette politique de confidentialité :</p>
-                <p><strong>Email :</strong> <a href="mailto:olivier.guyot@seriosa.fr" className="text-blue-600 hover:underline">olivier.guyot@seriosa.fr</a></p>
-                <p><strong>Téléphone :</strong> 07 76 95 70 38</p>
+                <p><strong>Email :</strong> <a href="mailto:info@seriosa.fr" className="text-blue-600 hover:underline">info@seriosa.fr</a></p>
+                <p><strong>Téléphone :</strong> 04 89 30 85 54</p>
                 <p><strong>Adresse :</strong> 31 rue Chevalier Paul 83000 Toulon</p>
               </div>
             </section>
